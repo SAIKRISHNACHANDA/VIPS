@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-style-mode" content="0" />
+    <!-- 0 == light, 1 == dark -->
+
+    <title>Vaagdevi Colleges</title>
+    <!-- Favicon -->
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="assets/images/favicon.png"
+    />
+    <!-- CSS ============================================ -->
+    <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/plugins/animation.css" />
+    <link rel="stylesheet" href="assets/css/plugins/feature.css" />
+    <link rel="stylesheet" href="assets/css/plugins/magnify.min.css" />
+    <link rel="stylesheet" href="assets/css/plugins/slick.css" />
+    <link rel="stylesheet" href="assets/css/plugins/slick-theme.css" />
+    <link rel="stylesheet" href="assets/css/plugins/lightbox.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <main class="page-wrapper">
+      <!--Header section start-->
+      <div id="navBar"></div>
+      <!--Header section end-->
+
+      <div>
+        <div class="rainbow-gradient-circle"></div>
+        <div class="rainbow-gradient-circle theme-pink"></div>
+      </div>
+      <!-- End Theme Style  -->
+
+    <!-- Start Departments Section -->
+<!-- Start Departments Section -->
+<div class="rainbow-blog-list-view ptb--120">
+  <div class="container">
+    <div class="row gx-5">
+
+      <!-- Sidebar -->
+      <div class="col-lg-4 mt_md--40 mt_sm--40">
+        <aside class="rainbow-sidebar">
+          <div class="rbt-single-widget widget_categories mt--40">
+            <h3 class="title">Departments</h3>
+            <div class="inner">
+              <div class="row g-3">
+
+                <div class="col-12">
+                  <div class="dept-card" onclick="showDept('bpharm')">
+                   
+                    <p>B.Pharmacy</p>
+                  </div>
+                </div>
+
+                <div class="col-12">
+                  <div class="dept-card" onclick="showDept('pharmd')">
+                    
+                    <p>Pharm D</p>
+                  </div>
+                </div>
+
+                <div class="col-12">
+                  <div class="dept-card" onclick="showDept('pharmdpb')">
+                    
+                    <p>Pharm D (PB)</p>
+                  </div>
+                </div>
+
+                <div class="col-12">
+                  <div class="dept-card" onclick="showDept('mpharm')">
+                  
+                    <p>M.Pharmacy</p>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </aside>
+      </div>
+<style>
+.dept-card {
+  cursor: pointer;
+  padding: 12px 10px;
+  border-bottom: 1px solid #ddd; /* 🔥 LINE ADDED */
+  transition: 0.3s;
+}
+
+.dept-card:last-child {
+  border-bottom: none; /* remove last line */
+}
+
+.dept-card p {
+  margin: 0;
+  font-weight: 600;
+}
+
+.dept-card:hover {
+  background-color: #f5f5f5;
+  padding-left: 15px;
+}
+</style>
+      <!-- Content -->
+      <div class="col-lg-8">
+
+        <!-- B PHARM -->
+        <div id="bpharm" class="dept-content">
+          <h4>B. PHARMACY</h4>
+          <p>
+            B Pharmacy (Bachelor of Pharmacy) commonly referred as B Pharm, started in 2006 at Vaagdevi Institute of Pharmaceutical Sciences, is a 4-year (8 semesters) undergraduate programme that serves as the foundation for individuals aspiring to become pharmacists and contribute to the well-being of society.
+          </p>
+          <p>
+            It’s a comprehensive undergraduate course in pharmaceutical sciences that deeply explores the fascinating world of medicines. The programme focuses on theoretical learning and also encourages students to develop a practical understanding of how drugs are created, tested and prescribed safely.
+          </p>
+
+          <h5>Career Opportunities:</h5>
+          <p>
+            Roles in hospitals, pharmaceutical companies, research institutions, regulatory agencies.
+          </p>
+        </div>
+
+        <!-- PHARM D -->
+        <div id="pharmd" class="dept-content" style="display:none;">
+          <h4>PHARM D</h4>
+          <p>
+            The Pharm.D (Doctor of Pharmacy) programme started in 2011 at Vaagdevi Institute of Pharmaceutical Sciences, is a 6-year professional clinical doctorate designed to develop competent clinical pharmacists capable of providing evidence-based pharmaceutical care.
+          </p>
+          <p>
+            The curriculum is PCI-approved and integrates pharmaceutical sciences with advanced clinical training. Students undergo continuous clinical postings at Hospitals, gaining skills in patient counselling, medication therapy management, pharmacovigilance, and clinical decision-making.
+          </p>
+          <p>
+            The programme emphasizes therapeutics, biostatistics, research methodology, and interdisciplinary learning. A one-year rotational internship across specialties prepares graduates for careers in clinical pharmacy, drug safety, clinical research, hospital pharmacy, and digital health.
+          </p>
+
+          <h5>Career Opportunities:</h5>
+          <p>
+            Pharm. D graduates are highly sought after across clinical, research, regulatory, and pharmaceutical industries. They are equipped to take on specialized roles that bridge patient care, drug safety, and healthcare management.
+          </p>
+
+          <ul>
+            <li>Clinical Pharmacist</li>
+            <li>Pharmacovigilance Associate</li>
+            <li>Drug Safety Scientist</li>
+            <li>Clinical Research Associate</li>
+            <li>Clinical Data Manager</li>
+            <li>Medication Safety Officer</li>
+            <li>Drug Information Specialist</li>
+            <li>Medical Coding Specialist</li>
+            <li>Healthcare Analyst</li>
+          </ul>
+        </div>
+
+        <!-- PHARM D PB -->
+        <div id="pharmdpb" class="dept-content" style="display:none;">
+          <h4>PHARM D (PB) Post Baccalaureate</h4>
+          <p>
+            The Pharm.D (Post Baccalaureate) is a 3-year, started in 2022 at Vaagdevi Institute of Pharmaceutical Sciences is PCI-approved doctoral program designed for B.Pharm graduates to gain advanced clinical training.
+          </p>
+          <p>
+            As a lateral entry (4th year) course, it covers pharmacotherapy, research, and patient care, culminating in one year of internship/residency. It prepares graduates for roles as clinical pharmacists or pharmacovigilance associates.
+          </p>
+        </div>
+
+        <!-- M PHARM -->
+        <div id="mpharm" class="dept-content" style="display:none;">
+          <h4>M. PHARMACY</h4>
+          <p>
+            Master of Pharmacy (M.Pharm), is a 2-year (4-semester) postgraduate program specializing in pharmaceutical sciences, focusing on drug development, manufacturing, and research.
+          </p>
+          <p>
+            Candidates need a B.Pharm degree with 50-55% marks and a valid GPAT score.
+          </p>
+          <p>
+            Our institution offers four different Master of Pharmacy courses:
+          </p>
+
+          <h5>M. Pharmacy - Pharmaceutics</h5>
+          <p>
+            M.Pharm in Pharmaceutics, started in 2010 at Vaagdevi Institute of Pharmaceutical Sciences is a 2-year postgraduate program focused on the science of dosage form design, drug delivery systems, and industrial manufacturing.
+          </p>
+          <p>
+            It prepares students to develop safe, effective, and stable medicines. The program emphasizes advanced manufacturing technologies, formulation research, and regulatory requirements.
+          </p>
+
+          <h5>M. Pharmacy - Pharmacology</h5>
+          <p>
+            M.Pharm in Pharmacology, started in 2010, focuses on advanced study of drug mechanisms, interactions, and therapeutic effects on biological systems.
+          </p>
+          <p>
+            It covers preclinical screening, molecular pharmacology, toxicology, and research including drug discovery.
+          </p>
+
+          <h5>M. Pharmacy - Industrial Pharmacy</h5>
+          <p>
+            M.Pharm in Industrial Pharmacy, started in 2014, focuses on drug development, manufacturing technology, formulation development, and regulatory compliance.
+          </p>
+
+          <h5>M. Pharmacy - Pharmaceutical Analysis</h5>
+          <p>
+            M.Pharm in Pharmaceutical Analysis, started in 2021, focuses on advanced techniques to identify, quantify, and purify drug substances.
+          </p>
+          <p>
+            It includes method development, validation, and instrumental analysis (HPLC, GC).
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End Departments Section -->
+
+<script>
+function showDept(id) {
+  let sections = document.querySelectorAll(".dept-content");
+  sections.forEach(sec => sec.style.display = "none");
+
+  document.getElementById(id).style.display = "block";
+}
+</script>
+
+
+      <!--         
+       <iframe src="assets/pdf/addon_course .pdf" 
+    class="pdf-viewer mt--60 mb--60">
+</iframe> -->
+
+      <style>
+        .pdf-viewer {
+          width: 80%; /* Change as needed */
+          height: 1000px;
+          border: none;
+          display: block;
+          margin: auto; /* Centers it horizontally */
+        }
+      </style>
+
+      <!-- Start Footer Area  -->
+      <div id="footer"></div>
+    </main>
+    <!-- All Scripts  -->
+    <!-- Start Top To Bottom Area  -->
+    <div class="rainbow-back-top">
+      <i class="feather-arrow-up"></i>
+    </div>
+    <!-- End Top To Bottom Area  -->
+    <!-- JS
+============================================ -->
+    <script src="assets/js/custom.js"></script>
+    <script src="assets/js/vendor/modernizr.min.js"></script>
+    <script src="assets/js/vendor/jquery.min.js"></script>
+    <script src="assets/js/vendor/bootstrap.min.js"></script>
+    <script src="assets/js/vendor/popper.min.js"></script>
+    <script src="assets/js/vendor/waypoint.min.js"></script>
+    <script src="assets/js/vendor/wow.min.js"></script>
+    <script src="assets/js/vendor/counterup.min.js"></script>
+    <script src="assets/js/vendor/feather.min.js"></script>
+    <script src="assets/js/vendor/sal.min.js"></script>
+    <script src="assets/js/vendor/masonry.js"></script>
+    <script src="assets/js/vendor/imageloaded.js"></script>
+    <script src="assets/js/vendor/magnify.min.js"></script>
+    <script src="assets/js/vendor/lightbox.js"></script>
+    <script src="assets/js/vendor/slick.min.js"></script>
+    <script src="assets/js/vendor/easypie.js"></script>
+    <script src="assets/js/vendor/text-type.js"></script>
+    <script src="assets/js/vendor/jquery.style.swicher.js"></script>
+    <script src="assets/js/vendor/js.cookie.js"></script>
+    <script src="assets/js/vendor/jquery-one-page-nav.js"></script>
+    <!-- Main JS -->
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,612 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-style-mode" content="0" />
+
+    <title>Research & Collaborations | Vaagdevi Pharmacy College</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.png" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/plugins/animation.css" />
+    <link rel="stylesheet" href="assets/css/plugins/feature.css" />
+    <link rel="stylesheet" href="assets/css/plugins/magnify.min.css" />
+    <link rel="stylesheet" href="assets/css/plugins/slick.css" />
+    <link rel="stylesheet" href="assets/css/plugins/slick-theme.css" />
+    <link rel="stylesheet" href="assets/css/plugins/lightbox.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+
+    <style>
+      body {
+        font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+        background-color: #ffffff;
+        color: #1e293b;
+      }
+      
+      /* Hero Breadcrumb Header */
+      .research-hero-banner {
+        background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
+        padding: 70px 0 50px 0;
+        border-bottom: 1px solid #e2e8f0;
+        position: relative;
+        overflow: hidden;
+      }
+      
+      .badge-live-pulse {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: rgba(22, 163, 74, 0.08);
+        border: 1px solid rgba(22, 163, 74, 0.22);
+        padding: 6px 18px;
+        border-radius: 9999px;
+        margin-bottom: 16px;
+      }
+      .badge-live-pulse .pulse-dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: #16a34a;
+        box-shadow: 0 0 8px rgba(22, 163, 74, 0.6);
+      }
+      .badge-live-pulse span {
+        color: #15803d;
+        font-size: 0.84rem;
+        font-weight: 700;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+      }
+
+      /* Research Pillar Bento Cards */
+      .research-pillar-card {
+        background: #ffffff;
+        border: 1px solid #e2e8f0;
+        border-radius: 20px;
+        padding: 30px 24px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        box-shadow: 0 4px 16px rgba(15, 23, 42, 0.03);
+        transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+      .research-pillar-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 20px 36px -10px rgba(15, 23, 42, 0.08), 0 0 0 1px rgba(22, 163, 74, 0.3) !important;
+      }
+      .research-pillar-card .pillar-icon-box {
+        width: 52px;
+        height: 52px;
+        border-radius: 14px;
+        background: #f0fdf4;
+        border: 1px solid #dcfce7;
+        color: #16a34a;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.35rem;
+        margin-bottom: 18px;
+      }
+
+      /* MoU Showcase Bento Card */
+      .mou-showcase-card {
+        background: #ffffff;
+        border: 1px solid #e2e8f0;
+        border-radius: 24px;
+        overflow: hidden;
+        box-shadow: 0 4px 20px rgba(15, 23, 42, 0.04);
+        transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+        margin-bottom: 32px;
+      }
+      .mou-showcase-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 24px 44px -10px rgba(15, 23, 42, 0.09), 0 0 0 1px rgba(22, 163, 74, 0.35) !important;
+      }
+      .mou-img-container {
+        position: relative;
+        overflow: hidden;
+        border-radius: 18px;
+        background: #f8fafc;
+        border: 1px solid #e2e8f0;
+      }
+      .mou-img-container img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+      }
+      .mou-showcase-card:hover .mou-img-container img {
+        transform: scale(1.03);
+      }
+      .mou-tag-badge {
+        position: absolute;
+        top: 14px;
+        left: 14px;
+        background: rgba(15, 23, 42, 0.9);
+        backdrop-filter: blur(8px);
+        color: #ffffff;
+        font-size: 0.8rem;
+        font-weight: 700;
+        padding: 5px 14px;
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+      }
+
+      /* Document Vault Bento Item */
+      .doc-vault-item {
+        background: #ffffff;
+        border: 1px solid #e2e8f0;
+        border-radius: 16px;
+        padding: 20px 24px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        transition: all 0.3s ease;
+        margin-bottom: 14px;
+        text-decoration: none;
+      }
+      .doc-vault-item:hover {
+        transform: translateY(-3px);
+        border-color: #16a34a;
+        box-shadow: 0 10px 24px rgba(22, 163, 74, 0.1);
+        background: #f0fdf4;
+      }
+      .doc-icon-box {
+        width: 48px;
+        height: 48px;
+        border-radius: 12px;
+        background: #fef2f2;
+        border: 1px solid #fee2e2;
+        color: #dc2626;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.35rem;
+        flex-shrink: 0;
+      }
+      .doc-btn-download {
+        background: #0f172a;
+        color: #ffffff;
+        font-size: 0.88rem;
+        font-weight: 700;
+        padding: 8px 18px;
+        border-radius: 10px;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        transition: all 0.25s ease;
+        text-decoration: none;
+        white-space: nowrap;
+      }
+      .doc-vault-item:hover .doc-btn-download {
+        background: #16a34a;
+        color: #ffffff;
+      }
+    </style>
+</head>
+
+<body>
+
+<main class="page-wrapper">
+
+    <!-- Header Navigation -->
+    <div id="navBar"></div>
+
+    <!-- Hero Breadcrumb Banner -->
+    <section class="research-hero-banner">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-9 col-md-11" data-sal="slide-up" data-sal-duration="700">
+                    <div class="badge-live-pulse">
+                        <span class="pulse-dot"></span>
+                        <span>DSIR-SIRO RECOGNIZED RESEARCH CENTER</span>
+                    </div>
+                    <h1 style="font-size: 3.2rem; font-weight: 900; color: #0f172a; letter-spacing: -0.035em; line-height: 1.15; margin-bottom: 16px;">
+                        Research, Innovation & Industry Collaborations
+                    </h1>
+                    <p style="font-size: 1.22rem; line-height: 1.65; color: #475569; max-width: 820px; margin-bottom: 24px;">
+                        Advancing global pharmaceutical discovery through central analytical instrumentation, sponsored faculty research, clinical hospital residencies, and strategic corporate MoUs.
+                    </p>
+                    <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+                        <span style="background: #f8fafc; border: 1px solid #e2e8f0; color: #334155; font-size: 0.88rem; font-weight: 700; padding: 6px 14px; border-radius: 20px;">
+                            <i class="fas fa-certificate text-success me-1"></i> DSIR-SIRO Approved
+                        </span>
+                        <span style="background: #f8fafc; border: 1px solid #e2e8f0; color: #334155; font-size: 0.88rem; font-weight: 700; padding: 6px 14px; border-radius: 20px;">
+                            <i class="fas fa-book text-success me-1"></i> 120+ Research Publications
+                        </span>
+                        <span style="background: #f8fafc; border: 1px solid #e2e8f0; color: #334155; font-size: 0.88rem; font-weight: 700; padding: 6px 14px; border-radius: 20px;">
+                            <i class="fas fa-handshake text-success me-1"></i> Active Corporate MoUs
+                        </span>
+                        <span style="background: #f8fafc; border: 1px solid #e2e8f0; color: #334155; font-size: 0.88rem; font-weight: 700; padding: 6px 14px; border-radius: 20px;">
+                            <i class="fas fa-flask text-success me-1"></i> Central Instrumentation Lab
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Research Pillars (4-Card Bento Grid) -->
+    <section style="padding: 70px 0 60px 0; background: #ffffff;">
+        <div class="container">
+            <div class="row justify-content-center text-center" style="margin-bottom: 44px;">
+                <div class="col-lg-8" data-sal="slide-up" data-sal-duration="700">
+                    <span style="color: #64748b; font-size: 0.85rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; display: inline-block; margin-bottom: 8px;">
+                        CORE RESEARCH DOMAINS
+                    </span>
+                    <h2 style="font-size: 2.5rem; font-weight: 800; color: #0f172a; letter-spacing: -0.025em; margin: 0;">
+                        Thrust Areas of Pharmaceutical Innovation
+                    </h2>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <!-- Pillar 1 -->
+                <div class="col-xl-3 col-lg-6 col-md-6 col-12" data-sal="slide-up" data-sal-duration="700" data-sal-delay="100">
+                    <div class="research-pillar-card">
+                        <div>
+                            <div class="pillar-icon-box">
+                                <i class="fas fa-capsules"></i>
+                            </div>
+                            <h4 style="font-size: 1.3rem; font-weight: 800; color: #0f172a; margin-bottom: 10px;">
+                                Novel Drug Delivery (NDDS)
+                            </h4>
+                            <p style="font-size: 1rem; line-height: 1.6; color: #64748b; margin-bottom: 16px;">
+                                Nanoparticle formulations, targeted micro-spheres, sustained-release matrix tablets, and transdermal drug delivery systems.
+                            </p>
+                        </div>
+                        <div style="font-size: 0.85rem; font-weight: 700; color: #16a34a; background: #f0fdf4; border: 1px solid #dcfce7; padding: 6px 12px; border-radius: 8px; display: inline-flex; align-items: center; gap: 6px;">
+                            <i class="fas fa-check-circle"></i> Pharmaceutics Lab
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pillar 2 -->
+                <div class="col-xl-3 col-lg-6 col-md-6 col-12" data-sal="slide-up" data-sal-duration="700" data-sal-delay="200">
+                    <div class="research-pillar-card">
+                        <div>
+                            <div class="pillar-icon-box">
+                                <i class="fas fa-hospital-user"></i>
+                            </div>
+                            <h4 style="font-size: 1.3rem; font-weight: 800; color: #0f172a; margin-bottom: 10px;">
+                                Clinical Pharmacology
+                            </h4>
+                            <p style="font-size: 1rem; line-height: 1.6; color: #64748b; margin-bottom: 16px;">
+                                Ward-based pharmacotherapy, adverse drug reaction monitoring, therapeutic drug monitoring, and multi-center clinical trials.
+                            </p>
+                        </div>
+                        <div style="font-size: 0.85rem; font-weight: 700; color: #16a34a; background: #f0fdf4; border: 1px solid #dcfce7; padding: 6px 12px; border-radius: 8px; display: inline-flex; align-items: center; gap: 6px;">
+                            <i class="fas fa-check-circle"></i> Hospital Residency
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pillar 3 -->
+                <div class="col-xl-3 col-lg-6 col-md-6 col-12" data-sal="slide-up" data-sal-duration="700" data-sal-delay="300">
+                    <div class="research-pillar-card">
+                        <div>
+                            <div class="pillar-icon-box">
+                                <i class="fas fa-dna"></i>
+                            </div>
+                            <h4 style="font-size: 1.3rem; font-weight: 800; color: #0f172a; margin-bottom: 10px;">
+                                Phytochemistry & Discovery
+                            </h4>
+                            <p style="font-size: 1rem; line-height: 1.6; color: #64748b; margin-bottom: 16px;">
+                                Natural bioactive secondary metabolite isolation, chromatographic profiling, in-vitro pharmacological screening, and lead optimization.
+                            </p>
+                        </div>
+                        <div style="font-size: 0.85rem; font-weight: 700; color: #16a34a; background: #f0fdf4; border: 1px solid #dcfce7; padding: 6px 12px; border-radius: 8px; display: inline-flex; align-items: center; gap: 6px;">
+                            <i class="fas fa-check-circle"></i> Pharmacognosy Lab
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pillar 4 -->
+                <div class="col-xl-3 col-lg-6 col-md-6 col-12" data-sal="slide-up" data-sal-duration="700" data-sal-delay="400">
+                    <div class="research-pillar-card">
+                        <div>
+                            <div class="pillar-icon-box">
+                                <i class="fas fa-microscope"></i>
+                            </div>
+                            <h4 style="font-size: 1.3rem; font-weight: 800; color: #0f172a; margin-bottom: 10px;">
+                                Analytical Method Validation
+                            </h4>
+                            <p style="font-size: 1rem; line-height: 1.6; color: #64748b; margin-bottom: 16px;">
+                                High Performance Liquid Chromatography (HPLC), FTIR spectral analysis, UV-Vis spectrophotometry, and stability testing according to ICH guidelines.
+                            </p>
+                        </div>
+                        <div style="font-size: 0.85rem; font-weight: 700; color: #16a34a; background: #f0fdf4; border: 1px solid #dcfce7; padding: 6px 12px; border-radius: 8px; display: inline-flex; align-items: center; gap: 6px;">
+                            <i class="fas fa-check-circle"></i> Central QA / QC Lab
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Strategic Industry MoUs & Collaborations Showcase -->
+    <section style="padding: 80px 0; background: #f8fafc; border-top: 1px solid #e2e8f0; border-bottom: 1px solid #e2e8f0;">
+        <div class="container">
+            
+            <!-- Section Header -->
+            <div class="row justify-content-center text-center" style="margin-bottom: 50px;">
+                <div class="col-lg-8" data-sal="slide-up" data-sal-duration="700">
+                    <div style="display: inline-flex; align-items: center; gap: 8px; background: rgba(22, 163, 74, 0.08); border: 1px solid rgba(22, 163, 74, 0.22); padding: 6px 18px; border-radius: 9999px; margin-bottom: 14px;">
+                        <span style="width: 8px; height: 8px; border-radius: 50%; background: #16a34a;"></span>
+                        <span style="color: #15803d; font-size: 0.84rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase;">INDUSTRY & ACADEMIC ALLIANCES</span>
+                    </div>
+                    <h2 style="font-size: 2.7rem; font-weight: 800; color: #0f172a; letter-spacing: -0.03em; line-height: 1.2; margin-bottom: 12px;">
+                        Strategic Memorandums of Understanding (MoUs)
+                    </h2>
+                    <p style="font-size: 1.15rem; color: #64748b; margin: 0;">
+                        Partnering with leading pharmaceutical corporations, research foundations, and clinical networks to accelerate breakthrough learning.
+                    </p>
+                </div>
+            </div>
+
+            <!-- MoU 1: Leesha Pharma Tech -->
+            <div class="mou-showcase-card" data-sal="slide-up" data-sal-duration="700">
+                <div class="row g-0 align-items-center">
+                    <div class="col-lg-5 p-4">
+                        <div class="mou-img-container" style="height: 320px;">
+                            <img src="assets/images/home/research-2.png" alt="MoU with Leesha Pharma Tech" />
+                            <div class="mou-tag-badge">
+                                <i class="fas fa-handshake text-success"></i> Industrial R&D Collaboration
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-7 p-4 p-xl-5">
+                        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 12px;">
+                            <span style="background: #f0fdf4; border: 1px solid #dcfce7; color: #16a34a; font-size: 0.84rem; font-weight: 700; padding: 4px 12px; border-radius: 20px;">
+                                Official Partnership
+                            </span>
+                            <span style="color: #94a3b8; font-size: 0.85rem;">Hyderabad, Telangana</span>
+                        </div>
+                        <h3 style="font-size: 1.9rem; font-weight: 800; color: #0f172a; letter-spacing: -0.02em; margin-bottom: 14px;">
+                            MoU with Leesha Pharma Tech
+                        </h3>
+                        <p style="font-size: 1.12rem; line-height: 1.7; color: #475569; margin-bottom: 20px;">
+                            Vaagdevi Institute of Pharmaceutical Sciences has formally executed an MoU with <strong>Dr. B. Prabha Shankar Bodapunti</strong>, Chairman & Managing Director of Leesha Pharma Tech. This collaboration drives joint formulation R&D, pilot-plant scaleup exposure, and hands-on industrial internships for undergraduate and postgraduate scholars.
+                        </p>
+                        
+                        <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 24px;">
+                            <span style="background: #f8fafc; border: 1px solid #e2e8f0; color: #334155; font-size: 0.88rem; font-weight: 600; padding: 6px 14px; border-radius: 8px;">
+                                <i class="fas fa-check text-success me-1"></i> Joint R&D Projects
+                            </span>
+                            <span style="background: #f8fafc; border: 1px solid #e2e8f0; color: #334155; font-size: 0.88rem; font-weight: 600; padding: 6px 14px; border-radius: 8px;">
+                                <i class="fas fa-check text-success me-1"></i> Industrial Pilot Training
+                            </span>
+                            <span style="background: #f8fafc; border: 1px solid #e2e8f0; color: #334155; font-size: 0.88rem; font-weight: 600; padding: 6px 14px; border-radius: 8px;">
+                                <i class="fas fa-check text-success me-1"></i> Student Entrepreneurship
+                            </span>
+                        </div>
+
+                        <a href="assets/pdf/mou-1.pdf" target="_blank" class="doc-btn-download">
+                            <span>View MoU Document</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MoU 2: Magic Bus India Foundation -->
+            <div class="mou-showcase-card" data-sal="slide-up" data-sal-duration="700">
+                <div class="row g-0 align-items-center flex-lg-row-reverse">
+                    <div class="col-lg-5 p-4">
+                        <div class="mou-img-container" style="height: 320px;">
+                            <img src="assets/images/home/research-1.png" alt="MoU with Magic Bus India Foundation" />
+                            <div class="mou-tag-badge">
+                                <i class="fas fa-award text-success"></i> Skill & Career Development
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-7 p-4 p-xl-5">
+                        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 12px;">
+                            <span style="background: #f0fdf4; border: 1px solid #dcfce7; color: #16a34a; font-size: 0.84rem; font-weight: 700; padding: 4px 12px; border-radius: 20px;">
+                                Capacity Building Alliance
+                            </span>
+                            <span style="color: #94a3b8; font-size: 0.85rem;">National Program</span>
+                        </div>
+                        <h3 style="font-size: 1.9rem; font-weight: 800; color: #0f172a; letter-spacing: -0.02em; margin-bottom: 14px;">
+                            MoU with Magic Bus India Foundation
+                        </h3>
+                        <p style="font-size: 1.12rem; line-height: 1.7; color: #475569; margin-bottom: 20px;">
+                            Signed with <strong>Mr. T. Venkat Rao</strong>, Program Manager of Magic Bus India Foundation, this strategic initiative elevates student employability, corporate communication, professional leadership, and institutional placement readiness for pharmaceutical sectors.
+                        </p>
+                        
+                        <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 24px;">
+                            <span style="background: #f8fafc; border: 1px solid #e2e8f0; color: #334155; font-size: 0.88rem; font-weight: 600; padding: 6px 14px; border-radius: 8px;">
+                                <i class="fas fa-check text-success me-1"></i> Employability & Soft Skills
+                            </span>
+                            <span style="background: #f8fafc; border: 1px solid #e2e8f0; color: #334155; font-size: 0.88rem; font-weight: 600; padding: 6px 14px; border-radius: 8px;">
+                                <i class="fas fa-check text-success me-1"></i> Career Readiness Mentorship
+                            </span>
+                            <span style="background: #f8fafc; border: 1px solid #e2e8f0; color: #334155; font-size: 0.88rem; font-weight: 600; padding: 6px 14px; border-radius: 8px;">
+                                <i class="fas fa-check text-success me-1"></i> Corporate Interview Prep
+                            </span>
+                        </div>
+
+                        <a href="assets/pdf/mou-2.pdf" target="_blank" class="doc-btn-download">
+                            <span>View MoU Document</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Official Documents & Governance Section (Apple-Style Vault) -->
+    <section style="padding: 80px 0 90px 0; background: #ffffff;">
+        <div class="container">
+            
+            <div class="row justify-content-center text-center" style="margin-bottom: 48px;">
+                <div class="col-lg-8" data-sal="slide-up" data-sal-duration="700">
+                    <span style="color: #64748b; font-size: 0.85rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; display: inline-block; margin-bottom: 8px;">
+                        OFFICIAL REPOSITORY
+                    </span>
+                    <h2 style="font-size: 2.6rem; font-weight: 800; color: #0f172a; letter-spacing: -0.025em; margin-bottom: 10px;">
+                        Research Policies & MoU Documents
+                    </h2>
+                    <p style="font-size: 1.15rem; color: #64748b; margin: 0;">
+                        Access authorized institutional guidelines, government recognition letters, and collaboration documents.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                
+                <!-- Left Column: MoUs -->
+                <div class="col-lg-6 col-12" data-sal="slide-up" data-sal-duration="700" data-sal-delay="100">
+                    <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 20px; padding: 28px 24px; height: 100%;">
+                        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 20px;">
+                            <div style="width: 42px; height: 42px; border-radius: 10px; background: #f0fdf4; border: 1px solid #dcfce7; color: #16a34a; display: flex; align-items: center; justify-content: center; font-size: 1.2rem;">
+                                <i class="fas fa-file-contract"></i>
+                            </div>
+                            <h4 style="font-size: 1.35rem; font-weight: 800; color: #0f172a; margin: 0;">
+                                Signed MoU Agreements
+                            </h4>
+                        </div>
+
+                        <!-- Doc 1 -->
+                        <a href="assets/pdf/mou-1.pdf" target="_blank" class="doc-vault-item">
+                            <div style="display: flex; align-items: center; gap: 14px;">
+                                <div class="doc-icon-box"><i class="fas fa-file-pdf"></i></div>
+                                <div>
+                                    <h6 style="font-size: 1.05rem; font-weight: 800; color: #0f172a; margin: 0 0 3px 0;">MoU with Leesha Pharma Tech</h6>
+                                    <span style="font-size: 0.84rem; color: #64748b;">PDF Document • Official Agreement</span>
+                                </div>
+                            </div>
+                            <span class="doc-btn-download">
+                                <i class="fas fa-download"></i> View
+                            </span>
+                        </a>
+
+                        <!-- Doc 2 -->
+                        <a href="assets/pdf/mou-2.pdf" target="_blank" class="doc-vault-item">
+                            <div style="display: flex; align-items: center; gap: 14px;">
+                                <div class="doc-icon-box"><i class="fas fa-file-pdf"></i></div>
+                                <div>
+                                    <h6 style="font-size: 1.05rem; font-weight: 800; color: #0f172a; margin: 0 0 3px 0;">MoU with Magic Bus India Foundation</h6>
+                                    <span style="font-size: 0.84rem; color: #64748b;">PDF Document • Skill Development</span>
+                                </div>
+                            </div>
+                            <span class="doc-btn-download">
+                                <i class="fas fa-download"></i> View
+                            </span>
+                        </a>
+
+                        <!-- Doc 3 -->
+                        <a href="assets/pdf/mou-3.pdf" target="_blank" class="doc-vault-item" style="margin-bottom: 0;">
+                            <div style="display: flex; align-items: center; gap: 14px;">
+                                <div class="doc-icon-box"><i class="fas fa-file-pdf"></i></div>
+                                <div>
+                                    <h6 style="font-size: 1.05rem; font-weight: 800; color: #0f172a; margin: 0 0 3px 0;">MoU Institutional Summary</h6>
+                                    <span style="font-size: 0.84rem; color: #64748b;">PDF Document • Collaborative Alliances</span>
+                                </div>
+                            </div>
+                            <span class="doc-btn-download">
+                                <i class="fas fa-download"></i> View
+                            </span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Column: Research Policies -->
+                <div class="col-lg-6 col-12" data-sal="slide-up" data-sal-duration="700" data-sal-delay="200">
+                    <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 20px; padding: 28px 24px; height: 100%;">
+                        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 20px;">
+                            <div style="width: 42px; height: 42px; border-radius: 10px; background: #f0fdf4; border: 1px solid #dcfce7; color: #16a34a; display: flex; align-items: center; justify-content: center; font-size: 1.2rem;">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <h4 style="font-size: 1.35rem; font-weight: 800; color: #0f172a; margin: 0;">
+                                Research Governance & Recognition
+                            </h4>
+                        </div>
+
+                        <!-- Doc 4 -->
+                        <a href="assets/pdf/Research/Research Policy.pdf" target="_blank" class="doc-vault-item">
+                            <div style="display: flex; align-items: center; gap: 14px;">
+                                <div class="doc-icon-box"><i class="fas fa-file-pdf"></i></div>
+                                <div>
+                                    <h6 style="font-size: 1.05rem; font-weight: 800; color: #0f172a; margin: 0 0 3px 0;">Institutional Research Policy</h6>
+                                    <span style="font-size: 0.84rem; color: #64748b;">PDF Document • Governance & Ethics</span>
+                                </div>
+                            </div>
+                            <span class="doc-btn-download">
+                                <i class="fas fa-download"></i> View
+                            </span>
+                        </a>
+
+                        <!-- Doc 5 -->
+                        <a href="assets/pdf/Research/DSIR-SIRO recognition letter.pdf" target="_blank" class="doc-vault-item" style="margin-bottom: 0;">
+                            <div style="display: flex; align-items: center; gap: 14px;">
+                                <div class="doc-icon-box"><i class="fas fa-file-pdf"></i></div>
+                                <div>
+                                    <h6 style="font-size: 1.05rem; font-weight: 800; color: #0f172a; margin: 0 0 3px 0;">DSIR-SIRO Recognition Letter</h6>
+                                    <span style="font-size: 0.84rem; color: #64748b;">Govt. of India • Scientific & Industrial Research</span>
+                                </div>
+                            </div>
+                            <span class="doc-btn-download">
+                                <i class="fas fa-download"></i> View
+                            </span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+
+</main>
+
+<!-- Back To Top -->
+<div class="rainbow-back-top">
+    <i class="feather-arrow-up"></i>
+</div>
+
+<!-- JS -->
+<script src="assets/js/custom.js"></script>
+<script src="assets/js/vendor/modernizr.min.js"></script>
+<script src="assets/js/vendor/jquery.min.js"></script>
+<script src="assets/js/vendor/bootstrap.min.js"></script>
+<script src="assets/js/vendor/popper.min.js"></script>
+<script src="assets/js/vendor/waypoint.min.js"></script>
+<script src="assets/js/vendor/wow.min.js"></script>
+<script src="assets/js/vendor/counterup.min.js"></script>
+<script src="assets/js/vendor/feather.min.js"></script>
+<script src="assets/js/vendor/sal.min.js"></script>
+<script src="assets/js/vendor/masonry.js"></script>
+<script src="assets/js/vendor/imageloaded.js"></script>
+<script src="assets/js/vendor/magnify.min.js"></script>
+<script src="assets/js/vendor/lightbox.js"></script>
+<script src="assets/js/vendor/slick.min.js"></script>
+<script src="assets/js/vendor/easypie.js"></script>
+<script src="assets/js/vendor/text-type.js"></script>
+<script src="assets/js/vendor/jquery.style.swicher.js"></script>
+<script src="assets/js/vendor/js.cookie.js"></script>
+<script src="assets/js/vendor/jquery-one-page-nav.js"></script>
+<script src="assets/js/main.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,2748 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-style-mode" content="0" />
+    <!-- 0 == light, 1 == dark -->
+
+    <title>Vaagdevi Colleges</title>
+    <!-- Favicon -->
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="assets/images/favicon.png"
+    />
+    <!-- CSS ============================================ -->
+    <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/plugins/animation.css" />
+    <link rel="stylesheet" href="assets/css/plugins/feature.css" />
+    <link rel="stylesheet" href="assets/css/plugins/magnify.min.css" />
+    <link rel="stylesheet" href="assets/css/plugins/slick.css" />
+    <link rel="stylesheet" href="assets/css/plugins/slick-theme.css" />
+    <link rel="stylesheet" href="assets/css/plugins/lightbox.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <style>
+      /* High-Conversion Rich Course Card Styles */
+      .course-rich-card {
+        background: #ffffff;
+        border: 1px solid rgba(226, 232, 240, 0.9);
+        border-radius: 22px;
+        overflow: hidden;
+        box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.05);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+        position: relative;
+      }
+      .course-rich-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 24px 48px -12px rgba(15, 23, 42, 0.12), 0 0 0 1px rgba(22, 163, 74, 0.3) !important;
+      }
+      .course-rich-card .course-thumb-box {
+        position: relative;
+        height: 200px;
+        width: 100%;
+        overflow: hidden;
+      }
+      .course-rich-card .course-thumb-box img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+      .course-rich-card:hover .course-thumb-box img {
+        transform: scale(1.08);
+      }
+      .course-rich-card .course-thumb-box::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(to top, rgba(15, 23, 42, 0.65) 0%, transparent 50%, rgba(15, 23, 42, 0.3) 100%);
+        pointer-events: none;
+      }
+      .course-rich-card .glass-pill-dark {
+        position: absolute;
+        top: 12px;
+        left: 12px;
+        z-index: 2;
+        background: rgba(15, 23, 42, 0.8);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        color: #ffffff;
+        font-size: 0.95rem;
+        font-weight: 700;
+        padding: 6px 14px;
+        border-radius: 20px;
+        letter-spacing: 0.3px;
+      }
+      .course-rich-card .glass-pill-light {
+        position: absolute;
+        top: 12px;
+        right: 12px;
+        z-index: 2;
+        background: rgba(255, 255, 255, 0.92);
+        backdrop-filter: blur(10px);
+        color: #0f172a;
+        font-size: 0.95rem;
+        font-weight: 700;
+        padding: 6px 14px;
+        border-radius: 20px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      }
+      .course-rich-card .glass-pill-bottom {
+        position: absolute;
+        bottom: 12px;
+        left: 12px;
+        z-index: 2;
+        background: rgba(22, 163, 74, 0.95);
+        backdrop-filter: blur(8px);
+        color: #ffffff;
+        font-size: 0.88rem;
+        font-weight: 700;
+        padding: 5px 12px;
+        border-radius: 6px;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+      }
+      .course-rich-card .course-content-box {
+        padding: 24px 22px 20px 22px;
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        justify-content: space-between;
+      }
+      .course-rich-card .course-title {
+        font-size: 1.55rem;
+        font-weight: 800;
+        color: #0f172a;
+        letter-spacing: -0.02em;
+        line-height: 1.3;
+        margin-bottom: 14px;
+        min-height: 52px;
+        display: flex;
+        align-items: center;
+      }
+      .course-rich-card .course-highlights {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 18px 0;
+      }
+      .course-rich-card .course-highlights li {
+        font-size: 1.25rem;
+        color: #1e293b;
+        margin-bottom: 10px;
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+        line-height: 1.55;
+        font-weight: 500;
+      }
+      .course-rich-card .course-highlights li i {
+        color: #16a34a;
+        font-size: 1.15rem;
+        margin-top: 4px;
+        flex-shrink: 0;
+      }
+      .course-rich-card .specs-badge-bar {
+        background: #f8fafc;
+        border: 1px solid #e2e8f0;
+        border-radius: 12px;
+        padding: 12px 16px;
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 1.1rem;
+      }
+      .course-rich-card .btn-conversion {
+        background: linear-gradient(135deg, #15803d 0%, #16a34a 100%);
+        color: #ffffff !important;
+        border-radius: 14px;
+        height: 52px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        font-weight: 800;
+        font-size: 1.12rem;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 14px rgba(22, 163, 74, 0.25);
+        border: none;
+      }
+      .course-rich-card .btn-conversion:hover {
+        background: linear-gradient(135deg, #14532d 0%, #15803d 100%) !important;
+        transform: translateY(-2px);
+        box-shadow: 0 8px 22px rgba(22, 163, 74, 0.4) !important;
+      }
+      .course-rich-card .btn-conversion i {
+        transition: transform 0.3s ease;
+      }
+      .course-rich-card .btn-conversion:hover i {
+        transform: translateX(4px);
+      }
+      .filter-pill-btn {
+        background: #ffffff;
+        border: 1.5px solid #e2e8f0;
+        color: #334155;
+        font-family: 'Times New Roman', Times, serif !important;
+        font-size: 22px !important;
+        font-weight: 700;
+        padding: 11px 28px;
+        border-radius: 35px;
+        cursor: pointer;
+        transition: all 0.25s ease;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+      }
+      .filter-pill-btn:hover, .filter-pill-btn.active {
+        background: #0f172a;
+        color: #ffffff;
+        border-color: #0f172a;
+        box-shadow: 0 4px 12px rgba(15, 23, 42, 0.2);
+      }
+      .metric-stat-card {
+        background: linear-gradient(160deg, #111827 0%, #0f172a 50%, #1e293b 100%) !important;
+        border-radius: 22px;
+        padding: 26px 22px;
+        text-align: left;
+        box-shadow: 0 14px 36px -4px rgba(15, 23, 42, 0.5);
+        transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        height: 100%;
+        position: relative;
+        overflow: hidden;
+      }
+      .metric-stat-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 5px;
+      }
+
+      /* Card 1: Emerald (Placements / Partners) */
+      .metric-stat-card.theme-emerald {
+        border: 2px solid rgba(74, 222, 128, 0.4) !important;
+      }
+      .metric-stat-card.theme-emerald::before {
+        background: linear-gradient(90deg, #10b981, #4ade80);
+      }
+      .metric-stat-card.theme-emerald:hover {
+        transform: translateY(-6px);
+        border-color: #4ade80 !important;
+        box-shadow: 0 24px 48px -10px rgba(16, 185, 129, 0.45), 0 0 0 1px #4ade80 !important;
+      }
+      .metric-stat-card.theme-emerald .metric-icon-box {
+        background: rgba(16, 185, 129, 0.28);
+        border: 2px solid #4ade80;
+        color: #ffffff;
+      }
+      .metric-stat-card.theme-emerald .metric-pill-tag {
+        background: #16a34a !important;
+        border: 1.5px solid #86efac;
+        color: #ffffff !important;
+      }
+      .metric-stat-card.theme-emerald .stat-plus {
+        color: #4ade80;
+        text-shadow: 0 0 20px rgba(74, 222, 128, 0.7);
+      }
+
+      /* Card 2: Cyan (Alumni) */
+      .metric-stat-card.theme-cyan {
+        border: 2px solid rgba(56, 189, 248, 0.4) !important;
+      }
+      .metric-stat-card.theme-cyan::before {
+        background: linear-gradient(90deg, #0284c7, #38bdf8);
+      }
+      .metric-stat-card.theme-cyan:hover {
+        transform: translateY(-6px);
+        border-color: #38bdf8 !important;
+        box-shadow: 0 24px 48px -10px rgba(6, 182, 212, 0.45), 0 0 0 1px #38bdf8 !important;
+      }
+      .metric-stat-card.theme-cyan .metric-icon-box {
+        background: rgba(6, 182, 212, 0.28);
+        border: 2px solid #38bdf8;
+        color: #ffffff;
+      }
+      .metric-stat-card.theme-cyan .metric-pill-tag {
+        background: #0284c7 !important;
+        border: 1.5px solid #7dd3fc;
+        color: #ffffff !important;
+      }
+      .metric-stat-card.theme-cyan .stat-plus {
+        color: #38bdf8;
+        text-shadow: 0 0 20px rgba(56, 189, 248, 0.7);
+      }
+
+      /* Card 3: Biotech Teal (Pharmaceutical Lab & Scholars) */
+      .metric-stat-card.theme-teal {
+        border: 2px solid rgba(45, 212, 191, 0.4) !important;
+      }
+      .metric-stat-card.theme-teal::before {
+        background: linear-gradient(90deg, #0d9488, #2dd4bf);
+      }
+      .metric-stat-card.theme-teal:hover {
+        transform: translateY(-6px);
+        border-color: #2dd4bf !important;
+        box-shadow: 0 24px 48px -10px rgba(13, 148, 136, 0.45), 0 0 0 1px #2dd4bf !important;
+      }
+      .metric-stat-card.theme-teal .metric-icon-box {
+        background: rgba(13, 148, 136, 0.28);
+        border: 2px solid #2dd4bf;
+        color: #ffffff;
+      }
+      .metric-stat-card.theme-teal .metric-pill-tag {
+        background: #0d9488 !important;
+        border: 1.5px solid #99f6e4;
+        color: #ffffff !important;
+      }
+      .metric-stat-card.theme-teal .stat-plus {
+        color: #2dd4bf;
+        text-shadow: 0 0 20px rgba(45, 212, 191, 0.7);
+      }
+
+      /* Card 4: Medicinal Mint / Jade (Faculty & Drug Discovery) */
+      .metric-stat-card.theme-mint {
+        border: 2px solid rgba(52, 211, 153, 0.4) !important;
+      }
+      .metric-stat-card.theme-mint::before {
+        background: linear-gradient(90deg, #059669, #34d399);
+      }
+      .metric-stat-card.theme-mint:hover {
+        transform: translateY(-6px);
+        border-color: #34d399 !important;
+        box-shadow: 0 24px 48px -10px rgba(5, 150, 105, 0.45), 0 0 0 1px #34d399 !important;
+      }
+      .metric-stat-card.theme-mint .metric-icon-box {
+        background: rgba(5, 150, 105, 0.28);
+        border: 2px solid #34d399;
+        color: #ffffff;
+      }
+      .metric-stat-card.theme-mint .metric-pill-tag {
+        background: #059669 !important;
+        border: 1.5px solid #a7f3d0;
+        color: #ffffff !important;
+      }
+      .metric-stat-card.theme-mint .stat-plus {
+        color: #34d399;
+        text-shadow: 0 0 20px rgba(52, 211, 153, 0.7);
+      }
+
+      .metric-stat-card .metric-top-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 16px;
+      }
+      .metric-stat-card .metric-icon-box {
+        width: 56px;
+        height: 56px;
+        border-radius: 14px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.65rem;
+        flex-shrink: 0;
+      }
+      .metric-stat-card .metric-pill-tag {
+        font-size: 0.94rem !important;
+        font-weight: 800 !important;
+        padding: 7px 15px !important;
+        border-radius: 30px;
+        display: inline-flex;
+        align-items: center;
+        gap: 7px;
+        letter-spacing: 0.02em;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+      }
+      .metric-stat-card .stat-number {
+        font-size: 3.6rem !important;
+        font-weight: 900 !important;
+        color: #ffffff !important;
+        line-height: 1;
+        letter-spacing: -0.04em;
+        margin: 2px 0 8px 0;
+      }
+      .metric-stat-card .stat-title {
+        font-size: 1.5rem !important;
+        font-weight: 800 !important;
+        color: #ffffff !important;
+        margin-bottom: 8px;
+        letter-spacing: -0.01em;
+      }
+      .metric-stat-card .stat-desc {
+        font-size: 1.15rem !important;
+        line-height: 1.65 !important;
+        color: #ffffff !important;
+        opacity: 1 !important;
+        font-weight: 500 !important;
+        margin: 0 !important;
+      }
+      .metric-stat-card .stat-footer-chip {
+        margin-top: auto;
+        background: rgba(255, 255, 255, 0.13) !important;
+        border: 1.5px solid rgba(255, 255, 255, 0.25) !important;
+        border-radius: 12px;
+        padding: 11px 16px !important;
+        font-size: 1.02rem !important;
+        font-weight: 700 !important;
+        color: #ffffff !important;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        line-height: 1.35;
+      }
+      /* Apple UI / Top Global University Alumni Cards */
+      .alumni-apple-card {
+        background: #ffffff;
+        border: 1px solid rgba(226, 232, 240, 0.95);
+        border-radius: 24px;
+        padding: 34px 28px;
+        box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.04);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+        position: relative;
+      }
+      .alumni-apple-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 24px 48px -12px rgba(15, 23, 42, 0.1), 0 0 0 1px rgba(22, 163, 74, 0.35) !important;
+      }
+      .alumni-apple-card .alumni-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 22px;
+      }
+      .alumni-apple-card .alumni-avatar-box {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+      }
+      .alumni-apple-card .alumni-avatar-initials {
+        width: 54px;
+        height: 54px;
+        border-radius: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.25rem;
+        font-weight: 800;
+        color: #ffffff;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        flex-shrink: 0;
+      }
+      .alumni-apple-card .alumni-avatar-img {
+        width: 56px;
+        height: 56px;
+        border-radius: 16px;
+        object-fit: cover;
+        object-position: top center;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+        flex-shrink: 0;
+        border: 2px solid #ffffff;
+      }
+      .alumni-apple-card .alumni-meta-name {
+        font-size: 1.3rem;
+        font-weight: 800;
+        color: #0f172a;
+        margin: 0 0 3px 0;
+        letter-spacing: -0.01em;
+      }
+      .alumni-apple-card .alumni-meta-role {
+        font-size: 0.9rem;
+        font-weight: 600;
+        color: #16a34a;
+        margin: 0;
+      }
+      .alumni-apple-card .alumni-degree-badge {
+        background: #f8fafc;
+        border: 1px solid #e2e8f0;
+        color: #334155;
+        font-size: 0.8rem;
+        font-weight: 700;
+        padding: 5px 12px;
+        border-radius: 20px;
+        letter-spacing: 0.3px;
+        white-space: nowrap;
+      }
+      .alumni-apple-card .alumni-quote {
+        font-size: 1.15rem;
+        line-height: 1.68;
+        color: #334155;
+        font-weight: 400;
+        margin-bottom: 22px;
+        flex-grow: 1;
+        position: relative;
+      }
+      .alumni-apple-card .alumni-footer-bar {
+        border-top: 1px solid #f1f5f9;
+        padding-top: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 0.88rem;
+        color: #64748b;
+        font-weight: 500;
+      }
+      /* Apple UI Horizontal Scroll Track */
+      .alumni-carousel-wrapper {
+        position: relative;
+        margin-bottom: 48px;
+      }
+      .alumni-scroll-track {
+        display: flex;
+        gap: 24px;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        padding: 12px 4px 28px 4px;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+      }
+      .alumni-scroll-track::-webkit-scrollbar {
+        display: none;
+      }
+      .alumni-scroll-item {
+        flex: 0 0 calc(33.333% - 16px);
+        min-width: 380px;
+        scroll-snap-align: start;
+      }
+      @media (max-width: 991px) {
+        .alumni-scroll-item {
+          flex: 0 0 calc(50% - 12px);
+          min-width: 320px;
+        }
+      }
+      @media (max-width: 767px) {
+        .alumni-scroll-item {
+          flex: 0 0 88%;
+          min-width: 290px;
+        }
+      }
+      .apple-nav-btn {
+        width: 46px;
+        height: 46px;
+        border-radius: 50%;
+        background: #ffffff;
+        border: 1px solid #e2e8f0;
+        color: #0f172a;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.05rem;
+        cursor: pointer;
+        transition: all 0.25s ease;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      }
+      .apple-nav-btn:hover {
+        background: #0f172a;
+        color: #ffffff;
+        border-color: #0f172a;
+        transform: scale(1.06);
+        box-shadow: 0 8px 20px rgba(15, 23, 42, 0.15);
+      }
+      .metric-stat-card .metric-icon-box {
+        width: 64px;
+        height: 64px;
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.6rem;
+        margin-bottom: 20px;
+        transition: transform 0.3s ease;
+      }
+      .metric-stat-card:hover .metric-icon-box {
+        transform: scale(1.1);
+      }
+    </style>
+  </head>
+
+  <body>
+    <main class="page-wrapper">
+      <!--Header section start-->
+      <div id="navBar"></div>
+      <!--Header section end-->
+
+      <div>
+        <div class="rainbow-gradient-circle"></div>
+        <div class="rainbow-gradient-circle theme-pink"></div>
+      </div>
+      <!-- End Theme Style  -->
+
+      <!-- Start Testimonial Area  -->
+      <div class="rainbow-testimonial-area mt--30 mb--30">
+        <style>
+          .rainbow-testimonial-area .prev-arrow,
+          .rainbow-testimonial-area .next-arrow,
+          .rainbow-testimonial-area .slider-prev,
+          .rainbow-testimonial-area .slider-next,
+          .rainbow-testimonial-area .carousel-control-prev,
+          .rainbow-testimonial-area .carousel-control-next,
+          .rainbow-testimonial-area .slick-prev,
+          .rainbow-testimonial-area .slick-next {
+            display: none !important;
+          }
+        </style>
+
+        <div class="container section-two">
+          <div
+            class="row rainbow-slick-dot testimonial-activation"
+            data-sal="slide-up"
+            data-sal-duration="800"
+          >
+            <div class="col-lg-12">
+              <div class="testimonial-style-two radius">
+                <div class="single-banner banner1"></div>
+              </div>
+            </div>
+
+            <div class="col-lg-12">
+              <div class="testimonial-style-two radius">
+                <div class="single-banner banner2"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <style>
+          .single-banner {
+            width: 100%;
+            height: 550px;
+            border-radius: 10px;
+            background-size: cover;
+            background-position: center center;
+          }
+
+          /* 🖥️ SECTION 1 - Desktop Images */
+          
+          .banner1 {
+            background-image: url("assets/images/banner/web-banner-mai.png");
+          }
+          .banner2 {
+            background-image: url("assets/images/banner/Vaagdevi Banner-1.png");
+          }
+
+          /* 📱 Mobile View */
+          @media (max-width: 768px) {
+            /* Section 1 mobile banners */
+            
+            .banner1 {
+              background-image: url("assets/images/banner/web-banner-mobile.png");
+            }
+            .banner2 {
+              background-image: url("assets/images/banner/Vaagdevi Banner-mobile-1.png");
+            }
+
+            /* Section 2 mobile banners */
+            /* .banner4-sec2 {
+              background-image: url("assets/images/banner/mobile-bg-3.png");
+            }
+            .banner5-sec2 {
+              background-image: url("assets/images/banner/mobile-bg-6.png");
+            }
+            .banner6-sec2 {
+              background-image: url("assets/images/banner/mobile-bg-2.png");
+            } */
+
+            /* Smaller height for phones */
+            .single-banner {
+              height: 300px;
+            }
+          }
+        </style>
+
+        <script>
+          jQuery(function ($) {
+            var $slider = $(".testimonial-activation");
+
+            function enableAutoplay() {
+              if (typeof $.fn.slick !== "function") {
+                console.warn(
+                  "Slick not loaded: include slick.min.js and slick.css before this script.",
+                );
+                return;
+              }
+
+              if ($slider.hasClass("slick-initialized")) {
+                // If your theme already initialized it, just switch on autoplay
+                $slider.slick(
+                  "slickSetOption",
+                  {
+                    autoplay: true,
+                    autoplaySpeed: 3000,
+                    pauseOnHover: false,
+                    dots: true,
+                    infinite: true,
+                  },
+                  true,
+                );
+                $slider.slick("slickPlay");
+              } else {
+                // Otherwise, initialize with autoplay
+                $slider.slick({
+                  dots: true, // keep dots
+                  arrows: false,
+                  infinite: true,
+                  speed: 200,
+                  autoplay: true,
+                  autoplaySpeed: 3000,
+                  slidesToShow: 1,
+                  slidesToScroll: 1,
+                  pauseOnHover: false,
+                });
+              }
+            }
+
+            // Ensure images & fonts are ready before sizing slides
+            if (document.readyState === "complete") {
+              enableAutoplay();
+            } else {
+              $(window).on("load", enableAutoplay);
+            }
+          });
+        </script>
+      </div>
+      <!-- End Testimonial Area  -->
+
+      <!-- Start Welcome / About Section with Full Campus Background Image -->
+      <div class="rainbow-about-area mt--60 mb--60 position-relative overflow-hidden" style="background: url('assets/images/banner/footer.png') no-repeat center center / cover; padding: 40px 0 35px 0; border-radius: 24px; margin-left: 15px; margin-right: 15px; min-height: 750px; display: flex; flex-direction: column; justify-content: space-between;">
+        <!-- Soft Translucent Overlay: Allows campus building photo to shine through clearly -->
+        <div style="position: absolute; inset: 0; background: linear-gradient(135deg, rgba(15, 23, 42, 0.72) 0%, rgba(15, 23, 42, 0.48) 50%, rgba(15, 23, 42, 0.22) 100%); z-index: 1;"></div>
+
+        <div class="container position-relative d-flex flex-column justify-content-between h-100" style="z-index: 2;">
+          
+          <!-- Main Welcome Content Area (Positioned flush at top of section) -->
+          <div class="row align-items-start row--30 pt--0 mb-auto">
+            <div class="col-lg-8 col-md-12">
+              <div class="content text-left" data-sal="slide-up" data-sal-duration="700">
+                <div class="section-title text-left">
+                  <h2 class="title w-600 mb--15 text-white" style="font-size: 2.7rem; line-height: 1.25; font-weight: 700;">
+                    Welcome to <br />
+                    <span style="color: #991b1b; font-weight: 800; font-size: 3.1rem; display: inline-block; line-height: 1.2; margin-top: 4px;">Vaagdevi Institute of Pharmaceutical Sciences</span>
+                  </h2>
+                  <p class="description b1 mb--0" style="font-size: 1.05rem; line-height: 1.75; color: #ffffff !important; font-weight: 500; max-width: 800px; display: block; margin-top: 15px; opacity: 1 !important; text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);">
+                    Established in 2006 under the Viswambhara Educational Society (est. 1993), Vaagdevi Institute of Pharmaceutical Sciences is dedicated to fostering academic excellence, advanced pharmaceutical research, and industry-oriented professional training on a serene 70-acre campus at Bollikunta, Warangal.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Column: Action Buttons -->
+            <div class="col-lg-4 col-md-12 mt-lg-0 mt_md--20 mt_sm--20">
+              <div class="button-group d-flex flex-column flex-sm-row flex-lg-column align-items-lg-end" style="margin-top: -30px; margin-bottom: 25px; gap: 8px !important;" data-sal="slide-left" data-sal-duration="700">
+                <a class="btn-default" href="about.html" style="box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35); width: 260px; height: 48px; display: inline-flex; align-items: center; justify-content: center; border-radius: 12px; color: #ffffff !important;">
+                  <span style="font-size: 0.98rem; font-weight: 700; color: #ffffff;">Read Institutional Profile <i class="fas fa-arrow-right ms-2"></i></span>
+                </a>
+                <a class="btn-default btn-border" href="admission.html" style="background: rgba(15, 23, 42, 0.65); border: 2px solid rgba(255, 255, 255, 0.85) !important; width: 260px; height: 48px; display: inline-flex; align-items: center; justify-content: center; border-radius: 12px; color: #ffffff !important; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);">
+                  <span style="font-size: 0.98rem; font-weight: 700; color: #ffffff;">Admissions Guide <i class="fas fa-graduation-cap ms-2"></i></span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Feature Badges Row (Positioned flush at the bottom of the section) -->
+          <div class="row g-3 mt-auto pt--25" style="border-top: 1px solid rgba(255, 255, 255, 0.2);" data-sal="slide-up" data-sal-duration="700">
+            <div class="col-lg-3 col-md-6 col-sm-6">
+              <div style="background: rgba(255, 255, 255, 0.12); backdrop-filter: blur(16px); border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 20px; padding: 14px 18px; display: flex; align-items: center; gap: 14px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2); height: 100%;">
+                <div style="width: 48px; height: 48px; min-width: 48px; display: flex; align-items: center; justify-content: center;">
+                  <img src="assets/images/icons/badge-approved.svg" alt="PCI Approved" style="width: 46px; height: 46px; object-fit: contain;" />
+                </div>
+                <div>
+                  <h6 style="margin: 0; font-weight: 700; color: #ffffff; font-size: 0.95rem;">PCI & AICTE Approved</h6>
+                  <small style="color: rgba(255, 255, 255, 0.75); font-size: 0.78rem;">Kakatiya University</small>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 col-sm-6">
+              <div style="background: rgba(255, 255, 255, 0.12); backdrop-filter: blur(16px); border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 20px; padding: 14px 18px; display: flex; align-items: center; gap: 14px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2); height: 100%;">
+                <div style="width: 48px; height: 48px; min-width: 48px; display: flex; align-items: center; justify-content: center;">
+                  <img src="assets/images/icons/badge-campus.svg" alt="70-Acre Campus" style="width: 46px; height: 46px; object-fit: contain;" />
+                </div>
+                <div>
+                  <h6 style="margin: 0; font-weight: 700; color: #ffffff; font-size: 0.95rem;">70-Acre Serene Campus</h6>
+                  <small style="color: rgba(255, 255, 255, 0.75); font-size: 0.78rem;">Bollikunta, Warangal</small>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 col-sm-6">
+              <div style="background: rgba(255, 255, 255, 0.12); backdrop-filter: blur(16px); border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 20px; padding: 14px 18px; display: flex; align-items: center; gap: 14px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2); height: 100%;">
+                <div style="width: 48px; height: 48px; min-width: 48px; display: flex; align-items: center; justify-content: center;">
+                  <img src="assets/images/icons/badge-degree.svg" alt="Degree Programs" style="width: 46px; height: 46px; object-fit: contain;" />
+                </div>
+                <div>
+                  <h6 style="margin: 0; font-weight: 700; color: #ffffff; font-size: 0.95rem;">B.Pharm, M.Pharm & Pharm.D</h6>
+                  <small style="color: rgba(255, 255, 255, 0.75); font-size: 0.78rem;">UG, PG & Doctoral</small>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 col-sm-6">
+              <div style="background: rgba(255, 255, 255, 0.12); backdrop-filter: blur(16px); border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 20px; padding: 14px 18px; display: flex; align-items: center; gap: 14px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2); height: 100%;">
+                <div style="width: 48px; height: 48px; min-width: 48px; display: flex; align-items: center; justify-content: center;">
+                  <img src="assets/images/icons/badge-labs.svg" alt="Research Labs" style="width: 46px; height: 46px; object-fit: contain;" />
+                </div>
+                <div>
+                  <h6 style="margin: 0; font-weight: 700; color: #ffffff; font-size: 0.95rem;">Advanced Research Labs</h6>
+                  <small style="color: rgba(255, 255, 255, 0.75); font-size: 0.78rem;">Pharmaceutics & Pharmacology</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <!-- End Welcome / About Section -->
+
+      <!-- Start Courses We Offer Section (Rich UI/UX High Conversion) -->
+      <div class="rainbow-service-area" style="background: #f8fafc; padding: 90px 0 110px 0; border-top: 1px solid #e2e8f0; border-bottom: 1px solid #e2e8f0;">
+        <div class="container">
+          
+          <!-- High-Conversion Section Header -->
+          <div class="row align-items-center justify-content-between" style="margin-bottom: 32px;" data-sal="slide-up" data-sal-duration="700">
+            <div class="col-lg-12 text-start">
+              <style>
+                @keyframes smoothFadeLTR {
+                  0% {
+                    opacity: 0;
+                    transform: translateX(-30px);
+                    filter: blur(4px);
+                  }
+                  100% {
+                    opacity: 1;
+                    transform: translateX(0px);
+                    filter: blur(0px);
+                  }
+                }
+
+                @keyframes subtleShimmerLTR {
+                  0% {
+                    background-position: 0% 50%;
+                  }
+                  100% {
+                    background-position: 200% 50%;
+                  }
+                }
+
+                .fade-header-wrapper {
+                  display: inline-flex;
+                  align-items: center;
+                  gap: 18px;
+                  cursor: pointer;
+                  user-select: none;
+                }
+
+                .fade-item {
+                  display: inline-block;
+                  opacity: 0;
+                  transform: translateX(-30px);
+                  filter: blur(4px);
+                  will-change: transform, opacity, filter;
+                }
+
+                .play-fade .fade-item {
+                  animation: smoothFadeLTR 0.85s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+                  animation-delay: calc(var(--delay) * 1s);
+                }
+
+                .fade-bar {
+                  width: 10px;
+                  height: 68px;
+                  background: linear-gradient(180deg, #16a34a 0%, #0d9488 100%);
+                  border-radius: 9999px;
+                  display: inline-block;
+                  flex-shrink: 0;
+                  box-shadow: 0 0 18px rgba(22, 163, 74, 0.45);
+                }
+
+                .fade-word {
+                  display: inline-block;
+                  white-space: nowrap;
+                }
+
+                .fade-word.highlight {
+                  background: linear-gradient(90deg, #15803d 0%, #22c55e 35%, #06b6d4 70%, #15803d 100%);
+                  background-size: 200% auto;
+                  -webkit-background-clip: text;
+                  -webkit-text-fill-color: transparent;
+                  font-weight: 900;
+                  animation: subtleShimmerLTR 4s linear infinite;
+                  filter: drop-shadow(0 2px 10px rgba(22, 163, 74, 0.25));
+                }
+
+                .fade-header-wrapper.fading-out .fade-item {
+                  opacity: 0;
+                  transform: translateX(18px);
+                  filter: blur(3px);
+                  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+                }
+              </style>
+
+              <div id="fadeHeader" class="fade-header-wrapper play-fade" onclick="triggerFadeHeaderCascade()" title="Click to replay animation">
+                <span class="fade-item fade-bar" style="--delay: 0;"></span>
+                <h2 style="font-size: clamp(2.4rem, 4.8vw, 3.85rem); font-weight: 900; color: #0f172a; letter-spacing: -0.035em; line-height: 1.15; margin: 0;">
+                  <span class="fade-item fade-word" style="--delay: 0.12;">Find</span>
+                  <span class="fade-item fade-word" style="--delay: 0.24;">Your</span>
+                  <span class="fade-item fade-word" style="--delay: 0.36;">Degree.</span>
+                  <span class="fade-item fade-word highlight" style="--delay: 0.48;">Build</span>
+                  <span class="fade-item fade-word highlight" style="--delay: 0.60;">Your</span>
+                  <span class="fade-item fade-word highlight" style="--delay: 0.72;">Future.</span>
+                </h2>
+              </div>
+
+              <script>
+                function triggerFadeHeaderCascade() {
+                  const hdr = document.getElementById('fadeHeader');
+                  if (!hdr) return;
+                  hdr.classList.add('fading-out');
+                  setTimeout(() => {
+                    hdr.classList.remove('play-fade');
+                    hdr.classList.remove('fading-out');
+                    void hdr.offsetWidth;
+                    hdr.classList.add('play-fade');
+                  }, 420);
+                }
+                setInterval(triggerFadeHeaderCascade, 6000);
+              </script>
+            </div>
+          </div>
+
+          <!-- Interactive Program Filter Tabs -->
+          <div class="row" style="margin-bottom: 46px;" data-sal="slide-up" data-sal-duration="700">
+            <div class="col-12 text-start">
+              <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                <button type="button" class="filter-pill-btn active" onclick="filterCourses('all', this)">All Programs (7)</button>
+                <button type="button" class="filter-pill-btn" onclick="filterCourses('ug', this)">Undergraduate (UG)</button>
+                <button type="button" class="filter-pill-btn" onclick="filterCourses('pg', this)">Postgraduate (PG)</button>
+                <button type="button" class="filter-pill-btn" onclick="filterCourses('doc', this)">Doctoral (Pharm.D)</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4-Column Rich Program Grid -->
+          <div class="row g-4" id="coursesGridContainer">
+            
+            <!-- Row 1, Card 1: B.Pharmacy (UG) -->
+            <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 course-item-col" data-category="ug" data-sal="slide-up" data-sal-duration="700" data-sal-delay="100">
+              <div class="course-rich-card">
+                <div>
+                  <div class="course-thumb-box">
+                    <img src="assets/images/home/B.Pharmacy.png" alt="B.Pharmacy at Vaagdevi" />
+                    <span class="glass-pill-dark">UG Degree</span>
+                    <span class="glass-pill-light"><i class="far fa-clock text-success me-1"></i> 4 Years</span>
+                    <span class="glass-pill-bottom"><i class="fas fa-certificate"></i> PCI Approved</span>
+                  </div>
+                  <div class="course-content-box">
+                    <h4 class="course-title">B.Pharmacy</h4>
+                    <ul class="course-highlights">
+                      <li><i class="fas fa-check-circle"></i> Drug formulation & medicinal chemistry</li>
+                      <li><i class="fas fa-check-circle"></i> State-of-the-art pharmaceutics labs</li>
+                      <li><i class="fas fa-check-circle"></i> Hospital & clinical pharmacy internships</li>
+                    </ul>
+                    <div class="specs-badge-bar">
+                      <div><strong class="text-dark">Intake:</strong> <span class="text-secondary">100 Seats</span></div>
+                      <div><strong class="text-dark">Eligibility:</strong> <span class="text-secondary">10+2 / EAMCET</span></div>
+                    </div>
+                  </div>
+                </div>
+                <div style="padding: 0 20px 20px 20px;">
+                  <a href="admission.html" class="btn-conversion">
+                    <span>Apply for B.Pharm</span>
+                    <i class="fas fa-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Row 1, Card 2: Pharm.D (Doctor of Pharmacy) (Doctoral) -->
+            <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 course-item-col" data-category="doc" data-sal="slide-up" data-sal-duration="700" data-sal-delay="200">
+              <div class="course-rich-card">
+                <div>
+                  <div class="course-thumb-box">
+                    <img src="assets/images/home/Pharm.D (Doctor of Pharmacy).png" alt="Pharm.D Doctor of Pharmacy" />
+                    <span class="glass-pill-dark">Doctoral Program</span>
+                    <span class="glass-pill-light"><i class="far fa-clock text-success me-1"></i> 6 Years</span>
+                    <span class="glass-pill-bottom"><i class="fas fa-hospital-alt"></i> Hospital Residency</span>
+                  </div>
+                  <div class="course-content-box">
+                    <h4 class="course-title">Pharm.D (Doctor of Pharmacy)</h4>
+                    <ul class="course-highlights">
+                      <li><i class="fas fa-check-circle"></i> Multi-specialty clinical hospital ward rounds</li>
+                      <li><i class="fas fa-check-circle"></i> Patient pharmacotherapy & drug interactions</li>
+                      <li><i class="fas fa-check-circle"></i> Eligible for Dr. prefix & global practice</li>
+                    </ul>
+                    <div class="specs-badge-bar">
+                      <div><strong class="text-dark">Intake:</strong> <span class="text-secondary">30 Seats</span></div>
+                      <div><strong class="text-dark">Eligibility:</strong> <span class="text-secondary">10+2 / EAMCET</span></div>
+                    </div>
+                  </div>
+                </div>
+                <div style="padding: 0 20px 20px 20px;">
+                  <a href="admission.html" class="btn-conversion">
+                    <span>Apply for Pharm.D</span>
+                    <i class="fas fa-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Row 1, Card 3: M.Pharm – Pharmaceutics (PG) -->
+            <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 course-item-col" data-category="pg" data-sal="slide-up" data-sal-duration="700" data-sal-delay="300">
+              <div class="course-rich-card">
+                <div>
+                  <div class="course-thumb-box">
+                    <img src="assets/images/home/M.Pharmacy – Pharmaceutics.png" alt="M.Pharm Pharmaceutics" />
+                    <span class="glass-pill-dark">PG Degree</span>
+                    <span class="glass-pill-light"><i class="far fa-clock text-success me-1"></i> 2 Years</span>
+                    <span class="glass-pill-bottom"><i class="fas fa-flask"></i> R&D Specialized</span>
+                  </div>
+                  <div class="course-content-box">
+                    <h4 class="course-title">M.Pharm – Pharmaceutics</h4>
+                    <ul class="course-highlights">
+                      <li><i class="fas fa-check-circle"></i> Novel drug delivery systems (NDDS)</li>
+                      <li><i class="fas fa-check-circle"></i> Nanomedicine & polymer formulation</li>
+                      <li><i class="fas fa-check-circle"></i> Direct thesis & industry R&D projects</li>
+                    </ul>
+                    <div class="specs-badge-bar">
+                      <div><strong class="text-dark">Intake:</strong> <span class="text-secondary">15 Seats</span></div>
+                      <div><strong class="text-dark">Eligibility:</strong> <span class="text-secondary">B.Pharm / GPAT</span></div>
+                    </div>
+                  </div>
+                </div>
+                <div style="padding: 0 20px 20px 20px;">
+                  <a href="admission.html" class="btn-conversion">
+                    <span>Apply for M.Pharm</span>
+                    <i class="fas fa-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Row 1, Card 4: Admissions 2026-27 Luxury Feature Card (In First Row) -->
+            <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 course-item-col" data-category="all" data-sal="slide-up" data-sal-duration="700" data-sal-delay="400">
+              <div class="course-rich-card" style="background: #0f172a; border: 1px solid rgba(255,255,255,0.12); color: #ffffff; box-shadow: 0 16px 36px rgba(15, 23, 42, 0.25);">
+                <div>
+                  <div style="height: 190px; width: 100%; position: relative; background: radial-gradient(circle at 50% 35%, rgba(22, 163, 74, 0.2) 0%, rgba(15, 23, 42, 0.95) 100%); display: flex; flex-direction: column; align-items: center; justify-content: center; border-bottom: 1px solid rgba(255,255,255,0.08);">
+                    <span class="glass-pill-dark" style="background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.15); color: #ffffff;">
+                      <span style="display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: #16a34a; margin-right: 6px; box-shadow: 0 0 6px #16a34a;"></span>Live Desk
+                    </span>
+                    <span class="glass-pill-light" style="background: rgba(255, 255, 255, 0.08); color: #ffffff; border: 1px solid rgba(255, 255, 255, 0.15);">
+                      <i class="fas fa-calendar-alt text-success me-1"></i> 2026–27
+                    </span>
+                    
+                    <div style="width: 58px; height: 58px; border-radius: 18px; background: rgba(22, 163, 74, 0.16); border: 1px solid rgba(22, 163, 74, 0.45); display: flex; align-items: center; justify-content: center; font-size: 1.6rem; color: #16a34a; margin-bottom: 8px;">
+                      <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <span style="color: #ffffff; font-size: 1.12rem; font-weight: 800; letter-spacing: 0.5px;">Admissions & Guidance</span>
+                  </div>
+                  
+                  <div class="course-content-box" style="padding: 24px 22px 0 22px;">
+                    <h4 class="course-title" style="color: #ffffff; font-size: 1.55rem; min-height: auto; margin-bottom: 14px;">Need Help Choosing?</h4>
+                    <ul class="course-highlights" style="margin-bottom: 18px;">
+                      <li style="color: #e2e8f0; font-size: 1.25rem;"><i class="fas fa-check-circle" style="color: #16a34a; font-size: 1.15rem;"></i> Direct Merit & Convener quota help</li>
+                      <li style="color: #e2e8f0; font-size: 1.25rem;"><i class="fas fa-check-circle" style="color: #16a34a; font-size: 1.15rem;"></i> Scholarship & fee concessions</li>
+                      <li style="color: #e2e8f0; font-size: 1.25rem;"><i class="fas fa-check-circle" style="color: #16a34a; font-size: 1.15rem;"></i> Guided campus & research lab tour</li>
+                    </ul>
+                    
+                    <!-- Click to Call Helpline Box (2-Color Theme) -->
+                    <a href="tel:+919154984523" style="display: flex; align-items: center; justify-content: space-between; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.12); border-radius: 14px; padding: 12px 16px; margin-bottom: 20px; text-decoration: none; transition: all 0.25s ease;">
+                      <div>
+                        <div style="font-size: 0.92rem; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 3px;">Admissions Helpline</div>
+                        <div style="font-size: 1.35rem; font-weight: 800; color: #ffffff;">+91 91549 84523</div>
+                      </div>
+                      <div style="width: 44px; height: 44px; border-radius: 50%; background: rgba(22, 163, 74, 0.18); border: 1px solid rgba(22, 163, 74, 0.45); display: flex; align-items: center; justify-content: center; color: #16a34a; font-size: 1.1rem;">
+                        <i class="fas fa-phone-alt"></i>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                
+                <div style="padding: 0 22px 22px 22px;">
+                  <a href="contact.html" class="btn-conversion" style="background: linear-gradient(135deg, #15803d 0%, #16a34a 100%); font-weight: 800; height: 52px; font-size: 1.12rem;">
+                    <span>Apply for 2026 Batch</span>
+                    <i class="fas fa-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Row 2, Card 5: M.Pharm – Pharmacology (PG) -->
+            <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 course-item-col" data-category="pg" data-sal="slide-up" data-sal-duration="700" data-sal-delay="100">
+              <div class="course-rich-card">
+                <div>
+                  <div class="course-thumb-box">
+                    <img src="assets/images/home/M.Pharmacy – Pharmacology.png" alt="M.Pharm Pharmacology" />
+                    <span class="glass-pill-dark">PG Degree</span>
+                    <span class="glass-pill-light"><i class="far fa-clock text-success me-1"></i> 2 Years</span>
+                    <span class="glass-pill-bottom"><i class="fas fa-microscope"></i> Clinical Research</span>
+                  </div>
+                  <div class="course-content-box">
+                    <h4 class="course-title">M.Pharm – Pharmacology</h4>
+                    <ul class="course-highlights">
+                      <li><i class="fas fa-check-circle"></i> Pharmacodynamics & molecular targets</li>
+                      <li><i class="fas fa-check-circle"></i> Preclinical toxicology & animal modeling</li>
+                      <li><i class="fas fa-check-circle"></i> Clinical trial data analysis & CRO careers</li>
+                    </ul>
+                    <div class="specs-badge-bar">
+                      <div><strong class="text-dark">Intake:</strong> <span class="text-secondary">15 Seats</span></div>
+                      <div><strong class="text-dark">Eligibility:</strong> <span class="text-secondary">B.Pharm / GPAT</span></div>
+                    </div>
+                  </div>
+                </div>
+                <div style="padding: 0 20px 20px 20px;">
+                  <a href="admission.html" class="btn-conversion">
+                    <span>Apply for M.Pharm</span>
+                    <i class="fas fa-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Row 2, Card 6: M.Pharm – Industrial Pharmacy (PG) -->
+            <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 course-item-col" data-category="pg" data-sal="slide-up" data-sal-duration="700" data-sal-delay="200">
+              <div class="course-rich-card">
+                <div>
+                  <div class="course-thumb-box">
+                    <img src="assets/images/home/M.Pharmacy – Industrial Pharmacy.png" alt="M.Pharm Industrial Pharmacy" />
+                    <span class="glass-pill-dark">PG Degree</span>
+                    <span class="glass-pill-light"><i class="far fa-clock text-success me-1"></i> 2 Years</span>
+                    <span class="glass-pill-bottom"><i class="fas fa-industry"></i> cGMP Compliance</span>
+                  </div>
+                  <div class="course-content-box">
+                    <h4 class="course-title">M.Pharm – Industrial Pharmacy</h4>
+                    <ul class="course-highlights">
+                      <li><i class="fas fa-check-circle"></i> Pharmaceutical manufacturing & scale-up</li>
+                      <li><i class="fas fa-check-circle"></i> cGMP compliance & regulatory filings</li>
+                      <li><i class="fas fa-check-circle"></i> QA/QC audits & industrial pilot plant</li>
+                    </ul>
+                    <div class="specs-badge-bar">
+                      <div><strong class="text-dark">Intake:</strong> <span class="text-secondary">15 Seats</span></div>
+                      <div><strong class="text-dark">Eligibility:</strong> <span class="text-secondary">B.Pharm / GPAT</span></div>
+                    </div>
+                  </div>
+                </div>
+                <div style="padding: 0 20px 20px 20px;">
+                  <a href="admission.html" class="btn-conversion">
+                    <span>Apply for M.Pharm</span>
+                    <i class="fas fa-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Row 2, Card 7: M.Pharm – Pharmaceutical Analysis (PG) -->
+            <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 course-item-col" data-category="pg" data-sal="slide-up" data-sal-duration="700" data-sal-delay="300">
+              <div class="course-rich-card">
+                <div>
+                  <div class="course-thumb-box">
+                    <img src="assets/images/home/pharmacuitical analysis.png" alt="M.Pharm Pharmaceutical Analysis" />
+                    <span class="glass-pill-dark">PG Degree</span>
+                    <span class="glass-pill-light"><i class="far fa-clock text-success me-1"></i> 2 Years</span>
+                    <span class="glass-pill-bottom"><i class="fas fa-chart-line"></i> HPLC & QA Testing</span>
+                  </div>
+                  <div class="course-content-box">
+                    <h4 class="course-title">M.Pharm – Pharm. Analysis</h4>
+                    <ul class="course-highlights">
+                      <li><i class="fas fa-check-circle"></i> HPLC, UV-Vis, FTIR & spectroscopy</li>
+                      <li><i class="fas fa-check-circle"></i> Bio-analytical method validation</li>
+                      <li><i class="fas fa-check-circle"></i> Drug stability & purity testing</li>
+                    </ul>
+                    <div class="specs-badge-bar">
+                      <div><strong class="text-dark">Intake:</strong> <span class="text-secondary">15 Seats</span></div>
+                      <div><strong class="text-dark">Eligibility:</strong> <span class="text-secondary">B.Pharm / GPAT</span></div>
+                    </div>
+                  </div>
+                </div>
+                <div style="padding: 0 20px 20px 20px;">
+                  <a href="admission.html" class="btn-conversion">
+                    <span>Apply for M.Pharm</span>
+                    <i class="fas fa-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Row 2, Card 8: Pharm.D (Post Baccalaureate) (Doctoral) -->
+            <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 course-item-col" data-category="doc" data-sal="slide-up" data-sal-duration="700" data-sal-delay="400">
+              <div class="course-rich-card">
+                <div>
+                  <div class="course-thumb-box">
+                    <img src="assets/images/home/Pharm.D (Post Baccalaureate).png" alt="Pharm.D Post Baccalaureate" />
+                    <span class="glass-pill-dark">Post Baccalaureate</span>
+                    <span class="glass-pill-light"><i class="far fa-clock text-success me-1"></i> 3 Years</span>
+                    <span class="glass-pill-bottom"><i class="fas fa-user-md"></i> Clinical Care</span>
+                  </div>
+                  <div class="course-content-box">
+                    <h4 class="course-title">Pharm.D (Post Baccalaureate)</h4>
+                    <ul class="course-highlights">
+                      <li><i class="fas fa-check-circle"></i> 3-year fast-track clinical residency</li>
+                      <li><i class="fas fa-check-circle"></i> Intensive ICU & clinical pharmacology</li>
+                      <li><i class="fas fa-check-circle"></i> For B.Pharm graduates aiming for doctorates</li>
+                    </ul>
+                    <div class="specs-badge-bar">
+                      <div><strong class="text-dark">Intake:</strong> <span class="text-secondary">10 Seats</span></div>
+                      <div><strong class="text-dark">Eligibility:</strong> <span class="text-secondary">B.Pharm Graduate</span></div>
+                    </div>
+                  </div>
+                </div>
+                <div style="padding: 0 20px 20px 20px;">
+                  <a href="admission.html" class="btn-conversion">
+                    <span>Apply for Post Bacc</span>
+                    <i class="fas fa-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <!-- End Courses We Offer Section -->
+
+      <script>
+        function filterCourses(category, btn) {
+          // Update active filter pill
+          document.querySelectorAll('.filter-pill-btn').forEach(function(el) {
+            el.classList.remove('active');
+          });
+          if (btn) btn.classList.add('active');
+
+          // Filter course cards
+          var cards = document.querySelectorAll('.course-item-col');
+          cards.forEach(function(card) {
+            var cat = card.getAttribute('data-category');
+            if (category === 'all' || cat === category || cat === 'all') {
+              card.style.display = 'block';
+              card.style.opacity = '1';
+            } else {
+              card.style.display = 'none';
+            }
+          });
+        }
+      </script>
+        </div>
+      </div>
+      
+
+      <!-- Start Unified Placements & Career Success Showcase -->
+      <div class="rainbow-counterup-area" style="background: linear-gradient(180deg, #f8fafc 0%, #ffffff 50%, #f8fafc 100%); padding: 90px 0 100px 0; border-top: 1px solid #e2e8f0; border-bottom: 1px solid #e2e8f0;">
+        <div class="container">
+          <!-- Section Title -->
+          <div class="row justify-content-center">
+            <div class="col-xl-9 col-lg-10 text-center">
+              <div style="margin-bottom: 54px;" data-sal="slide-up" data-sal-duration="700">
+                <div style="display: inline-flex; align-items: center; gap: 8px; background: rgba(22, 163, 74, 0.08); border: 1px solid rgba(22, 163, 74, 0.22); padding: 6px 18px; border-radius: 9999px; margin-bottom: 16px;">
+                  <span style="width: 8px; height: 8px; border-radius: 50%; background: #16a34a; display: inline-block; box-shadow: 0 0 8px rgba(22, 163, 74, 0.6);"></span>
+                  <span style="color: #15803d; font-size: 0.85rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase;">PROVEN CAREER TRACK RECORD</span>
+                </div>
+                
+                <h2 style="font-size: 3rem; font-weight: 800; color: #0f172a; letter-spacing: -0.03em; line-height: 1.2; margin-bottom: 0;">
+                  Our Success Story <span style="background: linear-gradient(135deg, #15803d 0%, #16a34a 50%, #0d9488 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: 900;">in Figures</span>
+                </h2>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4-Column Metric Bento Cards -->
+          <div class="row g-4" style="margin-bottom: 50px;">
+            
+            <!-- Metric 1: Recruiting Partners (Emerald) -->
+            <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-12" data-sal="slide-up" data-sal-duration="700" data-sal-delay="100">
+              <div class="metric-stat-card theme-emerald" style="background: linear-gradient(160deg, #111827 0%, #0f172a 60%, #1e293b 100%) !important; border: 2px solid #22c55e !important; border-radius: 22px; padding: 28px 24px; box-shadow: 0 12px 32px -4px rgba(15, 23, 42, 0.45);">
+                <div class="metric-top-row" style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px;">
+                  <div class="metric-icon-box" style="width: 58px; height: 58px; border-radius: 16px; background: rgba(34, 197, 94, 0.2); border: 2px solid #22c55e; color: #4ade80; display: inline-flex; align-items: center; justify-content: center; font-size: 1.65rem;">
+                    <i class="fas fa-handshake"></i>
+                  </div>
+                  <span class="metric-pill-tag" style="background: #16a34a !important; border: 1.5px solid #86efac; color: #ffffff !important; font-size: 0.95rem !important; font-weight: 800 !important; padding: 8px 16px !important; border-radius: 30px; display: inline-flex; align-items: center; gap: 7px; box-shadow: 0 4px 12px rgba(22, 163, 74, 0.35);"><i class="fas fa-check-circle" style="color: #ffffff;"></i> 98% Placed</span>
+                </div>
+                <div class="stat-number" style="font-size: 3.6rem !important; font-weight: 900 !important; color: #ffffff !important; line-height: 1 !important; letter-spacing: -0.04em; margin: 4px 0 10px 0;">
+                  <span class="counter">250</span><span class="stat-plus" style="color: #4ade80; font-weight: 900; text-shadow: 0 0 16px rgba(74, 222, 128, 0.6);">+</span>
+                </div>
+                <h5 class="stat-title" style="font-size: 1.55rem !important; font-weight: 800 !important; color: #ffffff !important; margin: 0; letter-spacing: -0.02em;">Recruiting Partners</h5>
+              </div>
+            </div>
+
+            <!-- Metric 2: Alumni (Emerald) -->
+            <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-12" data-sal="slide-up" data-sal-duration="700" data-sal-delay="200">
+              <div class="metric-stat-card theme-emerald" style="background: linear-gradient(160deg, #111827 0%, #0f172a 60%, #1e293b 100%) !important; border: 2px solid #22c55e !important; border-radius: 22px; padding: 28px 24px; box-shadow: 0 12px 32px -4px rgba(15, 23, 42, 0.45);">
+                <div class="metric-top-row" style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px;">
+                  <div class="metric-icon-box" style="width: 58px; height: 58px; border-radius: 16px; background: rgba(34, 197, 94, 0.2); border: 2px solid #22c55e; color: #4ade80; display: inline-flex; align-items: center; justify-content: center; font-size: 1.65rem;">
+                    <i class="fas fa-user-graduate"></i>
+                  </div>
+                  <span class="metric-pill-tag" style="background: #16a34a !important; border: 1.5px solid #86efac; color: #ffffff !important; font-size: 0.95rem !important; font-weight: 800 !important; padding: 8px 16px !important; border-radius: 30px; display: inline-flex; align-items: center; gap: 7px; box-shadow: 0 4px 12px rgba(22, 163, 74, 0.35);"><i class="fas fa-globe-americas" style="color: #ffffff;"></i> 18+ Nations</span>
+                </div>
+                <div class="stat-number" style="font-size: 3.6rem !important; font-weight: 900 !important; color: #ffffff !important; line-height: 1 !important; letter-spacing: -0.04em; margin: 4px 0 10px 0;">
+                  <span class="counter">15,000</span><span class="stat-plus" style="color: #4ade80; font-weight: 900; text-shadow: 0 0 16px rgba(74, 222, 128, 0.6);">+</span>
+                </div>
+                <h5 class="stat-title" style="font-size: 1.55rem !important; font-weight: 800 !important; color: #ffffff !important; margin: 0; letter-spacing: -0.02em;">Proud Alumni</h5>
+              </div>
+            </div>
+
+            <!-- Metric 3: Students (Emerald) -->
+            <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-12" data-sal="slide-up" data-sal-duration="700" data-sal-delay="300">
+              <div class="metric-stat-card theme-emerald" style="background: linear-gradient(160deg, #111827 0%, #0f172a 60%, #1e293b 100%) !important; border: 2px solid #22c55e !important; border-radius: 22px; padding: 28px 24px; box-shadow: 0 12px 32px -4px rgba(15, 23, 42, 0.45);">
+                <div class="metric-top-row" style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px;">
+                  <div class="metric-icon-box" style="width: 58px; height: 58px; border-radius: 16px; background: rgba(34, 197, 94, 0.2); border: 2px solid #22c55e; color: #4ade80; display: inline-flex; align-items: center; justify-content: center; font-size: 1.65rem;">
+                    <i class="fas fa-capsules"></i>
+                  </div>
+                  <span class="metric-pill-tag" style="background: #16a34a !important; border: 1.5px solid #86efac; color: #ffffff !important; font-size: 0.95rem !important; font-weight: 800 !important; padding: 8px 16px !important; border-radius: 30px; display: inline-flex; align-items: center; gap: 7px; box-shadow: 0 4px 12px rgba(22, 163, 74, 0.35);"><i class="fas fa-mortar-pestle" style="color: #ffffff;"></i> 70-Acres</span>
+                </div>
+                <div class="stat-number" style="font-size: 3.6rem !important; font-weight: 900 !important; color: #ffffff !important; line-height: 1 !important; letter-spacing: -0.04em; margin: 4px 0 10px 0;">
+                  <span class="counter">5,000</span><span class="stat-plus" style="color: #4ade80; font-weight: 900; text-shadow: 0 0 16px rgba(74, 222, 128, 0.6);">+</span>
+                </div>
+                <h5 class="stat-title" style="font-size: 1.55rem !important; font-weight: 800 !important; color: #ffffff !important; margin: 0; letter-spacing: -0.02em;">Enrolled Scholars</h5>
+              </div>
+            </div>
+
+            <!-- Metric 4: Faculty (Emerald) -->
+            <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-12" data-sal="slide-up" data-sal-duration="700" data-sal-delay="400">
+              <div class="metric-stat-card theme-emerald" style="background: linear-gradient(160deg, #111827 0%, #0f172a 60%, #1e293b 100%) !important; border: 2px solid #22c55e !important; border-radius: 22px; padding: 28px 24px; box-shadow: 0 12px 32px -4px rgba(15, 23, 42, 0.45);">
+                <div class="metric-top-row" style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px;">
+                  <div class="metric-icon-box" style="width: 58px; height: 58px; border-radius: 16px; background: rgba(34, 197, 94, 0.2); border: 2px solid #22c55e; color: #4ade80; display: inline-flex; align-items: center; justify-content: center; font-size: 1.65rem;">
+                    <i class="fas fa-microscope"></i>
+                  </div>
+                  <span class="metric-pill-tag" style="background: #16a34a !important; border: 1.5px solid #86efac; color: #ffffff !important; font-size: 0.95rem !important; font-weight: 800 !important; padding: 8px 16px !important; border-radius: 30px; display: inline-flex; align-items: center; gap: 7px; box-shadow: 0 4px 12px rgba(22, 163, 74, 0.35);"><i class="fas fa-award" style="color: #ffffff;"></i> Ph.D Guides</span>
+                </div>
+                <div class="stat-number" style="font-size: 3.6rem !important; font-weight: 900 !important; color: #ffffff !important; line-height: 1 !important; letter-spacing: -0.04em; margin: 4px 0 10px 0;">
+                  <span class="counter">46</span><span class="stat-plus" style="color: #4ade80; font-weight: 900; text-shadow: 0 0 16px rgba(74, 222, 128, 0.6);">+</span>
+                </div>
+                <h5 class="stat-title" style="font-size: 1.55rem !important; font-weight: 800 !important; color: #ffffff !important; margin: 0; letter-spacing: -0.02em;">Expert Faculty</h5>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Top Recruiters Section Header -->
+          <div class="row">
+            <div class="col-12 text-start" style="margin-bottom: 30px;">
+              <div style="display: inline-flex; align-items: center; gap: 18px;">
+                <span style="width: 9px; height: 62px; background: linear-gradient(180deg, #16a34a 0%, #0d9488 100%); border-radius: 9999px; display: inline-block; flex-shrink: 0; box-shadow: 0 0 16px rgba(22, 163, 74, 0.5);"></span>
+                <h2 style="font-size: clamp(2.3rem, 4.2vw, 3.4rem); font-weight: 900; color: #0f172a; letter-spacing: -0.035em; margin: 0; line-height: 1.15; text-align: left;">
+                  Our Students Are Placed At <span style="background: linear-gradient(135deg, #15803d 0%, #16a34a 50%, #0d9488 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: 900;">Top Global Enterprises</span>
+                </h2>
+              </div>
+            </div>
+          </div>
+
+          <!-- Top Recruiters Logo Grid -->
+          <div class="row g-3 justify-content-center align-items-center">
+            <div class="col-lg-12">
+              <div style="background: linear-gradient(180deg, #f8fafc 0%, #ffffff 50%, #f8fafc 100%); border: 1.5px solid #e2e8f0; border-radius: 28px; padding: 36px 32px; box-shadow: 0 8px 30px -4px rgba(15, 23, 42, 0.05);">
+                <style>
+                  .recruiter-grid-list {
+                    margin: 0;
+                    padding: 0;
+                    list-style: none;
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 18px;
+                  }
+                  .recruiter-card-item {
+                    flex: 0 0 calc(20% - 15px);
+                    max-width: calc(20% - 15px);
+                    min-width: 190px;
+                    height: 104px;
+                    background: #ffffff;
+                    border: 1.5px solid #e2e8f0;
+                    border-radius: 20px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 14px 24px;
+                    box-shadow: 0 3px 12px rgba(15, 23, 42, 0.04);
+                    transition: all 0.32s cubic-bezier(0.16, 1, 0.3, 1);
+                    text-decoration: none;
+                    position: relative;
+                    overflow: hidden;
+                  }
+                  .recruiter-card-item::before {
+                    content: '';
+                    position: absolute;
+                    inset: 0;
+                    background: radial-gradient(circle at 50% 0%, rgba(22, 163, 74, 0.06), transparent 70%);
+                    opacity: 0;
+                    transition: opacity 0.3s ease;
+                  }
+                  .recruiter-card-item:hover {
+                    transform: translateY(-6px);
+                    border-color: #4ade80 !important;
+                    box-shadow: 0 16px 32px -4px rgba(22, 163, 74, 0.2), 0 0 0 1.5px #16a34a !important;
+                  }
+                  .recruiter-card-item:hover::before {
+                    opacity: 1;
+                  }
+                  .recruiter-card-item a {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 100%;
+                    height: 100%;
+                    position: relative;
+                    z-index: 1;
+                  }
+                  .recruiter-card-item img {
+                    max-height: 66px;
+                    max-width: 170px;
+                    width: auto;
+                    height: auto;
+                    object-fit: contain;
+                    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+                  }
+                  .recruiter-card-item:hover img {
+                    transform: scale(1.08) !important;
+                  }
+                  @media (max-width: 1199px) and (min-width: 768px) {
+                    .recruiter-card-item {
+                      flex: 0 0 calc(33.333% - 14px);
+                      max-width: calc(33.333% - 14px);
+                      height: 96px;
+                    }
+                  }
+                  @media (max-width: 767px) and (min-width: 480px) {
+                    .recruiter-card-item {
+                      flex: 0 0 calc(50% - 12px);
+                      max-width: calc(50% - 12px);
+                      height: 88px;
+                    }
+                  }
+                  @media (max-width: 479px) {
+                    .recruiter-card-item {
+                      flex: 0 0 100%;
+                      max-width: 100%;
+                      height: 80px;
+                    }
+                  }
+                </style>
+                <ul class="recruiter-grid-list">
+                  <li class="recruiter-card-item">
+                    <a href="#"><img src="assets/images/brand/apollo-pharmacy.png" alt="Apollo Pharmacy" style="max-height: 62px;" /></a>
+                  </li>
+                  <li class="recruiter-card-item">
+                    <a href="#"><img src="assets/images/brand/medplus.png" alt="MedPlus" style="max-height: 50px;" /></a>
+                  </li>
+                  <li class="recruiter-card-item">
+                    <a href="#"><img src="assets/images/brand/biological-e.png" alt="Biological E. Limited" style="max-height: 58px;" /></a>
+                  </li>
+                  <li class="recruiter-card-item">
+                    <a href="#"><img src="assets/images/brand/quess.png" alt="QUESS" style="max-height: 46px;" /></a>
+                  </li>
+                  <li class="recruiter-card-item">
+                    <a href="#"><img src="assets/images/brand/brand-01.png" alt="GE Healthcare" style="max-height: 64px; transform: scale(1.25);" /></a>
+                  </li>
+                  <li class="recruiter-card-item">
+                    <a href="#"><img src="assets/images/brand/brand-02.png" alt="Sun Pharma" style="max-height: 66px; transform: scale(1.15);" /></a>
+                  </li>
+                  <li class="recruiter-card-item">
+                    <a href="#"><img src="assets/images/brand/brand-03.png" alt="Cipla" style="max-height: 60px; transform: scale(1.18);" /></a>
+                  </li>
+                  <li class="recruiter-card-item">
+                    <a href="#"><img src="assets/images/brand/brand-04.png" alt="Pfizer" style="max-height: 66px; transform: scale(1.15);" /></a>
+                  </li>
+                  <li class="recruiter-card-item">
+                    <a href="#"><img src="assets/images/brand/brand-05.png" alt="Biocon" style="max-height: 62px; transform: scale(1.35);" /></a>
+                  </li>
+                  <li class="recruiter-card-item">
+                    <a href="#"><img src="assets/images/brand/brand-06.png" alt="Abbott" style="max-height: 60px; transform: scale(1.4);" /></a>
+                  </li>
+                  <li class="recruiter-card-item">
+                    <a href="#"><img src="assets/images/brand/brand-07.png" alt="GSK" style="max-height: 60px; transform: scale(1.55);" /></a>
+                  </li>
+                  <li class="recruiter-card-item">
+                    <a href="#"><img src="assets/images/brand/brand-08.png" alt="RC India" style="max-height: 64px; transform: scale(1.3);" /></a>
+                  </li>
+                  <li class="recruiter-card-item">
+                    <a href="#"><img src="assets/images/brand/brand-09.png" alt="Pharma Enterprise" style="max-height: 60px; transform: scale(1.7);" /></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <!-- End Placements & Career Success Showcase -->
+
+      <!-- Start Call To Action Area  -->
+      <div class="rainbow-callto-action-area mt--60 mb--60">
+        <div class="wrapper">
+          <div class="rainbow-callto-action clltoaction-style-default style-5">
+            <div class="container">
+              <div
+                class="row row--0 align-items-center content-wrapper theme-shape shadow"
+              >
+                <div class="col-lg-12">
+                  <div class="inner">
+                    <div class="content text-center">
+                      <h2 class="title">
+                        Document Your Academic Accomplishments with Pride.
+                      </h2>
+                      <h6 class="subtitle">
+                        Your Best Destination for Learning & Growth
+                      </h6>
+                      <div class="call-to-btn">
+                        <a class="btn-default btn-icon me-4 mb-4" href="#"
+                          >Admissions Open
+                          <i class="feather-arrow-right"></i>
+                        </a>
+                        <a
+                          class="btn-default btn-icon"
+                          href="assets/Vaagdevi degree brochure 15X25 fb.pdf"
+                          >Download Brochure
+                          <i class="feather-arrow-right"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Call To Action Area  -->
+
+ 
+      <!-- Start Top Global University Alumni Showcase (Apple UI Inspiration - Scrollable) -->
+      <div class="rainbow-testimonial-area" style="background: #f8fafc; padding: 100px 0 110px 0; border-top: 1px solid #e2e8f0; border-bottom: 1px solid #e2e8f0;">
+        <div class="container">
+          
+          <!-- Section Header with Interactive Scroll Buttons -->
+          <div class="row align-items-end justify-content-between" style="margin-bottom: 40px;" data-sal="slide-up" data-sal-duration="700">
+            <div class="col-lg-8 text-start">
+              <div style="display: inline-flex; align-items: center; gap: 8px; background: rgba(22, 163, 74, 0.08); border: 1px solid rgba(22, 163, 74, 0.22); padding: 6px 18px; border-radius: 9999px; margin-bottom: 16px;">
+                <span style="width: 8px; height: 8px; border-radius: 50%; background: #16a34a; display: inline-block; box-shadow: 0 0 8px rgba(22, 163, 74, 0.6);"></span>
+                <span style="color: #15803d; font-size: 0.85rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase;">GLOBAL ALUMNI IMPACT • 15,000+ WORLDWIDE</span>
+              </div>
+              
+              <h2 style="font-size: 3rem; font-weight: 800; color: #0f172a; letter-spacing: -0.03em; line-height: 1.2; margin-bottom: 14px;">
+                Voices of Leadership & Innovation
+              </h2>
+              
+              <p style="font-size: 1.2rem; line-height: 1.65; color: #475569; max-width: 780px; margin: 0; font-weight: 400;">
+                Discover how Vaagdevi pharmacy graduates are advancing novel therapeutics, clinical research, and hospital healthcare leadership across the globe.
+              </p>
+            </div>
+
+            <!-- Apple-Style Scroll Controls -->
+            <div class="col-lg-4 text-lg-end mt-4 mt-lg-0">
+              <div style="display: inline-flex; align-items: center; gap: 12px;">
+                <button type="button" class="apple-nav-btn" onclick="scrollAlumni(-1)" title="Previous Alumni Story" aria-label="Previous">
+                  <i class="fas fa-chevron-left"></i>
+                </button>
+                <button type="button" class="apple-nav-btn" onclick="scrollAlumni(1)" title="Next Alumni Story" aria-label="Next">
+                  <i class="fas fa-chevron-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Apple Pro Scrollable Alumni Carousel Track -->
+          <div class="alumni-carousel-wrapper" data-sal="slide-up" data-sal-duration="700">
+            <div class="alumni-scroll-track" id="alumniScrollTrack">
+              
+              <!-- Story: B. Manasa -->
+              <div class="alumni-scroll-item">
+                <div class="alumni-apple-card">
+                  <div>
+                    <div class="alumni-header">
+                      <div class="alumni-avatar-box">
+                        <img src="assets/images/alumni/b-manasa.png" alt="B. Manasa" class="alumni-avatar-img" />
+                        <div>
+                          <h5 class="alumni-meta-name">B. Manasa</h5>
+                          <p class="alumni-meta-role"><i class="fas fa-check-circle me-1"></i> Clinical Pharmacist</p>
+                        </div>
+                      </div>
+                      <span class="alumni-degree-badge">PharmD</span>
+                    </div>
+                    
+                    <div style="color: #16a34a; font-size: 0.95rem; margin-bottom: 16px;">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                    </div>
+
+                    <p class="alumni-quote">
+                      "The intensive hospital residency and clinical rotations at Vaagdevi instilled deep diagnostic confidence and patient pharmacotherapy expertise."
+                    </p>
+                  </div>
+
+                  <div class="alumni-footer-bar">
+                    <div>
+                      <strong style="color: #0f172a; display: block; font-size: 0.95rem;">Apollo Hospitals</strong>
+                      <span style="color: #64748b; font-size: 0.85rem;"><i class="fas fa-map-marker-alt text-success me-1"></i> Hyderabad, India</span>
+                    </div>
+                    <span style="color: #16a34a; font-weight: 700; font-size: 0.85rem; background: #f0fdf4; border: 1px solid #dcfce7; padding: 4px 10px; border-radius: 8px;">
+                      Verified Alumni
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Story: Rajireddy Akshara -->
+              <div class="alumni-scroll-item">
+                <div class="alumni-apple-card">
+                  <div>
+                    <div class="alumni-header">
+                      <div class="alumni-avatar-box">
+                        <img src="assets/images/alumni/rajireddy-akshara.png" alt="Rajireddy Akshara" class="alumni-avatar-img" />
+                        <div>
+                          <h5 class="alumni-meta-name">Rajireddy Akshara</h5>
+                          <p class="alumni-meta-role"><i class="fas fa-check-circle me-1"></i> Drug Safety & Clinical Specialist</p>
+                        </div>
+                      </div>
+                      <span class="alumni-degree-badge">PharmD</span>
+                    </div>
+                    
+                    <div style="color: #16a34a; font-size: 0.95rem; margin-bottom: 16px;">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                    </div>
+
+                    <p class="alumni-quote">
+                      "The dedicated clinical mentorship, research facilities, and advanced pharmacy practice at Vaagdevi helped me launch my career in global pharma."
+                    </p>
+                  </div>
+
+                  <div class="alumni-footer-bar">
+                    <div>
+                      <strong style="color: #0f172a; display: block; font-size: 0.95rem;">Novartis Healthcare</strong>
+                      <span style="color: #64748b; font-size: 0.85rem;"><i class="fas fa-map-marker-alt text-success me-1"></i> Hyderabad, India</span>
+                    </div>
+                    <span style="color: #16a34a; font-weight: 700; font-size: 0.85rem; background: #f0fdf4; border: 1px solid #dcfce7; padding: 4px 10px; border-radius: 8px;">
+                      Verified Alumni
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Story: Shaista Fathima -->
+              <div class="alumni-scroll-item">
+                <div class="alumni-apple-card">
+                  <div>
+                    <div class="alumni-header">
+                      <div class="alumni-avatar-box">
+                        <img src="assets/images/alumni/shaista-fathima.png" alt="Shaista Fathima" class="alumni-avatar-img" />
+                        <div>
+                          <h5 class="alumni-meta-name">Shaista Fathima</h5>
+                          <p class="alumni-meta-role"><i class="fas fa-check-circle me-1"></i> Clinical & Regulatory Associate</p>
+                        </div>
+                      </div>
+                      <span class="alumni-degree-badge">PharmD</span>
+                    </div>
+                    
+                    <div style="color: #16a34a; font-size: 0.95rem; margin-bottom: 16px;">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                    </div>
+
+                    <p class="alumni-quote">
+                      "Vaagdevi's faculty guidance, sophisticated laboratory infrastructure, and clinical training provided the strongest foundation for my professional journey."
+                    </p>
+                  </div>
+
+                  <div class="alumni-footer-bar">
+                    <div>
+                      <strong style="color: #0f172a; display: block; font-size: 0.95rem;">Dr. Reddy's Laboratories</strong>
+                      <span style="color: #64748b; font-size: 0.85rem;"><i class="fas fa-map-marker-alt text-success me-1"></i> Hyderabad, India</span>
+                    </div>
+                    <span style="color: #16a34a; font-weight: 700; font-size: 0.85rem; background: #f0fdf4; border: 1px solid #dcfce7; padding: 4px 10px; border-radius: 8px;">
+                      Verified Alumni
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Story: Aduvala Chaitanya -->
+              <div class="alumni-scroll-item">
+                <div class="alumni-apple-card">
+                  <div>
+                    <div class="alumni-header">
+                      <div class="alumni-avatar-box">
+                        <img src="assets/images/alumni/aduvala-chaitanya.png" alt="Aduvala Chaitanya" class="alumni-avatar-img" />
+                        <div>
+                          <h5 class="alumni-meta-name">Aduvala Chaitanya</h5>
+                          <p class="alumni-meta-role"><i class="fas fa-check-circle me-1"></i> Clinical & Quality Specialist</p>
+                        </div>
+                      </div>
+                      <span class="alumni-degree-badge">PharmD</span>
+                    </div>
+                    
+                    <div style="color: #16a34a; font-size: 0.95rem; margin-bottom: 16px;">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                    </div>
+
+                    <p class="alumni-quote">
+                      "The hands-on case discussions, supportive professors, and hospital postings at Vaagdevi equipped me with industry-ready skills and confidence."
+                    </p>
+                  </div>
+
+                  <div class="alumni-footer-bar">
+                    <div>
+                      <strong style="color: #0f172a; display: block; font-size: 0.95rem;">Biological E. Limited</strong>
+                      <span style="color: #64748b; font-size: 0.85rem;"><i class="fas fa-map-marker-alt text-success me-1"></i> Hyderabad, India</span>
+                    </div>
+                    <span style="color: #16a34a; font-weight: 700; font-size: 0.85rem; background: #f0fdf4; border: 1px solid #dcfce7; padding: 4px 10px; border-radius: 8px;">
+                      Verified Alumni
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Story: Sindhuvardhini -->
+              <div class="alumni-scroll-item">
+                <div class="alumni-apple-card">
+                  <div>
+                    <div class="alumni-header">
+                      <div class="alumni-avatar-box">
+                        <img src="assets/images/alumni/sindhuvardhini.png" alt="Sindhuvardhini" class="alumni-avatar-img" />
+                        <div>
+                          <h5 class="alumni-meta-name">Sindhuvardhini</h5>
+                          <p class="alumni-meta-role"><i class="fas fa-check-circle me-1"></i> Pharmaceutical Care Associate</p>
+                        </div>
+                      </div>
+                      <span class="alumni-degree-badge">B. Pharmacy</span>
+                    </div>
+                    
+                    <div style="color: #16a34a; font-size: 0.95rem; margin-bottom: 16px;">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                    </div>
+
+                    <p class="alumni-quote">
+                      "Studying B. Pharmacy at Vaagdevi offered an inspiring academic environment, great practical lab sessions, and excellent campus recruitment opportunities."
+                    </p>
+                  </div>
+
+                  <div class="alumni-footer-bar">
+                    <div>
+                      <strong style="color: #0f172a; display: block; font-size: 0.95rem;">MedPlus Health Services</strong>
+                      <span style="color: #64748b; font-size: 0.85rem;"><i class="fas fa-map-marker-alt text-success me-1"></i> Hyderabad, India</span>
+                    </div>
+                    <span style="color: #16a34a; font-weight: 700; font-size: 0.85rem; background: #f0fdf4; border: 1px solid #dcfce7; padding: 4px 10px; border-radius: 8px;">
+                      Verified Alumni
+                    </span>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Story 1: Divija K. -->
+              <div class="alumni-scroll-item">
+                <div class="alumni-apple-card">
+                  <div>
+                    <div class="alumni-header">
+                      <div class="alumni-avatar-box">
+                        <div class="alumni-avatar-initials" style="background: linear-gradient(135deg, #0f172a 0%, #334155 100%);">
+                          DK
+                        </div>
+                        <div>
+                          <h5 class="alumni-meta-name">Divija K.</h5>
+                          <p class="alumni-meta-role"><i class="fas fa-check-circle me-1"></i> Clinical Research Lead</p>
+                        </div>
+                      </div>
+                      <span class="alumni-degree-badge">B.Pharm '18</span>
+                    </div>
+                    
+                    <div style="color: #16a34a; font-size: 0.95rem; margin-bottom: 16px;">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                    </div>
+
+                    <p class="alumni-quote">
+                      "The hands-on instrumentation labs and dedicated clinical faculty at Vaagdevi gave me the scientific foundation to lead global regulatory trials for multi-center oncology therapies."
+                    </p>
+                  </div>
+
+                  <div class="alumni-footer-bar">
+                    <div>
+                      <strong style="color: #0f172a; display: block; font-size: 0.95rem;">Novartis Healthcare</strong>
+                      <span style="color: #64748b; font-size: 0.85rem;"><i class="fas fa-map-marker-alt text-success me-1"></i> New Jersey, USA</span>
+                    </div>
+                    <span style="color: #16a34a; font-weight: 700; font-size: 0.85rem; background: #f0fdf4; border: 1px solid #dcfce7; padding: 4px 10px; border-radius: 8px;">
+                      Verified Alumni
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Story 2: Dr. Naveen Reddy -->
+              <div class="alumni-scroll-item">
+                <div class="alumni-apple-card">
+                  <div>
+                    <div class="alumni-header">
+                      <div class="alumni-avatar-box">
+                        <div class="alumni-avatar-initials" style="background: linear-gradient(135deg, #15803d 0%, #16a34a 100%);">
+                          NR
+                        </div>
+                        <div>
+                          <h5 class="alumni-meta-name">Dr. Naveen Reddy</h5>
+                          <p class="alumni-meta-role"><i class="fas fa-check-circle me-1"></i> Lead Clinical Pharmacist</p>
+                        </div>
+                      </div>
+                      <span class="alumni-degree-badge">Pharm.D '20</span>
+                    </div>
+                    
+                    <div style="color: #16a34a; font-size: 0.95rem; margin-bottom: 16px;">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                    </div>
+
+                    <p class="alumni-quote">
+                      "The 6-year Pharm.D residency, ICU ward rounds, and pharmacotherapy mentorship at Vaagdevi instilled deep diagnostic confidence. I now head clinical hospital operations."
+                    </p>
+                  </div>
+
+                  <div class="alumni-footer-bar">
+                    <div>
+                      <strong style="color: #0f172a; display: block; font-size: 0.95rem;">Apollo Hospitals</strong>
+                      <span style="color: #64748b; font-size: 0.85rem;"><i class="fas fa-map-marker-alt text-success me-1"></i> Hyderabad, India</span>
+                    </div>
+                    <span style="color: #16a34a; font-weight: 700; font-size: 0.85rem; background: #f0fdf4; border: 1px solid #dcfce7; padding: 4px 10px; border-radius: 8px;">
+                      Verified Alumni
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Story 3: Vinod Kumar -->
+              <div class="alumni-scroll-item">
+                <div class="alumni-apple-card">
+                  <div>
+                    <div class="alumni-header">
+                      <div class="alumni-avatar-box">
+                        <div class="alumni-avatar-initials" style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);">
+                          VK
+                        </div>
+                        <div>
+                          <h5 class="alumni-meta-name">Vinod Kumar</h5>
+                          <p class="alumni-meta-role"><i class="fas fa-check-circle me-1"></i> Principal Formulation Scientist</p>
+                        </div>
+                      </div>
+                      <span class="alumni-degree-badge">M.Pharm '19</span>
+                    </div>
+                    
+                    <div style="color: #16a34a; font-size: 0.95rem; margin-bottom: 16px;">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                    </div>
+
+                    <p class="alumni-quote">
+                      "From pilot-plant scaleup to novel drug delivery systems (NDDS), Vaagdevi's faculty and laboratory infrastructure laid the foundation for my breakthroughs in pharmaceutical formulations."
+                    </p>
+                  </div>
+
+                  <div class="alumni-footer-bar">
+                    <div>
+                      <strong style="color: #0f172a; display: block; font-size: 0.95rem;">Sun Pharma R&D</strong>
+                      <span style="color: #64748b; font-size: 0.85rem;"><i class="fas fa-map-marker-alt text-success me-1"></i> Mumbai, India</span>
+                    </div>
+                    <span style="color: #16a34a; font-weight: 700; font-size: 0.85rem; background: #f0fdf4; border: 1px solid #dcfce7; padding: 4px 10px; border-radius: 8px;">
+                      Verified Alumni
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Story 4: Sowmya Rao -->
+              <div class="alumni-scroll-item">
+                <div class="alumni-apple-card">
+                  <div>
+                    <div class="alumni-header">
+                      <div class="alumni-avatar-box">
+                        <div class="alumni-avatar-initials" style="background: linear-gradient(135deg, #15803d 0%, #22c55e 100%);">
+                          SR
+                        </div>
+                        <div>
+                          <h5 class="alumni-meta-name">Sowmya Rao</h5>
+                          <p class="alumni-meta-role"><i class="fas fa-check-circle me-1"></i> Senior Regulatory Affairs Specialist</p>
+                        </div>
+                      </div>
+                      <span class="alumni-degree-badge">M.Pharm '21</span>
+                    </div>
+                    
+                    <div style="color: #16a34a; font-size: 0.95rem; margin-bottom: 16px;">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                    </div>
+
+                    <p class="alumni-quote">
+                      "The thorough understanding of international cGMP compliance and quality assurance taught during M.Pharm enabled my direct placement into UK-based regulatory filings."
+                    </p>
+                  </div>
+
+                  <div class="alumni-footer-bar">
+                    <div>
+                      <strong style="color: #0f172a; display: block; font-size: 0.95rem;">Pfizer Global</strong>
+                      <span style="color: #64748b; font-size: 0.85rem;"><i class="fas fa-map-marker-alt text-success me-1"></i> London, UK</span>
+                    </div>
+                    <span style="color: #16a34a; font-weight: 700; font-size: 0.85rem; background: #f0fdf4; border: 1px solid #dcfce7; padding: 4px 10px; border-radius: 8px;">
+                      Verified Alumni
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Story 5: Dr. Rahul Varma -->
+              <div class="alumni-scroll-item">
+                <div class="alumni-apple-card">
+                  <div>
+                    <div class="alumni-header">
+                      <div class="alumni-avatar-box">
+                        <div class="alumni-avatar-initials" style="background: linear-gradient(135deg, #0f172a 0%, #334155 100%);">
+                          RV
+                        </div>
+                        <div>
+                          <h5 class="alumni-meta-name">Dr. Rahul Varma</h5>
+                          <p class="alumni-meta-role"><i class="fas fa-check-circle me-1"></i> Critical Care Pharmacist</p>
+                        </div>
+                      </div>
+                      <span class="alumni-degree-badge">Pharm.D '19</span>
+                    </div>
+                    
+                    <div style="color: #16a34a; font-size: 0.95rem; margin-bottom: 16px;">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                    </div>
+
+                    <p class="alumni-quote">
+                      "Vaagdevi's clinical case presentation rounds prepared me seamlessly for Middle-East medical licensure and high-acuity therapeutic management in hospital intensive care units."
+                    </p>
+                  </div>
+
+                  <div class="alumni-footer-bar">
+                    <div>
+                      <strong style="color: #0f172a; display: block; font-size: 0.95rem;">Cleveland Clinic</strong>
+                      <span style="color: #64748b; font-size: 0.85rem;"><i class="fas fa-map-marker-alt text-success me-1"></i> Abu Dhabi, UAE</span>
+                    </div>
+                    <span style="color: #16a34a; font-weight: 700; font-size: 0.85rem; background: #f0fdf4; border: 1px solid #dcfce7; padding: 4px 10px; border-radius: 8px;">
+                      Verified Alumni
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Story 6: Ananya Sharma -->
+              <div class="alumni-scroll-item">
+                <div class="alumni-apple-card">
+                  <div>
+                    <div class="alumni-header">
+                      <div class="alumni-avatar-box">
+                        <div class="alumni-avatar-initials" style="background: linear-gradient(135deg, #15803d 0%, #16a34a 100%);">
+                          AS
+                        </div>
+                        <div>
+                          <h5 class="alumni-meta-name">Ananya Sharma</h5>
+                          <p class="alumni-meta-role"><i class="fas fa-check-circle me-1"></i> Bio-Analytical Scientist</p>
+                        </div>
+                      </div>
+                      <span class="alumni-degree-badge">B.Pharm '20</span>
+                    </div>
+                    
+                    <div style="color: #16a34a; font-size: 0.95rem; margin-bottom: 16px;">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                    </div>
+
+                    <p class="alumni-quote">
+                      "The encouragement from faculty mentors to participate in international symposia and research conferences opened avenues for me at premier biotechnology organizations."
+                    </p>
+                  </div>
+
+                  <div class="alumni-footer-bar">
+                    <div>
+                      <strong style="color: #0f172a; display: block; font-size: 0.95rem;">Biocon Biologics</strong>
+                      <span style="color: #64748b; font-size: 0.85rem;"><i class="fas fa-map-marker-alt text-success me-1"></i> Bengaluru, India</span>
+                    </div>
+                    <span style="color: #16a34a; font-weight: 700; font-size: 0.85rem; background: #f0fdf4; border: 1px solid #dcfce7; padding: 4px 10px; border-radius: 8px;">
+                      Verified Alumni
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Alumni Association Global Connect Banner -->
+          <div class="row justify-content-center" data-sal="slide-up" data-sal-duration="700">
+            <div class="col-lg-12">
+              <div style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 20px; padding: 24px 32px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 20px; box-shadow: 0 4px 16px rgba(0,0,0,0.02);">
+                <div style="display: flex; align-items: center; gap: 16px;">
+                  <div style="width: 48px; height: 48px; border-radius: 14px; background: #f0fdf4; border: 1px solid #dcfce7; color: #16a34a; display: flex; align-items: center; justify-content: center; font-size: 1.4rem;">
+                    <i class="fas fa-user-friends"></i>
+                  </div>
+                  <div>
+                    <h5 style="margin: 0 0 3px 0; font-size: 1.15rem; font-weight: 800; color: #0f172a;">Are You a Proud Vaagdevi Graduate?</h5>
+                    <p style="margin: 0; font-size: 0.95rem; color: #64748b;">Connect with 15,000+ global alumni, mentor current scholars, and explore career opportunities.</p>
+                  </div>
+                </div>
+                <a href="contact.html" style="background: #0f172a; color: #ffffff; padding: 12px 24px; border-radius: 12px; font-weight: 700; font-size: 0.95rem; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; transition: all 0.3s ease;" onmouseover="this.style.background='#16a34a'" onmouseout="this.style.background='#0f172a'">
+                  <span>Join Alumni Association</span>
+                  <i class="fas fa-arrow-right" style="font-size: 0.85rem;"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <!-- End Alumni Showcase -->
+
+      <script>
+        function scrollAlumni(direction) {
+          var track = document.getElementById('alumniScrollTrack');
+          if (!track) return;
+          var scrollAmount = track.clientWidth * 0.75;
+          track.scrollBy({
+            left: direction * scrollAmount,
+            behavior: 'smooth'
+          });
+        }
+      </script>
+
+     
+
+
+      <!-- ========================================================
+           ADMISSIONS APPLICATION POPUP MODAL & FLOATING TAB
+           ======================================================== -->
+      <style>
+        .admission-modal-overlay {
+          position: fixed;
+          inset: 0;
+          background: rgba(15, 23, 42, 0.78);
+          backdrop-filter: blur(8px);
+          -webkit-backdrop-filter: blur(8px);
+          z-index: 99999;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 20px;
+          opacity: 0;
+          visibility: hidden;
+          transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .admission-modal-overlay.active {
+          opacity: 1;
+          visibility: visible;
+        }
+        .admission-modal-card {
+          background: #ffffff;
+          border-radius: 24px;
+          width: 100%;
+          max-width: 680px;
+          max-height: 90vh;
+          overflow-y: auto;
+          box-shadow: 0 25px 60px -15px rgba(15, 23, 42, 0.35), 0 0 0 1px rgba(226, 232, 240, 0.9);
+          transform: translateY(24px) scale(0.96);
+          transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+          position: relative;
+          scrollbar-width: thin;
+        }
+        .admission-modal-overlay.active .admission-modal-card {
+          transform: translateY(0) scale(1);
+        }
+        .admission-modal-header {
+          background: linear-gradient(135deg, #091224 0%, #1e293b 100%);
+          padding: 26px 30px 22px 30px;
+          border-top-left-radius: 24px;
+          border-top-right-radius: 24px;
+          position: relative;
+          color: #ffffff;
+        }
+        .admission-modal-header-content {
+          display: flex;
+          align-items: center;
+          gap: 18px;
+          padding-right: 44px;
+        }
+        .admission-modal-logo-wrap {
+          flex-shrink: 0;
+          width: 70px;
+          height: 70px;
+          border-radius: 50%;
+          background: #ffffff;
+          padding: 3px;
+          box-shadow: 0 4px 18px rgba(0, 0, 0, 0.35), 0 0 0 2.5px rgba(74, 222, 128, 0.55);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .admission-modal-logo-wrap:hover {
+          transform: scale(1.06);
+          box-shadow: 0 6px 22px rgba(74, 222, 128, 0.45), 0 0 0 3px #4ade80;
+        }
+        .admission-modal-logo {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+          border-radius: 50%;
+          display: block;
+        }
+        .admission-modal-header-info {
+          flex: 1;
+          min-width: 0;
+        }
+        .admission-modal-header .badge-pill {
+          display: inline-flex;
+          align-items: center;
+          gap: 7px;
+          background: rgba(22, 163, 74, 0.22);
+          border: 1px solid rgba(74, 222, 128, 0.5);
+          color: #4ade80;
+          font-size: 0.82rem;
+          font-weight: 800;
+          letter-spacing: 0.5px;
+          padding: 5px 14px;
+          border-radius: 9999px;
+          margin-bottom: 8px;
+          text-transform: uppercase;
+        }
+        .admission-modal-header .pulse-dot {
+          width: 8px;
+          height: 8px;
+          border-radius: 50%;
+          background: #4ade80;
+          box-shadow: 0 0 10px #4ade80;
+          animation: adm-pulse-green 1.8s infinite;
+        }
+        @keyframes adm-pulse-green {
+          0%, 100% { transform: scale(1); opacity: 1; }
+          50% { transform: scale(1.4); opacity: 0.6; }
+        }
+        body.active-light-mode .admission-modal-header h3,
+        .admission-modal-header h3,
+        #modalAdmTitle {
+          font-size: 1.65rem;
+          font-weight: 800;
+          color: #ffffff !important;
+          margin: 0 0 6px 0;
+          letter-spacing: -0.02em;
+          text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+        body.active-light-mode .admission-modal-header p,
+        .admission-modal-header p {
+          font-size: 0.92rem;
+          color: #cbd5e1 !important;
+          margin: 0;
+          line-height: 1.5;
+        }
+        .admission-modal-close {
+          position: absolute;
+          top: 20px;
+          right: 20px;
+          width: 38px;
+          height: 38px;
+          border-radius: 50%;
+          background: rgba(255, 255, 255, 0.12);
+          border: 1px solid rgba(255, 255, 255, 0.2);
+          color: #ffffff;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 1.3rem;
+          cursor: pointer;
+          transition: all 0.2s ease;
+          border: none;
+          outline: none;
+        }
+        .admission-modal-close:hover {
+          background: #ef4444;
+          transform: rotate(90deg);
+        }
+        .admission-modal-body {
+          padding: 26px 30px 30px 30px;
+        }
+        .adm-form-grid {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 16px;
+          margin-bottom: 18px;
+        }
+        @media (max-width: 600px) {
+          .admission-modal-header-content {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 12px;
+          }
+          .admission-modal-logo-wrap {
+            width: 56px;
+            height: 56px;
+          }
+          .adm-form-grid {
+            grid-template-columns: 1fr;
+          }
+          .admission-modal-header, .admission-modal-body {
+            padding: 20px !important;
+          }
+        }
+        .adm-form-group {
+          display: flex;
+          flex-direction: column;
+          gap: 6px;
+        }
+        .adm-form-group.full-width {
+          grid-column: 1 / -1;
+        }
+        .adm-form-group label {
+          font-size: 0.9rem;
+          font-weight: 700;
+          color: #0f172a;
+          margin: 0;
+          display: flex;
+          align-items: center;
+          gap: 4px;
+        }
+        .adm-form-group label span.req {
+          color: #ef4444;
+        }
+        .adm-input-wrap {
+          position: relative;
+          display: flex !important;
+          align-items: center !important;
+          background: #f8fafc !important;
+          border: 1.5px solid #cbd5e1 !important;
+          border-radius: 12px !important;
+          transition: all 0.2s ease !important;
+          overflow: hidden !important;
+          box-shadow: 0 1px 2px rgba(0,0,0,0.03) !important;
+        }
+        .adm-input-wrap:focus-within {
+          border-color: #16a34a !important;
+          background: #ffffff !important;
+          box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.18) !important;
+        }
+        .adm-input-wrap i.input-icon {
+          position: static !important;
+          padding: 0 12px 0 15px !important;
+          color: #16a34a !important;
+          font-size: 1.05rem !important;
+          flex-shrink: 0 !important;
+          pointer-events: none !important;
+          line-height: 1 !important;
+          display: inline-flex !important;
+          align-items: center !important;
+          justify-content: center !important;
+        }
+        .adm-input-wrap input.adm-input,
+        body.active-light-mode .adm-input-wrap input.adm-input,
+        .admission-modal-body input[type="text"].adm-input,
+        .admission-modal-body input[type="tel"].adm-input,
+        .admission-modal-body input[type="email"].adm-input {
+          flex: 1 1 auto !important;
+          width: 100% !important;
+          height: 48px !important;
+          line-height: 48px !important;
+          padding: 0 14px 0 4px !important;
+          margin: 0 !important;
+          border: none !important;
+          outline: none !important;
+          box-shadow: none !important;
+          background: transparent !important;
+          font-size: 0.95rem !important;
+          color: #0f172a !important;
+          font-family: inherit !important;
+        }
+        .adm-input-wrap input.adm-input::placeholder,
+        .admission-modal-body input.adm-input::placeholder {
+          color: #94a3b8 !important;
+          opacity: 1 !important;
+        }
+        .adm-input-wrap select.adm-select,
+        body.active-light-mode .adm-input-wrap select.adm-select,
+        .admission-modal-body select.adm-select {
+          flex: 1 1 auto !important;
+          width: 100% !important;
+          height: 48px !important;
+          padding: 0 38px 0 4px !important;
+          margin: 0 !important;
+          border: none !important;
+          outline: none !important;
+          box-shadow: none !important;
+          background-color: transparent !important;
+          font-size: 0.95rem !important;
+          font-weight: 600 !important;
+          color: #0f172a !important;
+          appearance: none !important;
+          background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2316a34a' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e") !important;
+          background-repeat: no-repeat !important;
+          background-position: right 14px center !important;
+          background-size: 16px !important;
+          cursor: pointer !important;
+          font-family: inherit !important;
+        }
+        .adm-btn-submit {
+          width: 100%;
+          height: 52px;
+          background: linear-gradient(135deg, #15803d 0%, #16a34a 100%);
+          color: #ffffff;
+          border: none;
+          border-radius: 14px;
+          font-size: 1.1rem;
+          font-weight: 800;
+          letter-spacing: 0.3px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 10px;
+          cursor: pointer;
+          box-shadow: 0 10px 25px -5px rgba(22, 163, 74, 0.45);
+          transition: all 0.3s ease;
+        }
+        .adm-btn-submit:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 16px 32px -6px rgba(22, 163, 74, 0.55);
+          background: linear-gradient(135deg, #166534 0%, #15803d 100%);
+        }
+        .adm-privacy-note {
+          font-size: 0.82rem;
+          color: #64748b;
+          text-align: center;
+          margin-top: 12px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 6px;
+        }
+        /* Floating Admissions Tab on Right */
+        .floating-admission-tab {
+          position: fixed;
+          right: 0;
+          top: 45%;
+          transform: translateY(-50%);
+          background: linear-gradient(135deg, #15803d 0%, #16a34a 100%);
+          color: #ffffff !important;
+          padding: 16px 14px;
+          border-top-left-radius: 16px;
+          border-bottom-left-radius: 16px;
+          box-shadow: -4px 8px 24px rgba(22, 163, 74, 0.45);
+          cursor: pointer;
+          z-index: 9998;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 8px;
+          font-weight: 800;
+          font-size: 0.88rem;
+          letter-spacing: 0.5px;
+          transition: all 0.25s ease;
+          text-decoration: none;
+        }
+        .floating-admission-tab:hover {
+          padding-right: 20px;
+          background: #0f172a;
+          color: #4ade80 !important;
+        }
+        .floating-admission-tab .tab-icon {
+          font-size: 1.25rem;
+          background: rgba(255, 255, 255, 0.25);
+          width: 32px;
+          height: 32px;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        .floating-admission-tab span {
+          writing-mode: vertical-rl;
+          text-orientation: mixed;
+        }
+        /* Success State View */
+        .adm-success-view {
+          display: none;
+          text-align: center;
+          padding: 35px 20px 25px 20px;
+        }
+        .adm-success-icon {
+          width: 76px;
+          height: 76px;
+          border-radius: 50%;
+          background: #dcfce7;
+          color: #16a34a;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 2.5rem;
+          margin: 0 auto 20px auto;
+          box-shadow: 0 10px 25px rgba(22, 163, 74, 0.25);
+        }
+      </style>
+
+      <!-- Floating Admissions Quick Tab -->
+      <div class="floating-admission-tab" onclick="openAdmissionModal()" title="Admissions Open 2025-26 - Apply Now" role="button" aria-label="Open Admission Application Form">
+        <div class="tab-icon"><i class="fas fa-graduation-cap"></i></div>
+        <span>Admissions 2025–26 Open</span>
+      </div>
+
+      <!-- Admissions Popup Modal Dialog -->
+      <div id="admissionModal" class="admission-modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modalAdmTitle">
+        <div class="admission-modal-card" id="admissionModalCard">
+          
+          <!-- Header -->
+          <div class="admission-modal-header">
+            <button type="button" class="admission-modal-close" onclick="closeAdmissionModal()" aria-label="Close Modal">&times;</button>
+            <div class="admission-modal-header-content">
+              <div class="admission-modal-logo-wrap" title="Vaagdevi Institute of Pharmaceutical Sciences">
+                <img src="assets/images/logo/vaagdevi.svg" alt="Vaagdevi Institute of Pharmaceutical Sciences Logo" class="admission-modal-logo" />
+              </div>
+              <div class="admission-modal-header-info">
+                <div class="badge-pill">
+                  <span class="pulse-dot"></span>
+                  <span>Admissions Open 2025–26</span>
+                </div>
+                <h3 id="modalAdmTitle">Apply for Admission</h3>
+                <p>Vaagdevi Institute of Pharmaceutical Sciences • Approved by PCI & AICTE, New Delhi</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Body / Form -->
+          <div class="admission-modal-body">
+            <form id="admissionApplicationForm" onsubmit="handleAdmissionSubmit(event)">
+              <div class="adm-form-grid">
+                
+                <!-- Full Name -->
+                <div class="adm-form-group">
+                  <label for="admFullName">Full Name <span class="req">*</span></label>
+                  <div class="adm-input-wrap">
+                    <i class="fas fa-user input-icon"></i>
+                    <input type="text" id="admFullName" class="adm-input" placeholder="e.g. Rahul Sharma" required />
+                  </div>
+                </div>
+
+                <!-- Mobile Phone -->
+                <div class="adm-form-group">
+                  <label for="admPhone">Mobile Number <span class="req">*</span></label>
+                  <div class="adm-input-wrap">
+                    <i class="fas fa-phone-alt input-icon"></i>
+                    <input type="tel" id="admPhone" class="adm-input" placeholder="+91 Mobile Number" pattern="[0-9]{10}" title="Please enter 10-digit mobile number" required />
+                  </div>
+                </div>
+
+                <!-- Email -->
+                <div class="adm-form-group">
+                  <label for="admEmail">Email Address <span class="req">*</span></label>
+                  <div class="adm-input-wrap">
+                    <i class="fas fa-envelope input-icon"></i>
+                    <input type="email" id="admEmail" class="adm-input" placeholder="student@example.com" required />
+                  </div>
+                </div>
+
+                <!-- Program / Course -->
+                <div class="adm-form-group">
+                  <label for="admCourse">Course Applying For <span class="req">*</span></label>
+                  <div class="adm-input-wrap">
+                    <i class="fas fa-capsules input-icon"></i>
+                    <select id="admCourse" class="adm-select" required>
+                      <option value="" disabled selected>Select Course / Degree</option>
+                      <option value="B. Pharmacy (4 Years UG)">B. Pharmacy (4 Years UG)</option>
+                      <option value="Pharm.D (Doctor of Pharmacy - 6 Years)">Pharm.D (Doctor of Pharmacy - 6 Years)</option>
+                      <option value="Pharm.D - Post Baccalaureate (3 Years)">Pharm.D - Post Baccalaureate (3 Years)</option>
+                      <option value="M. Pharmacy – Pharmaceutics (2 Years)">M. Pharmacy – Pharmaceutics (2 Years)</option>
+                      <option value="M. Pharmacy – Pharmacology (2 Years)">M. Pharmacy – Pharmacology (2 Years)</option>
+                      <option value="M. Pharmacy – Pharmaceutical Analysis (2 Years)">M. Pharmacy – Pharmaceutical Analysis (2 Years)</option>
+                      <option value="M. Pharmacy – Industrial Pharmacy (2 Years)">M. Pharmacy – Industrial Pharmacy (2 Years)</option>
+                    </select>
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- Submit Button -->
+              <button type="submit" id="admSubmitBtn" class="adm-btn-submit">
+                <span>Submit Admission Application</span>
+                <i class="fas fa-arrow-right"></i>
+              </button>
+
+              <div class="adm-privacy-note">
+                <i class="fas fa-shield-alt text-success"></i>
+                <span>Your application details are 100% confidential and handled by the official VIPS admissions cell.</span>
+              </div>
+            </form>
+
+            <!-- Success Confirmation Screen -->
+            <div id="admSuccessView" class="adm-success-view">
+              <div class="adm-success-icon">
+                <i class="fas fa-check"></i>
+              </div>
+              <h3 style="font-size: 1.8rem; font-weight: 800; color: #0f172a; margin-bottom: 10px;">Application Submitted Successfully!</h3>
+              <p id="admSuccessMsg" style="font-size: 1.1rem; color: #475569; line-height: 1.6; max-width: 520px; margin: 0 auto 24px auto;">
+                Thank you! Your application has been received. Our senior admissions counselor will connect with you shortly with course fees, scholarship opportunities, and seat allocation details.
+              </p>
+              <div style="display: flex; gap: 14px; justify-content: center; flex-wrap: wrap;">
+                <button type="button" class="btn-default btn-small" onclick="closeAdmissionModal()" style="border-radius: 12px; padding: 12px 28px;">
+                  <span>Done</span>
+                </button>
+                <a href="assets/pdf/addon_course .pdf" class="btn-default btn-small btn-border" target="_blank" style="border-radius: 12px; padding: 12px 24px;">
+                  <i class="fas fa-file-pdf me-2"></i>
+                  <span>Download Form PDF</span>
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Admission Modal Interactive Script -->
+      <script>
+        function openAdmissionModal(preselectedCourse) {
+          var modal = document.getElementById('admissionModal');
+          if (!modal) return;
+          
+          // Reset form views if it was previously submitted
+          var form = document.getElementById('admissionApplicationForm');
+          var successView = document.getElementById('admSuccessView');
+          if (form) form.style.display = 'block';
+          if (successView) successView.style.display = 'none';
+
+          // Preselect course if specified
+          if (preselectedCourse) {
+            var courseSelect = document.getElementById('admCourse');
+            if (courseSelect) {
+              for (var i = 0; i < courseSelect.options.length; i++) {
+                if (courseSelect.options[i].value.toLowerCase().includes(preselectedCourse.toLowerCase())) {
+                  courseSelect.selectedIndex = i;
+                  break;
+                }
+              }
+            }
+          }
+
+          modal.classList.add('active');
+          document.body.style.overflow = 'hidden';
+
+          // Set focus on first input
+          setTimeout(function() {
+            var nameInput = document.getElementById('admFullName');
+            if (nameInput) nameInput.focus();
+          }, 200);
+        }
+
+        function closeAdmissionModal() {
+          var modal = document.getElementById('admissionModal');
+          if (!modal) return;
+          modal.classList.remove('active');
+          document.body.style.overflow = '';
+          sessionStorage.setItem('vips_admission_popup_shown', 'true');
+        }
+
+        // Close when clicking outside of card
+        document.addEventListener('click', function(e) {
+          var modal = document.getElementById('admissionModal');
+          var card = document.getElementById('admissionModalCard');
+          if (modal && modal.classList.contains('active') && e.target === modal) {
+            closeAdmissionModal();
+          }
+        });
+
+        // Close on Escape key
+        document.addEventListener('keydown', function(e) {
+          if (e.key === 'Escape' || e.key === 'Esc') {
+            closeAdmissionModal();
+          }
+        });
+
+        // Intercept clicks on any course "Apply for..." buttons or links to admission.html
+        document.addEventListener('DOMContentLoaded', function() {
+          // Bind all course card buttons
+          document.querySelectorAll('.btn-conversion').forEach(function(btn) {
+            btn.addEventListener('click', function(e) {
+              e.preventDefault();
+              var text = btn.innerText || '';
+              var course = '';
+              if (text.toLowerCase().includes('b.pharm')) course = 'B. Pharmacy';
+              else if (text.toLowerCase().includes('pharm.d') || text.toLowerCase().includes('doctor of pharmacy')) course = 'Pharm.D';
+              else if (text.toLowerCase().includes('post bacc')) course = 'Post Baccalaureate';
+              else if (text.toLowerCase().includes('m.pharm')) course = 'M. Pharmacy';
+              openAdmissionModal(course);
+            });
+          });
+
+          // Delegated click handler for navbar Admissions button or any admission link
+          document.addEventListener('click', function(e) {
+            var admLink = e.target.closest('a[href="admission.html"], a[href*="admission.html"], .open-admission-modal');
+            if (admLink) {
+              e.preventDefault();
+              openAdmissionModal();
+            }
+          });
+
+          // Auto-trigger on home page after 3.5 seconds if first visit this session, or immediately if #apply hash
+          if (window.location.hash === '#apply' || !sessionStorage.getItem('vips_admission_popup_shown')) {
+            setTimeout(function() {
+              openAdmissionModal();
+            }, window.location.hash === '#apply' ? 200 : 3500);
+          }
+        });
+
+        // Handle submission
+        function handleAdmissionSubmit(e) {
+          e.preventDefault();
+          var btn = document.getElementById('admSubmitBtn');
+          var name = document.getElementById('admFullName').value;
+          var course = document.getElementById('admCourse').value;
+          var phone = document.getElementById('admPhone').value;
+
+          btn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i> Submitting...';
+          btn.disabled = true;
+
+          setTimeout(function() {
+            var form = document.getElementById('admissionApplicationForm');
+            var successView = document.getElementById('admSuccessView');
+            var successMsg = document.getElementById('admSuccessMsg');
+
+            form.style.display = 'none';
+            successView.style.display = 'block';
+            successMsg.innerHTML = 'Thank you, <strong>' + name + '</strong>! Your application for <strong>' + course + '</strong> has been recorded. Our admissions counselor will call you on <strong>' + phone + '</strong> shortly.';
+            btn.innerHTML = '<span>Submit Admission Application</span> <i class="fas fa-arrow-right"></i>';
+            btn.disabled = false;
+            sessionStorage.setItem('vips_admission_popup_shown', 'true');
+          }, 700);
+        }
+      </script>
+
+       <div id="footer"></div>
+    </main>
+    <!-- All Scripts  -->
+    <!-- Start Top To Bottom Area  -->
+    <div class="rainbow-back-top">
+      <i class="feather-arrow-up"></i>
+    </div>
+    <!-- End Top To Bottom Area  -->
+    <!-- JS
+============================================ -->
+    <script>
+      jQuery(function ($) {
+        var $slider = $(".testimonial-activation");
+
+        function enableAutoplay() {
+          if (typeof $.fn.slick !== "function") {
+            console.warn(
+              "Slick not loaded: include slick.min.js and slick.css before this script.",
+            );
+            return;
+          }
+
+          if ($slider.hasClass("slick-initialized")) {
+            // If your theme already initialized it, just switch on autoplay
+            $slider.slick(
+              "slickSetOption",
+              {
+                autoplay: true,
+                autoplaySpeed: 3000,
+                pauseOnHover: false,
+                dots: true,
+                infinite: true,
+              },
+              true,
+            );
+            $slider.slick("slickPlay");
+          } else {
+            // Otherwise, initialize with autoplay
+            $slider.slick({
+              dots: true, // keep dots
+              arrows: false,
+              infinite: true,
+              speed: 200,
+              autoplay: true,
+              autoplaySpeed: 1000,
+              slidesToShow: 1,
+              slidesToScroll: 1,
+              pauseOnHover: false,
+            });
+          }
+        }
+
+        // Ensure images & fonts are ready before sizing slides
+        if (document.readyState === "complete") {
+          enableAutoplay();
+        } else {
+          $(window).on("load", enableAutoplay);
+        }
+      });
+    </script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.css"
+    />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script>
+
+    <script src="assets/js/custom.js"></script>
+    <script src="assets/js/vendor/modernizr.min.js"></script>
+    <script src="assets/js/vendor/jquery.min.js"></script>
+    <script src="assets/js/vendor/bootstrap.min.js"></script>
+    <script src="assets/js/vendor/popper.min.js"></script>
+    <script src="assets/js/vendor/waypoint.min.js"></script>
+    <script src="assets/js/vendor/wow.min.js"></script>
+    <script src="assets/js/vendor/counterup.min.js"></script>
+    <script src="assets/js/vendor/feather.min.js"></script>
+    <script src="assets/js/vendor/sal.min.js"></script>
+    <script src="assets/js/vendor/masonry.js"></script>
+    <script src="assets/js/vendor/imageloaded.js"></script>
+    <script src="assets/js/vendor/magnify.min.js"></script>
+    <script src="assets/js/vendor/lightbox.js"></script>
+    <script src="assets/js/vendor/slick.min.js"></script>
+    <script src="assets/js/vendor/easypie.js"></script>
+    <script src="assets/js/vendor/text-type.js"></script>
+    <script src="assets/js/vendor/jquery.style.swicher.js"></script>
+    <script src="assets/js/vendor/js.cookie.js"></script>
+    <script src="assets/js/vendor/jquery-one-page-nav.js"></script>
+    <!-- Main JS -->
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

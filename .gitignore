@@ -1,0 +1,15 @@
+*.zip
+.DS_Store
+.env.local
+.vercel
+assets/images/Day1/
+assets/images/Day2/
+assets/images/gallery/
+assets/images/banner/
+assets/images/teaching/
+assets/images/infrastructure/
+assets/images/students-corner/
+assets/images/services/video.mp4
+assets/pdf/
+assets/*.pdf
+Vaagdevi pharmacy college/
