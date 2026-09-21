@@ -148,11 +148,11 @@
             </a>
           </div>
 
-          <!-- Right: Accreditation Logos & Action Buttons -->
-          <div class="vips-header-right-block d-flex align-items-center gap-3 ms-auto flex-shrink-0">
+          <!-- Right: Accreditation Logos (Top) & Action Buttons (Bottom) in 2 Rows -->
+          <div class="vips-header-right-block d-flex flex-column align-items-end justify-content-center gap-2 ms-auto flex-shrink-0">
             
-            <!-- Accreditation Logos Row (Desktop) -->
-            <div class="vips-accreditations-row d-none d-lg-flex align-items-center gap-2">
+            <!-- Row 1: Accreditation Logos -->
+            <div class="vips-accreditations-row d-none d-lg-flex align-items-center gap-3">
               <a href="pci-regulations.html" title="Pharmacy Council of India (PCI)" class="acc-logo-item">
                 <img src="assets/images/logo/pharmacy-council-logo.svg" alt="PCI Logo" />
               </a>
@@ -173,7 +173,7 @@
               </a>
             </div>
 
-            <!-- Premium Quick Action Buttons (Desktop) -->
+            <!-- Row 2: Premium Quick Action Buttons -->
             <div class="vips-cta-pills-group d-none d-lg-flex align-items-center gap-2">
               <a
                 class="vips-pill-btn vips-pill-viba"
@@ -778,12 +778,12 @@
         gap: 3px;
       }
 
-      /* Accreditation Logos Row - Prominent & Rich */
+      /* Accreditation Logos Row - Top Row */
       .vips-accreditations-row {
         display: flex;
         align-items: center;
-        gap: 14px;
-        margin-right: 12px;
+        gap: 12px;
+        margin-right: 0;
       }
 
       .vips-accreditations-row .acc-logo-item {
@@ -793,7 +793,7 @@
       }
 
       .vips-accreditations-row .acc-logo-item img {
-        height: 66px !important;
+        height: 52px !important;
         width: auto !important;
         object-fit: contain !important;
         display: block !important;
@@ -801,23 +801,23 @@
       }
 
       .vips-accreditations-row .acc-logo-item:hover {
-        transform: translateY(-3px) scale(1.08);
+        transform: translateY(-2px) scale(1.08);
       }
 
-      /* Premium CTA Action Pills - Full Size */
+      /* Premium CTA Action Pills - Bottom Row */
       .vips-cta-pills-group {
         display: flex;
         align-items: center;
-        gap: 10px;
+        gap: 8px;
         flex-shrink: 0;
       }
 
       .vips-pill-btn {
         font-family: var(--vips-font-body);
-        font-size: 13.5px !important;
+        font-size: 12.5px !important;
         font-weight: 700 !important;
         letter-spacing: 0.3px;
-        padding: 9px 18px !important;
+        padding: 6px 15px !important;
         border-radius: 50px !important;
         text-decoration: none !important;
         display: inline-flex;
@@ -831,19 +831,19 @@
       .vips-pill-viba {
         background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%) !important;
         color: #ffffff !important;
-        box-shadow: 0 4px 12px rgba(37, 99, 235, 0.28);
+        box-shadow: 0 2px 8px rgba(37, 99, 235, 0.25);
       }
 
       .vips-pill-admissions {
         background: linear-gradient(135deg, #047857 0%, #10b981 100%) !important;
         color: #ffffff !important;
-        box-shadow: 0 4px 14px rgba(16, 185, 129, 0.4);
+        box-shadow: 0 3px 10px rgba(16, 185, 129, 0.35);
         position: relative;
       }
 
       .vips-pulse-indicator {
-        width: 7px;
-        height: 7px;
+        width: 6px;
+        height: 6px;
         background-color: #ffffff;
         border-radius: 50%;
         box-shadow: 0 0 6px #ffffff;
@@ -854,13 +854,13 @@
       .vips-pill-ugc {
         background: linear-gradient(135deg, #0f172a 0%, #334155 100%) !important;
         color: #ffffff !important;
-        box-shadow: 0 4px 12px rgba(15, 23, 42, 0.22);
+        box-shadow: 0 2px 8px rgba(15, 23, 42, 0.2);
       }
 
       .vips-pill-disclosures {
         background: linear-gradient(135deg, #9a3412 0%, #ea580c 100%) !important;
         color: #ffffff !important;
-        box-shadow: 0 4px 12px rgba(234, 88, 12, 0.28);
+        box-shadow: 0 2px 8px rgba(234, 88, 12, 0.25);
       }
 
       .vips-pill-btn:hover {
