@@ -236,21 +236,10 @@
           <div class="col-lg-12 position-static">
             <div class="d-flex align-items-center justify-content-between w-100">
               
-              <!-- Sticky Brand Emblem (Visible only on compact sticky scroll) -->
-              <div class="vips-sticky-emblem d-none d-lg-flex align-items-center">
-                <a href="index.html" class="d-flex align-items-center text-decoration-none">
-                  <img src="assets/images/logo/vaagdevi.svg" alt="VIPS" class="sticky-crest-icon" />
-                  <div class="sticky-brand-names ms-2">
-                    <span class="sticky-main-name">VAAGDEVI</span>
-                    <span class="sticky-tag-name">PHARMACY COLLEGE</span>
-                  </div>
-                </a>
-              </div>
-
               <!-- Left-Aligned Main Navigation Bar -->
-              <nav class="mainmenu-nav d-none d-lg-block me-auto ms-0">
-                <ul class="mainmenu d-flex align-items-center justify-content-start gap-1 mb-0">
-                  <li><a href="index.html" class="nav-root-link"><i class="feather-home nav-icon-prefix"></i> Home</a></li>
+              <nav class="mainmenu-nav d-none d-lg-block me-auto ms-0 ps-0">
+                <ul class="mainmenu d-flex align-items-center justify-content-start gap-1 mb-0 ps-0">
+                  <li><a href="index.html" class="nav-root-link ps-2"><i class="feather-home nav-icon-prefix"></i> Home</a></li>
                   
                   <li class="has-droupdown has-menu-child-item">
                     <a href="about.html" class="nav-root-link">About <i class="feather-chevron-down nav-caret"></i></a>
@@ -950,49 +939,12 @@
         z-index: 980;
       }
 
-      .vips-sticky-emblem {
-        opacity: 0;
-        visibility: hidden;
-        transition: all 0.3s ease;
-        margin-right: 16px;
-      }
-
-      header.vips-sticky-navbar.sticky .vips-sticky-emblem {
-        opacity: 1;
-        visibility: visible;
-      }
-
-      .sticky-crest-icon {
-        height: 40px !important;
-        width: auto !important;
-      }
-
-      .sticky-brand-names {
-        display: flex;
-        flex-direction: column;
-      }
-
-      .sticky-main-name {
-        font-family: var(--vips-font-brand);
-        font-size: 15px;
-        font-weight: 800;
-        color: #ffffff;
-        line-height: 1;
-      }
-
-      .sticky-tag-name {
-        font-family: var(--vips-font-body);
-        font-size: 8.5px;
-        font-weight: 700;
-        color: #34d399;
-        letter-spacing: 0.8px;
-      }
-
-      /* Navigation Links - Left Aligned */
+      /* Navigation Links - Flush Left Aligned */
       .vips-sticky-navbar nav.mainmenu-nav {
         margin: 0 !important;
         margin-right: auto !important;
         margin-left: 0 !important;
+        padding-left: 0 !important;
       }
 
       .vips-sticky-navbar ul.mainmenu {
@@ -1002,6 +954,7 @@
         list-style: none;
         margin: 0 !important;
         padding: 0 !important;
+        padding-left: 0 !important;
       }
 
       .vips-sticky-navbar ul.mainmenu > li {
