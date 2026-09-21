@@ -4,9 +4,10 @@
 .vercel
 assets/images/Day1/
 assets/images/Day2/
-assets/images/gallery/
+assets/images/gallery/*.JPG
+assets/images/gallery/*.jpg
 assets/images/services/video.mp4
 assets/pdf/naac/
-assets/pdf/Feedback System.pdf
 assets/images/banner/*.pdf
 Vaagdevi pharmacy college/
+
