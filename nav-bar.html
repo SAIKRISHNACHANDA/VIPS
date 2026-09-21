@@ -119,10 +119,10 @@
     <!-- Main Header Branding & Accreditation Area -->
     <header class="rainbow-header header-default header-not-transparent header-top-bar vips-main-header">
       <div class="container-fluid px-lg-4 px-3 position-relative">
-        <div class="d-flex align-items-center justify-content-between py-2 flex-wrap gap-2">
+        <div class="d-flex align-items-center justify-content-between py-2 flex-nowrap w-100 gap-3">
           
           <!-- Left: Prestigious University Brand Lockup -->
-          <div class="vips-brand-container">
+          <div class="vips-brand-container flex-shrink-0">
             <a href="index.html" class="vips-brand-link">
               <div class="vips-crest-wrap">
                 <img
@@ -135,7 +135,7 @@
                 <div class="vips-society-label">VISWAMBHARA EDUCATIONAL SOCIETY</div>
                 <h1 class="vips-title-main">VAAGDEVI</h1>
                 <div class="vips-title-sub">INSTITUTE OF PHARMACEUTICAL SCIENCES</div>
-                <div class="vips-badges-row d-none d-sm-flex align-items-center flex-wrap gap-2">
+                <div class="vips-badges-row d-none d-xl-flex align-items-center flex-wrap gap-2">
                   <span class="vips-badge-item"><i class="feather-shield"></i> Approved by AICTE & PCI</span>
                   <span class="vips-badge-divider">•</span>
                   <span class="vips-badge-item">Affiliated to Kakatiya University</span>
@@ -148,41 +148,29 @@
             </a>
           </div>
 
-          <!-- Right: Accreditation Capsule & Action Buttons -->
-          <div class="vips-header-right-block d-flex align-items-center gap-3">
+          <!-- Right: Accreditation Logos & Action Buttons -->
+          <div class="vips-header-right-block d-flex align-items-center gap-3 ms-auto flex-shrink-0">
             
-            <!-- Accreditation Logos Capsule (Desktop Large) -->
-            <div class="vips-accreditations-capsule d-none d-xxl-flex align-items-center">
-              <div class="capsule-tag">RECOGNITIONS & PARTNERS</div>
-              <div class="capsule-logo-items d-flex align-items-center gap-3">
-                <a href="pci-regulations.html" title="Pharmacy Council of India (PCI)" class="capsule-logo-link">
-                  <img src="assets/images/logo/pharmacy-council-logo.svg" alt="PCI Logo" />
-                </a>
-                <a href="https://kakatiya.ac.in/" target="_blank" title="Kakatiya University" class="capsule-logo-link">
-                  <img src="assets/images/logo/ku.svg" alt="KU Logo" />
-                </a>
-                <a href="naac.html" title="NAAC B++ Accredited" class="capsule-logo-link">
-                  <img src="assets/images/logo/naac-logo.svg" alt="NAAC Logo" />
-                </a>
-                <a href="#" title="Institution's Innovation Council (IIC)" class="capsule-logo-link">
-                  <img src="assets/images/logo/IIC-LOGO.svg" alt="IIC Logo" />
-                </a>
-                <a href="#" title="Medicover Hospitals Tie-Up" class="capsule-logo-link">
-                  <img src="assets/images/logo/medicover-logo.svg" alt="Medicover Logo" />
-                </a>
-                <a href="#" title="ISO 9001:2015 Certified" class="capsule-logo-link">
-                  <img src="assets/images/logo/iso-logo.svg" alt="ISO Logo" />
-                </a>
-              </div>
-            </div>
-
-            <!-- Compact Accreditations (Desktop Medium) -->
-            <div class="vips-accreditations-compact d-none d-lg-flex d-xxl-none align-items-center gap-2">
-              <a href="pci-regulations.html" title="PCI"><img src="assets/images/logo/pharmacy-council-logo.svg" alt="PCI" class="compact-acc-logo" /></a>
-              <a href="https://kakatiya.ac.in/" target="_blank" title="Kakatiya University"><img src="assets/images/logo/ku.svg" alt="KU" class="compact-acc-logo" /></a>
-              <a href="naac.html" title="NAAC B++"><img src="assets/images/logo/naac-logo.svg" alt="NAAC" class="compact-acc-logo" /></a>
-              <a href="#" title="Medicover Hospitals"><img src="assets/images/logo/medicover-logo.svg" alt="Medicover" class="compact-acc-logo" /></a>
-              <a href="#" title="ISO Certified"><img src="assets/images/logo/iso-logo.svg" alt="ISO" class="compact-acc-logo" /></a>
+            <!-- Accreditation Logos Row (Desktop) -->
+            <div class="vips-accreditations-row d-none d-lg-flex align-items-center gap-2">
+              <a href="pci-regulations.html" title="Pharmacy Council of India (PCI)" class="acc-logo-item">
+                <img src="assets/images/logo/pharmacy-council-logo.svg" alt="PCI Logo" />
+              </a>
+              <a href="https://kakatiya.ac.in/" target="_blank" title="Kakatiya University" class="acc-logo-item">
+                <img src="assets/images/logo/ku.svg" alt="KU Logo" />
+              </a>
+              <a href="naac.html" title="NAAC B++ Accredited" class="acc-logo-item">
+                <img src="assets/images/logo/naac-logo.svg" alt="NAAC Logo" />
+              </a>
+              <a href="#" title="Institution's Innovation Council (IIC)" class="acc-logo-item">
+                <img src="assets/images/logo/IIC-LOGO.svg" alt="IIC Logo" />
+              </a>
+              <a href="#" title="Medicover Hospitals Tie-Up" class="acc-logo-item">
+                <img src="assets/images/logo/medicover-logo.svg" alt="Medicover Logo" />
+              </a>
+              <a href="#" title="ISO 9001:2015 Certified" class="acc-logo-item">
+                <img src="assets/images/logo/iso-logo.svg" alt="ISO Logo" />
+              </a>
             </div>
 
             <!-- Premium Quick Action Buttons (Desktop) -->
@@ -790,76 +778,52 @@
         gap: 3px;
       }
 
-      /* Accreditation Logos Capsule */
-      .vips-accreditations-capsule {
-        background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
-        border: 1px solid #cbd5e1;
-        border-radius: 50px;
-        padding: 6px 16px;
-        box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
-        position: relative;
+      /* Accreditation Logos Row */
+      .vips-accreditations-row {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-right: 6px;
       }
 
-      .capsule-tag {
-        font-family: var(--vips-font-body);
-        font-size: 8.5px;
-        font-weight: 800;
-        color: #64748b;
-        letter-spacing: 0.8px;
-        text-transform: uppercase;
-        margin-right: 12px;
-        padding-right: 12px;
-        border-right: 1px solid #cbd5e1;
-        white-space: nowrap;
-      }
-
-      .capsule-logo-link {
+      .vips-accreditations-row .acc-logo-item {
         display: inline-flex;
         align-items: center;
-        transition: transform 0.25s ease, filter 0.25s ease;
-      }
-
-      .capsule-logo-link img {
-        height: 48px !important;
-        width: auto !important;
-        object-fit: contain !important;
-        display: block !important;
-        filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.06));
-      }
-
-      .capsule-logo-link:hover {
-        transform: translateY(-3px) scale(1.08);
-      }
-
-      /* Compact Accreditations */
-      .compact-acc-logo {
-        height: 42px !important;
-        width: auto !important;
-        object-fit: contain !important;
         transition: transform 0.2s ease;
       }
 
-      .compact-acc-logo:hover {
-        transform: translateY(-2px);
+      .vips-accreditations-row .acc-logo-item img {
+        height: 44px !important;
+        width: auto !important;
+        object-fit: contain !important;
+        display: block !important;
+        filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.08));
+      }
+
+      .vips-accreditations-row .acc-logo-item:hover {
+        transform: translateY(-2px) scale(1.08);
       }
 
       /* Premium CTA Action Pills */
       .vips-cta-pills-group {
+        display: flex;
+        align-items: center;
+        gap: 6px;
         flex-shrink: 0;
       }
 
       .vips-pill-btn {
         font-family: var(--vips-font-body);
-        font-size: 12.5px;
+        font-size: 12px;
         font-weight: 700;
         letter-spacing: 0.3px;
-        padding: 8px 16px !important;
+        padding: 6px 13px !important;
         border-radius: 50px !important;
         text-decoration: none !important;
         display: inline-flex;
         align-items: center;
-        gap: 6px;
-        transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        gap: 5px;
+        transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
         white-space: nowrap;
         border: none !important;
       }
@@ -867,20 +831,19 @@
       .vips-pill-viba {
         background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%) !important;
         color: #ffffff !important;
-        box-shadow: 0 3px 10px rgba(37, 99, 235, 0.25);
+        box-shadow: 0 2px 8px rgba(37, 99, 235, 0.25);
       }
 
       .vips-pill-admissions {
         background: linear-gradient(135deg, #047857 0%, #10b981 100%) !important;
         color: #ffffff !important;
-        box-shadow: 0 4px 14px rgba(16, 185, 129, 0.4);
+        box-shadow: 0 3px 10px rgba(16, 185, 129, 0.35);
         position: relative;
-        overflow: hidden;
       }
 
       .vips-pulse-indicator {
-        width: 7px;
-        height: 7px;
+        width: 6px;
+        height: 6px;
         background-color: #ffffff;
         border-radius: 50%;
         box-shadow: 0 0 6px #ffffff;
@@ -891,13 +854,13 @@
       .vips-pill-ugc {
         background: linear-gradient(135deg, #0f172a 0%, #334155 100%) !important;
         color: #ffffff !important;
-        box-shadow: 0 3px 10px rgba(15, 23, 42, 0.2);
+        box-shadow: 0 2px 8px rgba(15, 23, 42, 0.2);
       }
 
       .vips-pill-disclosures {
         background: linear-gradient(135deg, #9a3412 0%, #ea580c 100%) !important;
         color: #ffffff !important;
-        box-shadow: 0 3px 10px rgba(234, 88, 12, 0.25);
+        box-shadow: 0 2px 8px rgba(234, 88, 12, 0.25);
       }
 
       .vips-pill-btn:hover {
