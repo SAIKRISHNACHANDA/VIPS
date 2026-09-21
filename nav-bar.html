@@ -247,9 +247,9 @@
                 </a>
               </div>
 
-              <!-- Centered Main Navigation Bar -->
-              <nav class="mainmenu-nav d-none d-lg-block mx-auto">
-                <ul class="mainmenu d-flex align-items-center justify-content-center gap-1 mb-0">
+              <!-- Left-Aligned Main Navigation Bar -->
+              <nav class="mainmenu-nav d-none d-lg-block me-auto ms-0">
+                <ul class="mainmenu d-flex align-items-center justify-content-start gap-1 mb-0">
                   <li><a href="index.html" class="nav-root-link"><i class="feather-home nav-icon-prefix"></i> Home</a></li>
                   
                   <li class="has-droupdown has-menu-child-item">
@@ -988,17 +988,20 @@
         letter-spacing: 0.8px;
       }
 
-      /* Navigation Links */
+      /* Navigation Links - Left Aligned */
       .vips-sticky-navbar nav.mainmenu-nav {
-        margin: 0 auto;
+        margin: 0 !important;
+        margin-right: auto !important;
+        margin-left: 0 !important;
       }
 
       .vips-sticky-navbar ul.mainmenu {
         display: flex;
         align-items: center;
+        justify-content: flex-start !important;
         list-style: none;
-        margin: 0;
-        padding: 0;
+        margin: 0 !important;
+        padding: 0 !important;
       }
 
       .vips-sticky-navbar ul.mainmenu > li {
