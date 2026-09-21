@@ -9338,10 +9338,10 @@ xclip
 }
 .header-default .logo a {
   display: flex;
-  height: 80px;
-  line-height: 150px;
+  height: auto;
+  min-height: 80px;
   align-items: center;
-
+  padding: 4px 0;
 }
 
 .header-default .header-right {

@@ -62,7 +62,7 @@
       </div>
     </div>
 
-    <header class="rainbow-header header-default header-not-transparent">
+    <header class="rainbow-header header-default header-not-transparent header-top-bar">
       <div class="container position-relative">
         <div class="row align-items-center row--0">
           <!-- Logo on the Left -->
@@ -665,6 +665,40 @@
     </div>
 
     <style>
+      /* Top header navigation with logos */
+      header.rainbow-header.header-default.header-top-bar,
+      header.rainbow-header.header-default:first-of-type {
+        padding-top: 20px !important;
+        padding-bottom: 18px !important;
+        background: #ffffff !important;
+        border-bottom: 1px solid rgba(226, 232, 240, 0.95) !important;
+      }
+
+      .header-default.header-top-bar .logo a {
+        display: inline-flex !important;
+        align-items: center !important;
+        height: auto !important;
+        line-height: normal !important;
+        padding: 6px 0 !important;
+        margin: 0 !important;
+      }
+
+      .header-default.header-top-bar .logo a img {
+        max-height: 80px !important;
+        height: auto !important;
+        width: auto !important;
+        display: block !important;
+        padding: 4px 0 !important;
+        object-fit: contain !important;
+      }
+
+      /* Secondary sticky menu header */
+      header.header-sticky {
+        margin-bottom: 0 !important;
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+      }
+
       header {
         margin-bottom: 0 !important;
       }
