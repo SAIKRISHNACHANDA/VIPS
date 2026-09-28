@@ -142,6 +142,8 @@
                   <span class="vips-badge-divider">•</span>
                   <span class="vips-badge-highlight"><i class="feather-award"></i> NAAC 'B++' Grade</span>
                   <span class="vips-badge-divider">•</span>
+                  <span class="vips-badge-item">DSIR-SIRO Recognized</span>
+                  <span class="vips-badge-divider">•</span>
                   <span class="vips-badge-item">ISO 9001:2015</span>
                 </div>
               </div>
@@ -161,6 +163,9 @@
               </a>
               <a href="naac.html" title="NAAC B++ Accredited" class="acc-logo-item">
                 <img src="assets/images/logo/naac-logo.svg" alt="NAAC Logo" />
+              </a>
+              <a href="assets/pdf/Research/DSIR-SIRO recognition letter.pdf" target="_blank" title="DSIR Recognized SIRO (Govt. of India)" class="acc-logo-item">
+                <img src="assets/images/logo/dsir-siro-logo.png" alt="DSIR SIRO Logo" />
               </a>
               <a href="#" title="Institution's Innovation Council (IIC)" class="acc-logo-item">
                 <img src="assets/images/logo/IIC-LOGO.svg" alt="IIC Logo" />
@@ -360,6 +365,20 @@
           </div>
           <p class="small mb-2 text-white-50">B.Pharm • Pharm.D • M.Pharm Admissions Open</p>
           <a href="admission.html" class="btn btn-sm btn-light w-100 fw-bold text-success">Apply For Admission</a>
+        </div>
+
+        <!-- Mobile Accreditations Strip -->
+        <div class="mobile-accreditations-strip my-3 p-2 bg-light rounded-3">
+          <div class="small fw-bold text-muted text-uppercase mb-2 text-center" style="font-size: 10px; letter-spacing: 0.5px;">Accreditations & Recognitions</div>
+          <div class="d-flex align-items-center justify-content-center flex-wrap gap-2">
+            <img src="assets/images/logo/pharmacy-council-logo.svg" alt="PCI" style="height: 38px; width: auto; object-fit: contain;" />
+            <img src="assets/images/logo/ku.svg" alt="KU" style="height: 38px; width: auto; object-fit: contain;" />
+            <img src="assets/images/logo/naac-logo.svg" alt="NAAC" style="height: 38px; width: auto; object-fit: contain;" />
+            <img src="assets/images/logo/dsir-siro-logo.png" alt="DSIR SIRO" style="height: 38px; width: auto; object-fit: contain;" />
+            <img src="assets/images/logo/IIC-LOGO.svg" alt="IIC" style="height: 38px; width: auto; object-fit: contain;" />
+            <img src="assets/images/logo/medicover-logo.svg" alt="Medicover" style="height: 38px; width: auto; object-fit: contain;" />
+            <img src="assets/images/logo/iso-logo.svg" alt="ISO" style="height: 38px; width: auto; object-fit: contain;" />
+          </div>
         </div>
 
         <ul class="mainmenu">
@@ -780,24 +799,27 @@
 
       /* Accreditation Logos Row - Top Row */
       .vips-header-right-block {
-        margin-right: 24px !important;
+        margin-right: 12px !important;
       }
 
       .vips-accreditations-row {
         display: flex;
         align-items: center;
-        gap: 14px;
+        gap: 10px;
         margin-right: 0;
+        flex-wrap: nowrap;
       }
 
       .vips-accreditations-row .acc-logo-item {
         display: inline-flex;
         align-items: center;
+        justify-content: center;
         transition: transform 0.25s ease;
       }
 
       .vips-accreditations-row .acc-logo-item img {
-        height: 62px !important;
+        height: 52px !important;
+        max-width: 65px !important;
         width: auto !important;
         object-fit: contain !important;
         display: block !important;
@@ -806,6 +828,19 @@
 
       .vips-accreditations-row .acc-logo-item:hover {
         transform: translateY(-2px) scale(1.08);
+      }
+
+      @media (min-width: 1400px) {
+        .vips-header-right-block {
+          margin-right: 24px !important;
+        }
+        .vips-accreditations-row {
+          gap: 14px;
+        }
+        .vips-accreditations-row .acc-logo-item img {
+          height: 60px !important;
+          max-width: 75px !important;
+        }
       }
 
       /* Premium CTA Action Pills - Bottom Row */
