@@ -1,0 +1,1184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Historic MoU Signing & Exchange with CSIR-IICT Hyderabad | Vaagdevi Pharmacy Colleges</title>
+  
+  <!-- Favicon -->
+  <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.png" />
+  
+  <!-- CSS Vendors & Fonts -->
+  <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ========================================================
+       PREMIUM HORIZONTAL SCROLLING MOU BANNER - STYLING
+       ======================================================== */
+    :root {
+      --mou-primary: #0284c7;
+      --mou-primary-dark: #0369a1;
+      --mou-accent: #f59e0b;
+      --mou-green: #10b981;
+      --mou-navy: #0f172a;
+      --mou-slate: #1e293b;
+      --mou-card-bg: rgba(255, 255, 255, 0.95);
+      --mou-glass-border: rgba(255, 255, 255, 0.4);
+      --mou-shadow: 0 20px 45px -12px rgba(15, 23, 42, 0.12), 0 4px 16px rgba(15, 23, 42, 0.04);
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #f8fafc;
+      color: #334155;
+      overflow-x: hidden;
+    }
+
+    .mou-showcase-section {
+      position: relative;
+      padding: 40px 0 60px 0;
+      background: linear-gradient(180deg, #f0fdf4 0%, #f8fafc 40%, #ffffff 100%);
+      overflow: hidden;
+    }
+
+    /* Ambient background glows */
+    .mou-bg-glow-1 {
+      position: absolute;
+      top: -100px;
+      left: -100px;
+      width: 450px;
+      height: 450px;
+      background: radial-gradient(circle, rgba(16, 185, 129, 0.15) 0%, rgba(255, 255, 255, 0) 70%);
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .mou-bg-glow-2 {
+      position: absolute;
+      top: 50px;
+      right: -120px;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(2, 132, 199, 0.12) 0%, rgba(255, 255, 255, 0) 70%);
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .mou-container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 20px;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Top Ticker Pill & Live Status */
+    .mou-top-badge-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+
+    .mou-live-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+      padding: 6px 14px;
+      border-radius: 9999px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: #0f172a;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+    }
+
+    .mou-pulse-dot {
+      width: 9px;
+      height: 9px;
+      background-color: #10b981;
+      border-radius: 50%;
+      position: relative;
+    }
+
+    .mou-pulse-dot::after {
+      content: '';
+      position: absolute;
+      inset: -3px;
+      border-radius: 50%;
+      background-color: #10b981;
+      opacity: 0.6;
+      animation: mouPulse 1.8s cubic-bezier(0.24, 0, 0.38, 1) infinite;
+    }
+
+    @keyframes mouPulse {
+      0% { transform: scale(0.9); opacity: 0.8; }
+      70% { transform: scale(2.4); opacity: 0; }
+      100% { transform: scale(2.4); opacity: 0; }
+    }
+
+    .mou-meta-tags {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.85rem;
+      color: #64748b;
+      font-weight: 600;
+    }
+
+    .mou-meta-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(241, 245, 249, 0.8);
+      padding: 4px 10px;
+      border-radius: 8px;
+    }
+
+    /* ONE-LINE HEADING CONTAINER */
+    .mou-one-line-header-box {
+      margin-bottom: 24px;
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-left: 6px solid #10b981;
+      border-radius: 16px;
+      padding: 16px 24px;
+      box-shadow: 0 4px 20px -4px rgba(15, 23, 42, 0.06);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .mou-header-content {
+      flex: 1;
+      min-width: 0; /* allows text truncation / clean one line */
+    }
+
+    /* STRICT ONE LINE HEADING */
+    .mou-one-line-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: clamp(1.15rem, 1.8vw, 1.6rem);
+      font-weight: 800;
+      color: #0f172a;
+      margin: 0;
+      letter-spacing: -0.02em;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .mou-title-gradient {
+      background: linear-gradient(135deg, #0284c7 0%, #0f766e 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .mou-one-line-sub {
+      font-size: 0.92rem;
+      color: #64748b;
+      margin: 4px 0 0 0;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      font-weight: 500;
+    }
+
+    .mou-controls {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-shrink: 0;
+    }
+
+    .mou-ctrl-btn {
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
+      border: 1px solid #e2e8f0;
+      background: #ffffff;
+      color: #1e293b;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+    }
+
+    .mou-ctrl-btn:hover {
+      background: #0f172a;
+      color: #ffffff;
+      border-color: #0f172a;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(15, 23, 42, 0.15);
+    }
+
+    .mou-ctrl-btn.active-play {
+      background: #f0fdf4;
+      color: #10b981;
+      border-color: #a7f3d0;
+    }
+
+    .mou-ctrl-btn.active-play:hover {
+      background: #10b981;
+      color: #ffffff;
+      border-color: #10b981;
+    }
+
+    /* HORIZONTAL SCROLL TRACK CONTAINER */
+    .mou-scroll-wrapper {
+      position: relative;
+      margin: 0 -10px;
+      padding: 10px 10px 24px 10px;
+    }
+
+    /* Gradient edge indicators */
+    .mou-scroll-wrapper::before,
+    .mou-scroll-wrapper::after {
+      content: '';
+      position: absolute;
+      top: 10px;
+      bottom: 24px;
+      width: 40px;
+      z-index: 5;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+    }
+
+    .mou-scroll-wrapper::before {
+      left: 10px;
+      background: linear-gradient(to right, rgba(248, 250, 252, 0.95), transparent);
+    }
+
+    .mou-scroll-wrapper::after {
+      right: 10px;
+      background: linear-gradient(to left, rgba(248, 250, 252, 0.95), transparent);
+    }
+
+    .mou-scroll-track {
+      display: flex;
+      gap: 24px;
+      overflow-x: auto;
+      overflow-y: hidden;
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+      -webkit-overflow-scrolling: touch;
+      padding-bottom: 8px;
+      cursor: grab;
+      user-select: none;
+    }
+
+    .mou-scroll-track.is-dragging {
+      cursor: grabbing;
+      scroll-behavior: auto;
+      scroll-snap-type: none;
+    }
+
+    /* Hide standard scrollbar */
+    .mou-scroll-track::-webkit-scrollbar {
+      height: 6px;
+    }
+    .mou-scroll-track::-webkit-scrollbar-track {
+      background: #e2e8f0;
+      border-radius: 9999px;
+    }
+    .mou-scroll-track::-webkit-scrollbar-thumb {
+      background: #94a3b8;
+      border-radius: 9999px;
+    }
+    .mou-scroll-track::-webkit-scrollbar-thumb:hover {
+      background: #64748b;
+    }
+
+    /* INDIVIDUAL IMAGE CARD */
+    .mou-card {
+      flex: 0 0 380px;
+      max-width: 380px;
+      scroll-snap-align: start;
+      background: #ffffff;
+      border-radius: 20px;
+      border: 1px solid #e2e8f0;
+      overflow: hidden;
+      box-shadow: var(--mou-shadow);
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+
+    @media (max-width: 576px) {
+      .mou-card {
+        flex: 0 0 300px;
+        max-width: 300px;
+      }
+    }
+
+    .mou-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 28px 50px -12px rgba(15, 23, 42, 0.18), 0 0 0 1.5px rgba(2, 132, 199, 0.4);
+    }
+
+    .mou-card-img-wrapper {
+      position: relative;
+      height: 250px;
+      overflow: hidden;
+      background: #0f172a;
+      cursor: pointer;
+    }
+
+    .mou-card-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .mou-card:hover .mou-card-img {
+      transform: scale(1.06);
+    }
+
+    /* Floating card chip */
+    .mou-card-chip {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      background: rgba(15, 23, 42, 0.85);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      color: #ffffff;
+      padding: 5px 12px;
+      border-radius: 8px;
+      font-size: 0.76rem;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      z-index: 2;
+    }
+
+    .mou-card-zoom-btn {
+      position: absolute;
+      top: 14px;
+      right: 14px;
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.9);
+      color: #0f172a;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.85rem;
+      opacity: 0;
+      transform: scale(0.8);
+      transition: all 0.25s ease;
+      z-index: 2;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    }
+
+    .mou-card:hover .mou-card-zoom-btn {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    .mou-card-zoom-btn:hover {
+      background: #0284c7;
+      color: #ffffff;
+    }
+
+    .mou-card-body {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      background: #ffffff;
+    }
+
+    .mou-card-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.12rem;
+      font-weight: 700;
+      color: #0f172a;
+      margin-bottom: 8px;
+      line-height: 1.35;
+    }
+
+    .mou-card-desc {
+      font-size: 0.88rem;
+      color: #64748b;
+      line-height: 1.55;
+      margin-bottom: 14px;
+      flex-grow: 1;
+    }
+
+    .mou-card-participants {
+      background: #f8fafc;
+      border: 1px solid #f1f5f9;
+      border-radius: 12px;
+      padding: 10px 12px;
+      font-size: 0.8rem;
+      color: #334155;
+      margin-top: auto;
+    }
+
+    .mou-card-participants strong {
+      color: #0f172a;
+      display: block;
+      margin-bottom: 4px;
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    /* SCROLL PROGRESS & QUICK NAV DOTS */
+    .mou-nav-dots-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 14px;
+    }
+
+    .mou-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 9999px;
+      background: #cbd5e1;
+      border: none;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      padding: 0;
+    }
+
+    .mou-dot.active {
+      width: 28px;
+      background: #0284c7;
+    }
+
+    /* DIGNITARIES & DETAILS EXPANDABLE ACCORDION / HIGHLIGHTS SECTION */
+    .mou-details-grid {
+      margin-top: 32px;
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 24px;
+    }
+
+    @media (max-width: 991px) {
+      .mou-details-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .mou-info-card {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 20px;
+      padding: 26px 28px;
+      box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.04);
+    }
+
+    .mou-section-heading {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: #0f172a;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .mou-section-heading i {
+      color: #0284c7;
+    }
+
+    .mou-dignitaries-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 14px;
+    }
+
+    .mou-person-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 14px;
+      padding: 12px 16px;
+      transition: all 0.25s ease;
+    }
+
+    .mou-person-item:hover {
+      background: #ffffff;
+      border-color: #cbd5e1;
+      transform: translateX(4px);
+      box-shadow: 0 4px 12px rgba(15, 23, 42, 0.05);
+    }
+
+    .mou-person-icon {
+      width: 38px;
+      height: 38px;
+      border-radius: 10px;
+      background: #e0f2fe;
+      color: #0284c7;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .mou-person-name {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #0f172a;
+      margin: 0 0 2px 0;
+    }
+
+    .mou-person-role {
+      font-size: 0.82rem;
+      color: #64748b;
+      margin: 0;
+      line-height: 1.4;
+    }
+
+    /* Quotation / Impact Card */
+    .mou-quote-card {
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+      color: #ffffff;
+      border-radius: 20px;
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 20px 40px -10px rgba(15, 23, 42, 0.3);
+    }
+
+    .mou-quote-card::after {
+      content: '\f10e';
+      font-family: 'Font Awesome 6 Free';
+      font-weight: 900;
+      position: absolute;
+      bottom: -20px;
+      right: 10px;
+      font-size: 7rem;
+      color: rgba(255, 255, 255, 0.04);
+      pointer-events: none;
+    }
+
+    .mou-quote-text {
+      font-size: 1.15rem;
+      font-weight: 600;
+      line-height: 1.6;
+      color: #f1f5f9;
+      margin-bottom: 20px;
+      font-style: italic;
+    }
+
+    .mou-quote-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(16, 185, 129, 0.2);
+      border: 1px solid rgba(16, 185, 129, 0.4);
+      color: #34d399;
+      font-size: 0.8rem;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 6px;
+      margin-bottom: 12px;
+      width: fit-content;
+    }
+
+    .mou-quote-footer {
+      font-size: 0.85rem;
+      color: #94a3b8;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding-top: 14px;
+      margin-top: 10px;
+    }
+
+    /* LIGHTBOX MODAL */
+    .mou-lightbox-modal {
+      position: fixed;
+      inset: 0;
+      background: rgba(15, 23, 42, 0.92);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      z-index: 100000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .mou-lightbox-modal.active {
+      display: flex;
+      opacity: 1;
+    }
+
+    .mou-lightbox-content {
+      max-width: 1000px;
+      width: 100%;
+      background: #ffffff;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      animation: modalSlideUp 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    @keyframes modalSlideUp {
+      from { transform: translateY(20px) scale(0.96); opacity: 0; }
+      to { transform: translateY(0) scale(1); opacity: 1; }
+    }
+
+    .mou-lightbox-header {
+      padding: 16px 20px;
+      background: #f8fafc;
+      border-bottom: 1px solid #e2e8f0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .mou-lightbox-title {
+      font-weight: 700;
+      font-size: 1.05rem;
+      color: #0f172a;
+      margin: 0;
+    }
+
+    .mou-lightbox-close {
+      background: none;
+      border: none;
+      font-size: 1.4rem;
+      color: #64748b;
+      cursor: pointer;
+      line-height: 1;
+      transition: color 0.2s;
+    }
+
+    .mou-lightbox-close:hover {
+      color: #ef4444;
+    }
+
+    .mou-lightbox-img-box {
+      max-height: 65vh;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #090d16;
+    }
+
+    .mou-lightbox-img {
+      max-width: 100%;
+      max-height: 65vh;
+      object-fit: contain;
+    }
+
+    .mou-lightbox-caption {
+      padding: 16px 24px;
+      background: #ffffff;
+      font-size: 0.95rem;
+      color: #475569;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar Component Injection Container -->
+  <div id="navBar"></div>
+
+  <!-- Start MoU Showcase Hero Section -->
+  <section class="mou-showcase-section" id="mouSection">
+    <div class="mou-bg-glow-1"></div>
+    <div class="mou-bg-glow-2"></div>
+
+    <div class="mou-container">
+      
+      <!-- Top Meta Status Bar -->
+      <div class="mou-top-badge-wrapper">
+        <div class="mou-live-pill">
+          <span class="mou-pulse-dot"></span>
+          <span>Strategic Partnership & Research MoU</span>
+        </div>
+        <div class="mou-meta-tags">
+          <span class="mou-meta-item"><i class="far fa-calendar-check text-success"></i> Today @ 12:00 PM</span>
+          <span class="mou-meta-item"><i class="fas fa-map-marker-alt text-danger"></i> CSIR-IICT, Tarnaka, Hyderabad</span>
+          <span class="mou-meta-item"><i class="fas fa-handshake text-primary"></i> VIPS & VCOP × CSIR-IICT</span>
+        </div>
+      </div>
+
+      <!-- STRICT ONE-LINE HEADING BAR -->
+      <div class="mou-one-line-header-box">
+        <div class="mou-header-content">
+          <h2 class="mou-one-line-title" title="MoU Signed & Exchanged with Dr. D. Srinivas Reddy, Director, CSIR - Indian Institute of Chemical Technology (IICT), Hyderabad">
+            <span>🤝</span>
+            <span>MoU Signed & Exchanged with</span>
+            <span class="mou-title-gradient">CSIR - Indian Institute of Chemical Technology (IICT), Hyderabad</span>
+          </h2>
+          <p class="mou-one-line-sub">
+            In the distinguished presence of Dr. D. Srinivas Reddy, Dr. S. Rammohan, Dr. Prasenjit Das, Dr. M. Swapna Reddy, Dr. T. Sreekanth & Mr. J. Pramod Srinivas.
+          </p>
+        </div>
+        
+        <!-- Interactive Horizontal Controls -->
+        <div class="mou-controls">
+          <button class="mou-ctrl-btn" id="mouPrevBtn" aria-label="Scroll Left" title="Previous image">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <button class="mou-ctrl-btn active-play" id="mouPlayPauseBtn" aria-label="Toggle Auto Scroll" title="Pause/Resume Auto Scroll">
+            <i class="fas fa-pause" id="mouPlayPauseIcon"></i>
+          </button>
+          <button class="mou-ctrl-btn" id="mouNextBtn" aria-label="Scroll Right" title="Next image">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- HORIZONTAL SCROLLING IMAGE GALLERY TRACK -->
+      <div class="mou-scroll-wrapper">
+        <div class="mou-scroll-track" id="mouScrollTrack">
+
+          <!-- Card 1: Official MoU Exchange Ceremony -->
+          <div class="mou-card" data-index="0">
+            <div class="mou-card-img-wrapper" onclick="openMouLightbox(0)">
+              <span class="mou-card-chip"><i class="fas fa-file-signature text-warning"></i> MoU Exchange</span>
+              <button class="mou-card-zoom-btn" title="View Fullscreen"><i class="fas fa-expand"></i></button>
+              <img 
+                src="assets/images/mou-csir-iict/mou-exchange-ceremony.jpg" 
+                alt="MoU Exchange Ceremony between Vaagdevi and CSIR-IICT"
+                class="mou-card-img" 
+                loading="lazy"
+              />
+            </div>
+            <div class="mou-card-body">
+              <h3 class="mou-card-title">Formal MoU Exchange & Partnership Inception</h3>
+              <p class="mou-card-desc">
+                Dr. M. Swapna Reddy (Principal, VIPS) exchanging the signed MoU with Dr. D. Srinivas Reddy (Director, CSIR-IICT) alongside dignitaries and research heads.
+              </p>
+              <div class="mou-card-participants">
+                <strong>Key Participants</strong>
+                <span>Dr. D. Srinivas Reddy, Dr. M. Swapna Reddy, Dr. S. Rammohan, Dr. Prasenjit Das, Dr. T. Sreekanth, Mr. J. Pramod Srinivas</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: Memento Presentation to Director -->
+          <div class="mou-card" data-index="1">
+            <div class="mou-card-img-wrapper" onclick="openMouLightbox(1)">
+              <span class="mou-card-chip"><i class="fas fa-award text-success"></i> Director Felicitation</span>
+              <button class="mou-card-zoom-btn" title="View Fullscreen"><i class="fas fa-expand"></i></button>
+              <img 
+                src="assets/images/mou-csir-iict/mou-memento-director.jpg" 
+                alt="Presenting divine memento to Dr. D. Srinivas Reddy, Director CSIR-IICT"
+                class="mou-card-img" 
+                loading="lazy"
+              />
+            </div>
+            <div class="mou-card-body">
+              <h3 class="mou-card-title">Felicitation & Memento Presentation to Director</h3>
+              <p class="mou-card-desc">
+                Presenting the auspicious framed memento of Goddess Saraswati to Dr. D. Srinivas Reddy in his official chamber at CSIR-IICT in appreciation of research mentorship.
+              </p>
+              <div class="mou-card-participants">
+                <strong>Chamber Meeting</strong>
+                <span>Dr. D. Srinivas Reddy (Director), Dr. M. Swapna Reddy (Principal), Faculty & Research Delegates</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3: Felicitation with BDRM & KIM Leadership -->
+          <div class="mou-card" data-index="2">
+            <div class="mou-card-img-wrapper" onclick="openMouLightbox(2)">
+              <span class="mou-card-chip"><i class="fas fa-lightbulb text-info"></i> IPR & Research Dept</span>
+              <button class="mou-card-zoom-btn" title="View Fullscreen"><i class="fas fa-expand"></i></button>
+              <img 
+                src="assets/images/mou-csir-iict/mou-felicitation-bdrm.jpg" 
+                alt="Felicitation with Dr. S. Rammohan and Dr. Prasenjit Das at CSIR-IICT"
+                class="mou-card-img" 
+                loading="lazy"
+              />
+            </div>
+            <div class="mou-card-body">
+              <h3 class="mou-card-title">Collaboration with BDRM & KIM Department</h3>
+              <p class="mou-card-desc">
+                Commemorating the alliance with Dr. S. Rammohan (Chief Scientist, BDRM & KIM) and Dr. Prasenjit Das (Senior Technical Officer & Patent Prosecutor, Govt of India).
+              </p>
+              <div class="mou-card-participants">
+                <strong>Focus Area</strong>
+                <span>Business Development, Research Management, Patent Filing & Knowledge Transfer</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4: Executive Roundtable & Signing Meeting -->
+          <div class="mou-card" data-index="3">
+            <div class="mou-card-img-wrapper" onclick="openMouLightbox(3)">
+              <span class="mou-card-chip"><i class="fas fa-map-marked-alt text-danger"></i> Geo-Tagged Session</span>
+              <button class="mou-card-zoom-btn" title="View Fullscreen"><i class="fas fa-expand"></i></button>
+              <img 
+                src="assets/images/mou-csir-iict/mou-roundtable-discussion.jpg" 
+                alt="Executive Roundtable & Signing session at CSIR-IICT Colony, Secunderabad"
+                class="mou-card-img" 
+                loading="lazy"
+              />
+            </div>
+            <div class="mou-card-body">
+              <h3 class="mou-card-title">Executive Discussion & Formal Signing</h3>
+              <p class="mou-card-desc">
+                Interactive roundtable deliberation on joint drug discovery projects, pharmaceutical technology incubation, MSME-TTFC support, and student internships.
+              </p>
+              <div class="mou-card-participants">
+                <strong>Venue & Location</strong>
+                <span>IICT Colony, Tarnaka, Secunderabad, Telangana (17.422592° N, 78.539655° E)</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Quick Nav Indicator Dots -->
+      <div class="mou-nav-dots-container" id="mouDotsContainer">
+        <button class="mou-dot active" onclick="scrollMouToCard(0)" aria-label="Slide 1"></button>
+        <button class="mou-dot" onclick="scrollMouToCard(1)" aria-label="Slide 2"></button>
+        <button class="mou-dot" onclick="scrollMouToCard(2)" aria-label="Slide 3"></button>
+        <button class="mou-dot" onclick="scrollMouToCard(3)" aria-label="Slide 4"></button>
+      </div>
+
+      <!-- DIGNITARIES LIST & INSTITUTIONAL QUOTE SECTION -->
+      <div class="mou-details-grid">
+        
+        <!-- Left Box: Dignitaries & Delegation Profiles -->
+        <div class="mou-info-card">
+          <h4 class="mou-section-heading">
+            <i class="fas fa-users-cog"></i>
+            <span>Distinguished Dignitaries & Delegation</span>
+          </h4>
+          
+          <div class="mou-dignitaries-list">
+            
+            <div class="mou-person-item">
+              <div class="mou-person-icon"><i class="fas fa-user-tie"></i></div>
+              <div>
+                <p class="mou-person-name">Dr. D. Srinivas Reddy</p>
+                <p class="mou-person-role">Director, CSIR-Indian Institute of Chemical Technology (IICT), Hyderabad</p>
+              </div>
+            </div>
+
+            <div class="mou-person-item">
+              <div class="mou-person-icon"><i class="fas fa-microscope"></i></div>
+              <div>
+                <p class="mou-person-name">Dr. S. Rammohan</p>
+                <p class="mou-person-role">Scientist-G & Chief Scientist, Business Development and Research Management (BDRM), Chairperson - KIM Dept</p>
+              </div>
+            </div>
+
+            <div class="mou-person-item">
+              <div class="mou-person-icon"><i class="fas fa-stamp"></i></div>
+              <div>
+                <p class="mou-person-name">Dr. Prasenjit Das</p>
+                <p class="mou-person-role">Senior Technical Officer (KIM) & Scientific Advisor (Controller General of Patent, Design & Trademark, Govt of India) - Indian Patent Prosecutor</p>
+              </div>
+            </div>
+
+            <div class="mou-person-item">
+              <div class="mou-person-icon"><i class="fas fa-user-graduate"></i></div>
+              <div>
+                <p class="mou-person-name">Dr. M. Swapna Reddy</p>
+                <p class="mou-person-role">Principal, Vaagdevi Institute of Pharmaceutical Sciences (VIPS)</p>
+              </div>
+            </div>
+
+            <div class="mou-person-item">
+              <div class="mou-person-icon"><i class="fas fa-flask"></i></div>
+              <div>
+                <p class="mou-person-name">Dr. T. Sreekanth</p>
+                <p class="mou-person-role">Head - R&D, Vaagdevi College of Pharmacy (VCOP)</p>
+              </div>
+            </div>
+
+            <div class="mou-person-item">
+              <div class="mou-person-icon"><i class="fas fa-briefcase"></i></div>
+              <div>
+                <p class="mou-person-name">Mr. J. Pramod Srinivas</p>
+                <p class="mou-person-role">VCOP 2020 Pharm.D Alumnus | Project Associate, MSME-TTFC @ CSIR-IICT</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Right Box: Message & Vision -->
+        <div class="mou-quote-card">
+          <div>
+            <div class="mou-quote-badge">
+              <i class="fas fa-rocket"></i> Impact & Vision
+            </div>
+            <p class="mou-quote-text">
+              "Let’s together make it functional! This strategic partnership with CSIR-IICT opens premier avenues for pharmaceutical innovation, patent filing, advanced instrumentation access, and career opportunities for our scholars."
+            </p>
+          </div>
+          
+          <div class="mou-quote-footer">
+            <p style="margin: 0 0 4px 0; font-weight: 700; color: #ffffff;">Special Thanks</p>
+            <p style="margin: 0; font-size: 0.82rem; color: #cbd5e1; line-height: 1.4;">
+              Heartfelt gratitude to our esteemed Management and all beloved Principals for their unwavering encouragement and visionary support.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+  <!-- End MoU Showcase Section -->
+
+  <!-- Fullscreen Lightbox Modal -->
+  <div class="mou-lightbox-modal" id="mouLightbox" onclick="closeMouLightbox(event)">
+    <div class="mou-lightbox-content" onclick="event.stopPropagation()">
+      <div class="mou-lightbox-header">
+        <h5 class="mou-lightbox-title" id="mouLightboxTitle">MoU Photo Gallery</h5>
+        <button class="mou-lightbox-close" onclick="closeMouLightbox(null)">&times;</button>
+      </div>
+      <div class="mou-lightbox-img-box">
+        <img src="" alt="MoU Fullscreen View" class="mou-lightbox-img" id="mouLightboxImg" />
+      </div>
+      <div class="mou-lightbox-caption" id="mouLightboxCaption"></div>
+    </div>
+  </div>
+
+  <!-- JavaScript for Interactive Controls, Auto-Scroll, Lightbox -->
+  <script>
+    (function() {
+      const track = document.getElementById('mouScrollTrack');
+      const prevBtn = document.getElementById('mouPrevBtn');
+      const nextBtn = document.getElementById('mouNextBtn');
+      const playPauseBtn = document.getElementById('mouPlayPauseBtn');
+      const playPauseIcon = document.getElementById('mouPlayPauseIcon');
+      const dots = document.querySelectorAll('.mou-dot');
+      
+      const galleryData = [
+        {
+          src: 'assets/images/mou-csir-iict/mou-exchange-ceremony.jpg',
+          title: 'Official MoU Signing & Exchange Ceremony',
+          caption: 'Dr. M. Swapna Reddy (Principal, VIPS) exchanging the signed MoU with Dr. D. Srinivas Reddy (Director, CSIR-IICT), witnessed by Dr. S. Rammohan, Dr. Prasenjit Das, Dr. T. Sreekanth, and Mr. J. Pramod Srinivas.'
+        },
+        {
+          src: 'assets/images/mou-csir-iict/mou-memento-director.jpg',
+          title: 'Memento Presentation to Director Dr. D. Srinivas Reddy',
+          caption: 'Presenting the auspicious Goddess Saraswati framed portrait to Dr. D. Srinivas Reddy, Director of CSIR-IICT, in recognition of fostering scientific collaboration and research leadership.'
+        },
+        {
+          src: 'assets/images/mou-csir-iict/mou-felicitation-bdrm.jpg',
+          title: 'Collaboration with BDRM & KIM Division',
+          caption: 'Commemorating the research synergy with Dr. S. Rammohan (Scientist-G, Chief Scientist BDRM & KIM) and Dr. Prasenjit Das (Senior Technical Officer & Indian Patent Prosecutor, Govt. of India).'
+        },
+        {
+          src: 'assets/images/mou-csir-iict/mou-roundtable-discussion.jpg',
+          title: 'Executive Roundtable & Geo-Tagged Signing Meeting',
+          caption: 'Strategic roundtable conference at CSIR-IICT Tarnaka, Secunderabad, formulating actionable roadmaps for drug research, IPR filing, and student placement initiatives.'
+        }
+      ];
+
+      // Scroll helpers
+      function getCardWidth() {
+        const card = track.querySelector('.mou-card');
+        return card ? card.offsetWidth + 24 : 400; // 24px gap
+      }
+
+      function updateActiveDot() {
+        const scrollLeft = track.scrollLeft;
+        const cardWidth = getCardWidth();
+        const activeIndex = Math.min(dots.length - 1, Math.round(scrollLeft / cardWidth));
+        
+        dots.forEach((dot, idx) => {
+          dot.classList.toggle('active', idx === activeIndex);
+        });
+      }
+
+      window.scrollMouToCard = function(index) {
+        const cardWidth = getCardWidth();
+        track.scrollTo({
+          left: index * cardWidth,
+          behavior: 'smooth'
+        });
+      };
+
+      if (prevBtn) {
+        prevBtn.addEventListener('click', () => {
+          track.scrollBy({ left: -getCardWidth(), behavior: 'smooth' });
+        });
+      }
+
+      if (nextBtn) {
+        nextBtn.addEventListener('click', () => {
+          const maxScroll = track.scrollWidth - track.clientWidth;
+          if (track.scrollLeft >= maxScroll - 10) {
+            track.scrollTo({ left: 0, behavior: 'smooth' });
+          } else {
+            track.scrollBy({ left: getCardWidth(), behavior: 'smooth' });
+          }
+        });
+      }
+
+      // Auto-Scroll Loop
+      let autoScrollInterval = null;
+      let isPlaying = true;
+
+      function startAutoScroll() {
+        if (autoScrollInterval) clearInterval(autoScrollInterval);
+        autoScrollInterval = setInterval(() => {
+          const maxScroll = track.scrollWidth - track.clientWidth;
+          if (track.scrollLeft >= maxScroll - 10) {
+            track.scrollTo({ left: 0, behavior: 'smooth' });
+          } else {
+            track.scrollBy({ left: getCardWidth(), behavior: 'smooth' });
+          }
+        }, 3800);
+        isPlaying = true;
+        if (playPauseBtn) playPauseBtn.classList.add('active-play');
+        if (playPauseIcon) playPauseIcon.className = 'fas fa-pause';
+      }
+
+      function stopAutoScroll() {
+        if (autoScrollInterval) {
+          clearInterval(autoScrollInterval);
+          autoScrollInterval = null;
+        }
+        isPlaying = false;
+        if (playPauseBtn) playPauseBtn.classList.remove('active-play');
+        if (playPauseIcon) playPauseIcon.className = 'fas fa-play';
+      }
+
+      if (playPauseBtn) {
+        playPauseBtn.addEventListener('click', () => {
+          if (isPlaying) stopAutoScroll();
+          else startAutoScroll();
+        });
+      }
+
+      // Pause on mouse hover / touch
+      track.addEventListener('mouseenter', stopAutoScroll);
+      track.addEventListener('mouseleave', () => {
+        if (isPlaying) startAutoScroll();
+      });
+
+      track.addEventListener('scroll', updateActiveDot);
+
+      // Mouse drag to scroll
+      let isDown = false;
+      let startX;
+      let scrollLeft;
+
+      track.addEventListener('mousedown', (e) => {
+        isDown = true;
+        track.classList.add('is-dragging');
+        startX = e.pageX - track.offsetLeft;
+        scrollLeft = track.scrollLeft;
+        stopAutoScroll();
+      });
+
+      track.addEventListener('mouseleave', () => {
+        isDown = false;
+        track.classList.remove('is-dragging');
+      });
+
+      track.addEventListener('mouseup', () => {
+        isDown = false;
+        track.classList.remove('is-dragging');
+      });
+
+      track.addEventListener('mousemove', (e) => {
+        if (!isDown) return;
+        e.preventDefault();
+        const x = e.pageX - track.offsetLeft;
+        const walk = (x - startX) * 1.5;
+        track.scrollLeft = scrollLeft - walk;
+      });
+
+      // Start on load
+      startAutoScroll();
+
+      // Lightbox Functions
+      window.openMouLightbox = function(index) {
+        stopAutoScroll();
+        const modal = document.getElementById('mouLightbox');
+        const img = document.getElementById('mouLightboxImg');
+        const title = document.getElementById('mouLightboxTitle');
+        const caption = document.getElementById('mouLightboxCaption');
+
+        const item = galleryData[index];
+        if (!item) return;
+
+        img.src = item.src;
+        title.innerText = item.title;
+        caption.innerHTML = item.caption;
+
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      };
+
+      window.closeMouLightbox = function(e) {
+        if (e && e.target !== e.currentTarget && !e.target.classList.contains('mou-lightbox-close')) return;
+        const modal = document.getElementById('mouLightbox');
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+      };
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+          const modal = document.getElementById('mouLightbox');
+          if (modal && modal.classList.contains('active')) {
+            closeMouLightbox(null);
+          }
+        }
+      });
+
+    })();
+  </script>
+
+  <!-- Load project navbar and footer if available -->
+  <script src="assets/js/vendor/jquery.js"></script>
+  <script src="assets/js/vendor/bootstrap.min.js"></script>
+  <script>
+    $(function(){
+      $("#navBar").load("nav-bar.html");
+    });
+  </script>
+
+</body>
+</html>

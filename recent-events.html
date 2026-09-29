@@ -52,6 +52,252 @@
         </div>
         <!-- End Recent Events Header Area  -->
 
+        <!-- Start Landmark MoU Horizontal Scrolling Banner Section -->
+        <div class="container mb--40">
+            <div class="mou-component-wrapper" style="padding: 10px 0; font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;">
+                <style>
+                    .mou-comp-header-bar {
+                        background: #ffffff;
+                        border: 1px solid #e2e8f0;
+                        border-left: 6px solid #10b981;
+                        border-radius: 16px;
+                        padding: 16px 22px;
+                        margin-bottom: 20px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        gap: 16px;
+                        box-shadow: 0 4px 20px -3px rgba(15, 23, 42, 0.06);
+                    }
+                    .mou-comp-title {
+                        font-size: clamp(1.1rem, 1.7vw, 1.45rem);
+                        font-weight: 800;
+                        color: #0f172a;
+                        margin: 0;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+                    }
+                    .mou-comp-badge {
+                        background: #f0fdf4;
+                        color: #16a34a;
+                        border: 1px solid #bbf7d0;
+                        padding: 4px 10px;
+                        border-radius: 8px;
+                        font-size: 0.75rem;
+                        font-weight: 800;
+                        text-transform: uppercase;
+                        letter-spacing: 0.04em;
+                        display: inline-flex;
+                        align-items: center;
+                        gap: 5px;
+                        flex-shrink: 0;
+                    }
+                    .mou-comp-sub {
+                        font-size: 0.88rem;
+                        color: #64748b;
+                        margin: 4px 0 0 0;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        font-weight: 500;
+                    }
+                    .mou-comp-track {
+                        display: flex;
+                        gap: 20px;
+                        overflow-x: auto;
+                        scroll-snap-type: x mandatory;
+                        scroll-behavior: smooth;
+                        -webkit-overflow-scrolling: touch;
+                        padding-bottom: 12px;
+                        scrollbar-width: thin;
+                        scrollbar-color: #94a3b8 transparent;
+                    }
+                    .mou-comp-track::-webkit-scrollbar {
+                        height: 6px;
+                    }
+                    .mou-comp-track::-webkit-scrollbar-thumb {
+                        background: #cbd5e1;
+                        border-radius: 999px;
+                    }
+                    .mou-comp-card {
+                        flex: 0 0 340px;
+                        max-width: 340px;
+                        scroll-snap-align: start;
+                        background: #ffffff;
+                        border: 1px solid #e2e8f0;
+                        border-radius: 18px;
+                        overflow: hidden;
+                        box-shadow: 0 10px 30px -5px rgba(15, 23, 42, 0.08);
+                        transition: transform 0.35s ease, box-shadow 0.35s ease;
+                        display: flex;
+                        flex-direction: column;
+                    }
+                    .mou-comp-card:hover {
+                        transform: translateY(-6px);
+                        box-shadow: 0 24px 45px -10px rgba(15, 23, 42, 0.16);
+                    }
+                    .mou-comp-img-box {
+                        height: 220px;
+                        position: relative;
+                        overflow: hidden;
+                        background: #0f172a;
+                    }
+                    .mou-comp-img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        transition: transform 0.6s ease;
+                    }
+                    .mou-comp-card:hover .mou-comp-img {
+                        transform: scale(1.06);
+                    }
+                    .mou-comp-chip {
+                        position: absolute;
+                        top: 12px;
+                        left: 12px;
+                        background: rgba(15, 23, 42, 0.85);
+                        color: #ffffff;
+                        font-size: 0.72rem;
+                        font-weight: 700;
+                        padding: 4px 10px;
+                        border-radius: 6px;
+                        backdrop-filter: blur(6px);
+                        -webkit-backdrop-filter: blur(6px);
+                        border: 1px solid rgba(255, 255, 255, 0.2);
+                    }
+                    .mou-comp-body {
+                        padding: 16px;
+                        display: flex;
+                        flex-direction: column;
+                        flex-grow: 1;
+                    }
+                    .mou-comp-card-title {
+                        font-size: 1rem;
+                        font-weight: 700;
+                        color: #0f172a;
+                        margin-bottom: 6px;
+                    }
+                    .mou-comp-card-text {
+                        font-size: 0.84rem;
+                        color: #64748b;
+                        line-height: 1.5;
+                        margin: 0;
+                    }
+                    .mou-comp-btn-nav {
+                        width: 40px;
+                        height: 40px;
+                        border-radius: 12px;
+                        border: 1px solid #e2e8f0;
+                        background: #ffffff;
+                        color: #0f172a;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        cursor: pointer;
+                        font-size: 0.9rem;
+                        transition: all 0.25s ease;
+                        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+                    }
+                    .mou-comp-btn-nav:hover {
+                        background: #0f172a;
+                        color: #ffffff;
+                        border-color: #0f172a;
+                        transform: translateY(-2px);
+                    }
+                </style>
+
+                <!-- STRICT ONE-LINE HEADING BAR -->
+                <div class="mou-comp-header-bar">
+                    <div style="min-width: 0; flex: 1;">
+                        <h3 class="mou-comp-title">
+                            <span class="mou-comp-badge"><i class="fas fa-handshake"></i> Landmark MoU</span>
+                            <span>MoU Signed & Exchanged with CSIR - Indian Institute of Chemical Technology (IICT), Hyderabad</span>
+                        </h3>
+                        <p class="mou-comp-sub">
+                            In the distinguished presence of Dr. D. Srinivas Reddy (Director, CSIR-IICT), Dr. S. Rammohan, Dr. Prasenjit Das, Dr. M. Swapna Reddy, Dr. T. Sreekanth & Mr. J. Pramod Srinivas.
+                        </p>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 8px; flex-shrink: 0;">
+                        <button class="mou-comp-btn-nav" onclick="document.getElementById('mouRecentEventsTrack').scrollBy({left: -360, behavior: 'smooth'})" title="Scroll Left" aria-label="Scroll Left">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button class="mou-comp-btn-nav" onclick="document.getElementById('mouRecentEventsTrack').scrollBy({left: 360, behavior: 'smooth'})" title="Scroll Right" aria-label="Scroll Right">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                        <a href="mou-csir-iict.html" class="mou-comp-btn-nav" style="width: auto; padding: 0 16px; text-decoration: none; font-weight: 700; font-size: 0.85rem; background: #0284c7; color: #ffffff; border-color: #0284c7;" title="View Full Showcase Page">
+                            <span>Explore MoU Hub</span> <i class="fas fa-arrow-right ms-1"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- HORIZONTAL SCROLLING TRACK -->
+                <div class="mou-comp-track" id="mouRecentEventsTrack">
+                    
+                    <!-- Card 1 -->
+                    <div class="mou-comp-card">
+                        <div class="mou-comp-img-box">
+                            <span class="mou-comp-chip"><i class="fas fa-file-contract text-warning me-1"></i> MoU Exchange</span>
+                            <img src="assets/images/mou-csir-iict/mou-exchange-ceremony.jpg" alt="MoU Exchange Ceremony with CSIR-IICT" class="mou-comp-img" />
+                        </div>
+                        <div class="mou-comp-body">
+                            <h4 class="mou-comp-card-title">Official MoU Documents Exchange</h4>
+                            <p class="mou-comp-card-text">
+                                Dr. M. Swapna Reddy (Principal, VIPS) exchanging the signed MoU with Dr. D. Srinivas Reddy (Director, CSIR-IICT) and dignitaries.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="mou-comp-card">
+                        <div class="mou-comp-img-box">
+                            <span class="mou-comp-chip"><i class="fas fa-award text-success me-1"></i> Director Felicitation</span>
+                            <img src="assets/images/mou-csir-iict/mou-memento-director.jpg" alt="Presenting memento to Director CSIR-IICT" class="mou-comp-img" />
+                        </div>
+                        <div class="mou-comp-body">
+                            <h4 class="mou-comp-card-title">Memento Presentation to Director</h4>
+                            <p class="mou-comp-card-text">
+                                Presenting the auspicious framed memento of Goddess Saraswati to Dr. D. Srinivas Reddy in his official chamber at CSIR-IICT.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="mou-comp-card">
+                        <div class="mou-comp-img-box">
+                            <span class="mou-comp-chip"><i class="fas fa-lightbulb text-info me-1"></i> BDRM & KIM Dept</span>
+                            <img src="assets/images/mou-csir-iict/mou-felicitation-bdrm.jpg" alt="Felicitation with Dr. Rammohan & Dr. Prasenjit Das" class="mou-comp-img" />
+                        </div>
+                        <div class="mou-comp-body">
+                            <h4 class="mou-comp-card-title">Felicitation with BDRM & KIM Leaders</h4>
+                            <p class="mou-comp-card-text">
+                                Honoring Dr. S. Rammohan (Chief Scientist, BDRM & KIM) and Dr. Prasenjit Das (Senior Technical Officer & Indian Patent Prosecutor).
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="mou-comp-card">
+                        <div class="mou-comp-img-box">
+                            <span class="mou-comp-chip"><i class="fas fa-map-marker-alt text-danger me-1"></i> Secunderabad Session</span>
+                            <img src="assets/images/mou-csir-iict/mou-roundtable-discussion.jpg" alt="Executive Roundtable and Signing Meeting at CSIR-IICT" class="mou-comp-img" />
+                        </div>
+                        <div class="mou-comp-body">
+                            <h4 class="mou-comp-card-title">Executive Discussion & Formal Signing</h4>
+                            <p class="mou-comp-card-text">
+                                High-level strategic discussion on drug discovery research, pharmaceutical technology incubation, and student placement initiatives.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- End Landmark MoU Horizontal Scrolling Banner Section -->
+
         <!-- Start Featured Event Section -->
         <div class="rainbow-gallery-area pt--20 pb--60">
             <div class="container">
